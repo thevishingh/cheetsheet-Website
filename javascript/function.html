@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../assests/jsfavicon.ico" type="image/x-icon" />
+    <!-- prism.css -->
+    <link rel="stylesheet" href="../prismScript/prism.css" />
+    <!-- custome css -->
+    <link rel="stylesheet" href="../style/html.css" />
+    <title>Functions</title>
+</head>
+
+<body>
+    <h1 class="title"><span class="spantitle">Functions </span> Code Snippits</h1>
+
+    <!-- container -->
+    <div class="main-container">
+        <div class="container">
+            <ol class="list">
+                <h3 class="listtitle">Functions</h3>
+                <p class="titledescription">
+                    JavaScript functions are blocks of code that can be defined and executed whenever needed. They are a
+                    crucial part of JavaScript programming and are used to perform specific tasks or actions.
+                    Functions are often referred to as "first-class citizens" in JavaScript because they can be treated
+                    like any other value, such as a number or a string. This means that they can be assigned to
+                    variables, passed as arguments to other functions, and returned as values from functions.
+                </p>
+                <p class="titledescription">
+                    Here's the basic syntax for defining a function in JavaScript:
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+function functionName(parameters) {
+  // code to be executed
+}</code></pre>
+                </li>
+                <p class="titledescription">
+                    The functionName is a unique identifier for the function, and the parameters are the variables that
+                    are passed to the function when it is called. These parameters act as placeholders for the actual
+                    values that are passed to the function when it is executed.
+                </p>
+                <p class="titledescription">
+                    Here's an example of a simple function that takes a single parameter and returns the square of that
+                    number:
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+function square(x) {
+  return x * x;
+}</code></pre>
+                </li>
+                <p class="titledescription">
+                    To call this function, you would simply use the function name followed by the arguments in
+                    parentheses:
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+let result = square(5);  // returns 25</code></pre>
+                </li>
+                <p class="titledescription">
+                    Functions can also have multiple parameters, like this:
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+function functionName(parameters) {
+  // code to be executed
+}</code></pre>
+                </li>
+                <p class="titledescription">
+                    In this case, the add function takes two parameters, x and y, and returns their sum.
+                </p>
+                <p class="titledescription">
+                    JavaScript also has a special type of function called an "arrow function," which uses a shorter
+                    syntax. Here's the same square a function defined using an arrow function:
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+const square = (x) => {
+  return x * x;
+};</code></pre>
+                </li>
+                <p class="titledescription">
+                    Arrow functions are often used when you want to create a small, one-line function that doesn't
+                    require a separate function keyword.
+                </p>
+                <p class="titledescription">
+                    Functions can be defined inside other functions, which is known as "nesting." This is useful for
+                    creating smaller, reusable blocks of code that can be called from within the larger function.
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+function outerFunction(x) {
+  function innerFunction() {
+    // code to be executed
+  }
+  // more code
+} </code></pre>
+                </li>
+                <p class="titledescription">
+                    In this example, the innerFunction is defined inside the outerFunction and can only be called from
+                    within that function.
+                </p>
+                <p class="titledescription">
+                    In addition to these basic concepts, there are many other things you can do with functions in
+                    JavaScript, such as passing functions as arguments, creating anonymous functions, and using
+                    higher-order functions. These advanced techniques can make your code more efficient and flexible,
+                    and are essential tools for any JavaScript developer.
+                </p>
+
+            </ol>
+</body>
+<!-- prism.js -->
+<script src="../prismScript/prism.js"></script>
+
+</html>

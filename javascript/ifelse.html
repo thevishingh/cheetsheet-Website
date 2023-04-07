@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../assests/jsfavicon.ico" type="image/x-icon" />
+    <!-- prism.css -->
+    <link rel="stylesheet" href="../prismScript/prism.css" />
+    <!-- custome.css -->
+    <link rel="stylesheet" href="../style/html.css" />
+    <title>if-else</title>
+</head>
+
+<body>
+    <h1 class="title">
+        <span class="spantitle">If-else-statement</span> Code Snippits
+    </h1>
+    <!-- container -->
+    <div class="main-container">
+        <div class="container">
+            <ol class="list">
+                <h3 class="listtitle">If else conditionals</h3>
+                <p class="titledescription">
+                    The "if" statement in JavaScript is used to execute a block of code if a certain condition is met.
+                    The "else" clause is used to execute a block of code if the condition is not met.
+                </p>
+                <p class="titledescription">
+                    Here is the basic syntax for an "if" statement:
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>if (condition) {
+// code to be executed if condition is true
+}</code>
+          </pre>
+                </li>
+                <p class="titledescription">
+                    Here is the syntax for an "if" statement with an "else" clause:
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>if (condition) {
+// code to be executed if condition is true
+} else {
+// code to be executed if condition is false
+}                  
+</code></pre>
+                </li>
+                <p class="titledescription">
+                    The condition is a boolean expression that evaluates to either true or false. If the condition is
+                    true, the code in the "if" block is executed. If the condition is false, the code in the "else"
+                    block is executed (if present).
+                    For example:
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>let x = 10;
+if (x > 5) {
+console.log("x is greater than 5");
+} else {
+console.log("x is not greater than 5");
+}</code></pre>
+                </li>
+                <p class="titledescription">
+                    In this example, the condition "x > 5" is true, so the code in the "if" block is executed and the
+                    message "x is greater than 5" is printed to the console
+                </p>
+                <!-- If else ladder -->
+                <h3 class="listtitle">
+                    If else ladder
+                </h3>
+                <p class="titledescription">
+                    The "if-else ladder" is a control structure in JavaScript that allows you to execute a different
+                    block of code depending on multiple conditions. It is called a ladder because it consists of
+                    multiple "if" and "else" statements arranged in a ladder-like fashion.
+                </p>
+                <p class="titledescription">
+                    Here is the syntax for an "if-else ladder"
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+if (condition1) {
+// code to be executed if condition1 is true
+}else if (condition2) {
+// code to be executed if condition1 is false and condition2 is true
+}else if (condition3) {
+// code to be executed if condition1 and condition2 are false and condition3 is true
+}...
+ese {
+// code to be executed if all conditions are false
+}/code></pre>
+                </li>
+                <p class="titledescription">
+                    In this structure, each "if" statement is followed by an optional "else" statement. If the first
+                    "if" condition is true, the code in the corresponding block is executed and the rest of the ladder
+                    is skipped. If the first "if" condition is false, the second "if" condition is evaluated, and so on.
+                    If none of the conditions are true, the code in the "else" block is executed.
+                </p>
+                <p class="titledescription">For example:</p>
+                <li class="links">
+                    <pre class="language-js"><code>let x = 10;
+if (x > 15) {
+  console.log("x is greater than 15");
+} else if (x > 10) {
+  console.log("x is greater than 10 but less than or equal to 15");
+} else if (x > 5) {
+  console.log("x is greater than 5 but less than or equal to 10");
+} else {
+  console.log("x is less than or equal to 5");
+}</code></pre>
+                </li>
+                <p class="titledescription">
+                    In this example, the first "if" condition "x > 15" is false, so the second "if" condition "x > 10"
+                    is evaluated. This condition is also false, so the third "if" condition "x > 5" is evaluated. This
+                    condition is true, so the code in the corresponding block is executed and the message "x is greater
+                    than 5 but less than or equal to 10" is printed to the console.
+                </p>
+                <p class="titledescription">
+                    The "if-else ladder" is a useful control structure for executing different blocks of code based on
+                    multiple conditions. It can help you write more concise and maintainable code in JavaScript.
+                </p>
+                <h3 class="listtitle">Switch case</h3>
+                <p class="titledescription">The "switch" statement in JavaScript is another control structure that
+                    allows you to execute a different block of code depending on a specific value. It is often used as
+                    an alternative to the "if-else ladder" when you have multiple conditions to check against a single
+                    value.</p>
+                <p class="titledescription">
+                    Here is the syntax for a "switch" statement:
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>switch (expression) {
+case value1:
+  // code to be executed if expression == value1
+  break;
+case value2:
+  // code to be executed if expression == value2
+  break;
+...
+default:
+  // code to be executed if expression does not match any of the values
+}</code></pre>
+                </li>
+                <p class="titledescription">
+                    In this structure, the "expression" is evaluated and compared to each of the "case" values. If the
+                    "expression" matches a "case" value, the corresponding block of code is executed. The "break"
+                    statement is used to exit the "switch" statement and prevent the code in the following cases from
+                    being executed. The "default" case is optional and is executed if the "expression" does not match
+                    any of the "case" values.
+                </p>
+                <span> For example:</span>
+                <li class="links">
+                    <pre class="language-js"><code>
+                    let x = "apple";
+switch (x) {
+case "apple":
+console.log("x is an apple");
+break;
+case "banana":
+console.log("x is a banana");
+break;
+case "orange":
+console.log("x is an orange");
+break;
+default:
+console.log("x is something else");
+}</code></pre>
+                </li>
+                <p class="titledescription">
+                    In this example, the "expression" is the variable "x," which has the value "apple." The "expression"
+                    is compared to each of the "case" values, and when it matches the value "apple," the corresponding
+                    block of code is executed and the message "x is an apple" is printed to the console.
+                </p>
+                <p class="titledescription">
+                    The "switch" statement is a useful control structure for executing different blocks of code based on
+                    a specific value. It can help you write more concise and maintainable code in JavaScript.
+                </p>
+                <!-- Ternary Operator -->
+                <h3 class="listtitle">Ternary Operator</h3>
+                <p class="titledescription">
+                    The ternary operator is a shorthand way to write an if-else statement in JavaScript. It takes the
+                    form of condition ? value1 : value2, where condition is a boolean expression, and value1 and value2
+                    are expressions of any type. If condition is true, the ternary operator returns value1; if condition
+                    is false, it returns value2.
+                </p>
+                <p class="description">
+                    Here's an example of how you can use the ternary operator to assign a value to a variable based on a
+                    condition:
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+let x = 10;
+let y = 20;
+let max;
+max = (x > y) ? x : y;
+console.log(max); // Outputs: 20</code></pre>
+                </li>
+                <p class="titledescription">
+                    In this example, the ternary operator checks whether x is greater than y. If it is, max is assigned the value of x; otherwise, it is assigned the value of y.
+                </p>
+                <p class="titledescription">
+                    The ternary operator can be a useful and concise way to write simple if-else statements, but it can become difficult to read and understand when used for more complex statements or nested inside other expressions. In these cases, it may be better to use a regular if-else statement instead.
+                </p>
+            </ol>
+        </div>
+    </div>
+</body>
+<!-- prism.js -->
+<script src="../prismScript/prism.js"></script>
+
+</html>

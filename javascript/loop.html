@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../assests/jsfavicon.ico" type="image/x-icon" />
+    <!-- prism.css -->
+    <link rel="stylesheet" href="../prismScript/prism.css" />
+    <!-- custome css -->
+    <link rel="stylesheet" href="../style/html.css" />
+    <title>Loops</title>
+</head>
+
+<body>
+    <h1 class="title">
+        <span class="spantitle">Javascript Loops</span> Code Snippits
+    </h1>
+
+    <!-- container -->
+    <div class="main-container">
+        <div class="container">
+            <ol class="list">
+                <h3 class="listtitle">For Loops</h3>
+                <p class="titledescription">
+                    For loops are a common control flow structure in programming that
+                    allows you to repeat a block of code a specific number of times. In
+                    JavaScript, there are three types of for loops: the standard for
+                    loop, the for-in loop, and the for-of loop.
+                </p>
+                <span>Standard for loop</span>
+                <p class="titledescription">
+                    The standard for loop has the following syntax:
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>for (initialization; condition; increment/decrement) {
+// code to be executed
+}
+</code></pre>
+                </li>
+                <p class="titledescription">
+                    The initialization the statement is executed before the loop starts
+                    and is typically used to initialize a counter variable. The
+                    condition is checked at the beginning of each iteration and if it is
+                    true, the loop continues. If it is false, the loop exits. The
+                    increment/decrement statement is executed at the end of each
+                    iteration and is used to update the counter variable.
+                </p>
+                <p class="titledescription">
+                    Here's an example of a standard for loop that counts from 1 to 10:
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+for (let i = 1; i <= 10; i++) {
+  console.log(i);
+}</code></pre>
+                </li>
+                <p class="titledescription">
+                    This loop will print the numbers 1 through 10 to the console.
+                </p>
+                <!-- For-in-loop -->
+                <h3 class="listtitle">For-in-Loop</h3>
+                <p class="titledescription">
+                    The for-in loop is used to iterate over the properties of an object.
+                    It has the following syntax:
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+for (variable in object) {
+  // code to be executed
+}</code></pre>
+                </li>
+                <p class="titledescription">
+                    The variable is assigned the name of each property in the object as
+                    the loop iterates over them. Here's an example of a for-in loop that
+                    iterates over the properties of an object:
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+let person = {
+  name: "John",
+  age: 30,
+  job: "developer"
+};
+
+for (let key in person) {
+  console.log(key + ": " + person[key]);
+}</code></pre>
+                </li>
+                <p class="titledescription">
+                    This loop will print the following to the console:
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+name: John
+age: 30
+job: developer
+             </code></pre>
+                </li>
+                <!-- For-of-Loop -->
+                <h3 class="listtitle">For-of-Loop</h3>
+                <p class="titledescription">
+                    The for-of loop is used to iterate over the values of an iterable
+                    object, such as an array or a string. It has the following syntax:
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+for (variable of object) {
+  // code to be executed
+}</code></pre>
+                </li>
+                <p class="titledescription">
+                    The variable is assigned the value of each element in the object as
+                    the loop iterates over them Here's an example of a for-of loop that
+                    iterates over the elements of an array:
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+let numbers = [1, 2, 3, 4, 5];
+for (let number of numbers) {
+  console.log(number);
+}</code></pre>
+                </li>
+                <p class="titledescription">
+                    This loop will print the numbers 1 through 5 to the console.
+                </p>
+                <p class="titledescription">
+                    For loops are a powerful tool in JavaScript and can be used to
+                    perform a variety of tasks, such as iterating over arrays and
+                    objects, repeating a block of code a specific number of times, and
+                    more. With the three types of for loops available in JavaScript, you
+                    can choose the one that best fits your needs and use it to write
+                    more efficient and effective code.
+                </p>
+
+                <!-- While Loop -->
+                <h3 class="listtitle">While Loop</h3>
+                <p class="titledescription">
+                    While loops are a control flow structure in programming that allow
+                    you to repeat a block of code while a certain condition is true. In
+                    JavaScript, the syntax for a while loop is:
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+while (condition) {
+  // code to be executed
+}</code></pre>
+                </li>
+                <p class="titledescription">
+                    The condition is checked at the beginning of each iteration and if it is true, the code block is
+                    executed. If it is false, the loop exits.
+                </p>
+                <span>Here's an example of a while loop that counts from 1 to 10:</span>
+                <li class="links">
+                    <pre class="language-js"><code>
+let i = 1;
+
+while (i <= 10) {
+  console.log(i);
+  i++;
+}</code></pre>
+                </li>
+                <p class="titledescription">This loop will print the numbers 1 through 10 to the console.</p>
+                <p class="titledescription">It's important to include a way to update the condition within the loop,
+                    otherwise it will become an infinite loop and will run forever. In the example above, the i++
+                    statement increments the value of i by 1 at the end of each iteration, which eventually causes the
+                    condition to be false and the loop to exit.
+                    While loops can be useful when you don't know exactly how many times you need to execute a block of
+                    code.</p>
+                <p class="titledescription">For example, you might use a while loop to keep prompting a user for input
+                    until they provide a valid response.</p>
+                <li class="links">
+                    <pre class="language-js"><code>
+let input = "";
+while (input !== "yes" && input !== "no") {
+  input = prompt("Please enter 'yes' or 'no':");
+} </code></pre>
+                </li>
+                <p class="titledescription">
+                    This loop will keep prompting the user for input until they enter either "yes" or "no".
+                </p>
+                <p class="titledescription">
+                    While loops can be a useful tool in JavaScript, but it's important to use them with caution. If the
+                    condition is never met, the loop will become an infinite loop and will run forever. Make sure to
+                    include a way to update the condition and eventually exit the loop to avoid this issue.
+                </p>
+            </ol>
+        </div>
+    </div>
+</body>
+<!-- prism.js -->
+<script src="../prismScript/prism.js"></script>
+
+</html>

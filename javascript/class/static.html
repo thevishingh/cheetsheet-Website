@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="/assests/jsfavicon.ico"
+      type="image/x-icon"
+    />
+    <!-- prism.css -->
+    <link rel="stylesheet" href="/prismScript/prism.css" />
+    <!-- custome css -->
+    <link rel="stylesheet" href="/style/html.css" />
+    <title>Static Method</title>
+  </head>
+
+  <body>
+    <h1 class="title">
+      <span class="spantitle">Static Method </span> Code Snippits
+    </h1>
+    <!-- container -->
+    <div class="main-container">
+      <div class="container">
+        <ol class="list">
+          <h3 class="listtitle">Static Method</h3>
+          <p class="titledescription">
+            In object-oriented programming, a static method is a method that is
+            associated with a class, rather than an instance of the class. In
+            JavaScript, static methods are defined using the static keyword and
+            they can be accessed without creating an instance of the class.
+          </p>
+          <p class="titledescription">
+            For example, consider the following class MathHelper that defines a
+            static method called add() that takes in two numbers and returns
+            their sum:
+          </p>
+          <li class="links">
+            <pre class="language-js"><code>
+class MathHelper {
+    static add(a, b) {
+        return a + b;
+    }
+}
+</code> </pre>
+          </li>
+          <p class="titledescription">
+            You can access the static method directly from the class, without
+            creating an instance of the class.
+          </p>
+          <li class="links">
+            <pre class="language-js"><code>
+console.log(MathHelper.add(1, 2)); // 3
+</code></pre>
+          </li>
+          <p class="titledescription">
+            Static methods are useful when you want to add utility methods to a
+            class that don't depend on the state of an instance. For example,
+            you might use a static method to generate a unique ID for an object,
+            or to perform a calculation that doesn't depend on the state of an
+            instance.
+          </p>
+          <p class="titledescription">
+            It's important to note that static methods do not have access to the
+            this keyword, as they are not associated with an instance of the
+            class. Instead, they can only access the arguments passed in to the
+            method and any variables or functions defined within the class.
+          </p>
+          <p class="titledescription">
+            In conclusion, static methods in JavaScript are methods that are
+            associated with a class, rather than an instance of the class. They
+            are defined using the static keyword and can be accessed directly
+            from the class, without creating an instance of the class. Static
+            methods are useful when you want to add utility methods to a class
+            that don't depend on the state of an instance. However, it's
+            important to keep in mind that static methods do not have access to
+            the this keyword.
+          </p>
+        </ol>
+      </div>
+    </div>
+  </body>
+  <!-- prism.js -->
+  <script src="/prismScript/prism.js"></script>
+</html>

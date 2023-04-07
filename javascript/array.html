@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../assests/jsfavicon.ico" type="image/x-icon" />
+    <!-- prism.css -->
+    <link rel="stylesheet" href="../prismScript/prism.css" />
+    <!-- custome css -->
+    <link rel="stylesheet" href="../style/html.css" />
+    <title>Arrays and Array Methods</title>
+</head>
+
+<body>
+    <h1 class="title"><span class="spantitle">Array</span> Code Snippits</h1>
+
+    <!-- container -->
+    <div class="main-container">
+        <div class="container">
+            <ol class="list">
+                <h3 class="listtitle">Arrays and Array Methods </h3>
+                <p class="titledescription">
+                    One of the most important data structures in JavaScript is the array, which is a collection of
+                    elements. In this blog post, we will explore the basics of JavaScript arrays and the various array
+                    methods that can be used to manipulate them.
+                </p>
+                <p class="titledescription">
+                    An array in JavaScript is a collection of elements enclosed in square brackets. Elements can be of
+                    any data type, including numbers, strings, and other arrays. For example, the following is a valid
+                    array in JavaScript:
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+var myArray = [1, "Hello", [2, 3]];</code> </pre>
+                </li>
+                <p class="titledescription">
+                    JavaScript provides a number of built-in methods for manipulating arrays. Some of the most commonly
+                    used array methods are:
+                </p>
+                <!-- Methods -->
+                <p class="titledescription">
+                    <span>length</span> - This method returns the number of elements in an array. For example, the
+                    following code will return 3:
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+var myArray = [1, "Hello", [2, 3]];
+console.log(myArray.length);
+</code> </pre>
+                </li>
+                <p class="titledescription">
+                    <span>push</span> - This method is used to add an element to the end of an array. For example, the
+                    following code will add the element "World" to the end of the array:
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+var myArray = [1, "Hello", [2, 3]];
+myArray.push("World");
+console.log(myArray); // [1, "Hello", [2, 3], "World"]
+</code></pre>
+                </li>
+                <p class="titledescription">
+                    <span>shift</span> - This method is used to remove the first element of an array. For example, the
+                    following code will remove the first element (1) from the array:
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+var myArray = [1, "Hello", [2, 3]];
+myArray.shift();
+console.log(myArray); // ["Hello", [2, 3]]
+</code></pre>
+                </li>
+                <p class="titledescription">
+                    <span>unshift</span> - This method is used to add an element to the beginning of an array. For
+                    example, the following code will add the element 0 to the beginning of the array:
+                </p>
+
+                <li class="links">
+                    <pre class="language-js"><code>
+var myArray = [1, "Hello", [2, 3]];
+myArray.unshift(0);
+console.log(myArray); // [0, 1, "Hello", [2, 3]]
+</code></pre>
+                </li>
+                <p class="titledescription">
+                    <span>slice</span> - This method is used to extract a portion of an array. For example, the
+                    following code will extract the elements from index 1 to 2 (exclusive):
+                </p>
+
+                <li class="links">
+                    <pre class="language-js"><code>
+var myArray = [1, "Hello", [2, 3]];
+console.log(myArray.slice(1, 2)); // ["Hello"]
+</code></pre>
+                </li>
+                <p class="titledescription">
+                    <span>splice</span> - This method is used to add or remove elements from an array. For example, the
+                    following code will remove the element at index 1 and add the elements "Hello World" and [4, 5] at
+                    index 1:
+                </p>
+
+                <li class="links">
+                    <pre class="language-js"><code>
+var myArray = [1, "Hello", [2, 3]];
+myArray.splice(1, 1, "Hello World", [4, 5]);
+console.
+</code></pre>
+                </li>
+                <!-- Loop with Array -->
+                <h3 class="listtitle">Loop with Array</h3>
+                <p class="titledescription">
+                    One of the most important data structures in JavaScript is the array, which is a collection of
+                    elements. When working with arrays, it is often necessary to iterate through each element in the
+                    array, which is where loops come in. In this blog post, we will explore how to use loops with arrays
+                    in JavaScript.
+                </p>
+                <p class="titledescription">
+                    JavaScript provides several ways to iterate through an array, including the for loop, forEach
+                    method, and for...of loop.
+                </p>
+                <!-- methods -->
+                <p class="titledescription">
+                    <span> for loop </span> - This is the most basic way to iterate through an array. The for loop uses
+                    a counter variable that is incremented on each iteration. For example, the following code will print
+                    out each element in the array:
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+var myArray = [1, 2, 3, 4, 5];
+for (var i = 0; i < myArray.length; i++) {
+    console.log(myArray[i]);
+}
+</code></pre>
+                </li>
+                <p class="titledescription">
+                    <span> forEach method </span> - This method is a more concise way to iterate through an array. The
+                    forEach method takes a callback function as its argument, which is called on each element in the
+                    array. For example, the following code will print out each element in the array:
+                </p>
+
+                <li class="links">
+                    <pre class="language-js"><code>
+var myArray = [1, 2, 3, 4, 5];
+myArray.forEach(function(element) {
+    console.log(element);
+});
+</code></pre>
+                </li>
+                <p class="titledescription">
+                    <span>for-of-loop </span> - This is a more recent addition to JavaScript, and it is the most concise
+                    way to iterate through an array. It allows you to iterate through the elements of an array without
+                    having to access the index, and it works with any iterable object, not just arrays. For example, the
+                    following code will print out each element in the array:
+                </p>
+
+                <li class="links">
+                    <pre class="language-js"><code>
+var myArray = [1, 2, 3, 4, 5];
+for (var element of myArray) {
+    console.log(element);
+}
+</code></pre>
+                </li>
+                <p class="titledescription">It is important to note that when you are iterating through an array using a
+                    for loop and you plan to change the array during iteration you should use a for loop with a separate
+                    counter variable.</p>
+            </ol>
+        </div>
+    </div>
+
+</body>
+<!-- prism.js -->
+<script src="../prismScript/prism.js"></script>r
+
+</html>

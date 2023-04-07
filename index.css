@@ -1,0 +1,1150 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    width: 100vw;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #ffffff;
+}
+
+.image {
+    width: 200px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.menulinks {
+    list-style: none;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.navbarlinks {
+    color: #fff;
+    font-family: 'Urbanist', sans-serif;
+    text-decoration: none;
+}
+
+.navbarlinks:hover {
+    color: rgb(224, 7, 7);
+}
+
+/* hambergur */
+
+
+
+
+
+/* About container */
+
+.container {
+    background-color: #EEEEEE;
+    width: 100vw;
+    height: 80vh;
+}
+
+.titlesection {
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.title {
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: .1rem;
+    font-weight: 400;
+    font-family: 'Urbanist', sans-serif;
+    color: blueviolet;
+}
+
+.about {
+    margin: 1rem;
+    padding: 1rem;
+}
+
+
+.descrisection {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.description {
+    width: 30vw;
+    padding: 1.2rem;
+    /* border:2px solid blueviolet; */
+    border-radius: 40px 0 40px 0;
+    outline: none;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(0, 0, 0);
+    background-color: #E9E8E8;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+span {
+    color: red;
+    font-size: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.brtag {
+    font-size: 1rem;
+    color: blueviolet;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 600;
+}
+
+.language {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+
+}
+
+.box {
+    width: 120px;
+    height: 120px;
+    background-color: #ffffff;
+    border: 1px solid #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: .8rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 19px 38px, rgba(0, 0, 0, 0.12) 0px 15px 12px;
+}
+
+.boximg {
+    width: 80px;
+    cursor: pointer;
+}
+
+.box:hover {
+    background-color: #DAF5FF;
+    transition: all 1s ease-in-out;
+}
+
+/* footer */
+.footercontainer {
+    background-color: #000000;
+    margin: auto;
+    width: 100%;
+    height: 30vh;
+    color: #fff;
+}
+
+.footer {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footerimg {
+    width: 150px;
+}
+
+.footermenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footermenulink {
+    list-style: none;
+    padding: 0.3rem;
+    font-size: 14px;
+    font-family: 'Urbanist', sans-serif;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.footermenulink:hover {
+    color: red;
+}
+
+.socialmedia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.socialmedialinks {
+    list-style: none;
+    padding: 0.5rem;
+    margin: 0.5px;
+}
+
+.socialmedialinks:hover {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.sociallinks {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Hover Effect */
+.instagram:hover {
+    font-size: 1rem;
+    color: rgb(209, 43, 106);
+    transition: all 0.5s ease-in-out;
+}
+
+.facebook:hover {
+    font-size: 1rem;
+    color: rgb(43, 101, 209);
+    transition: all 0.5s ease-in-out;
+}
+
+.gitub:hover {
+    font-size: 1rem;
+    color: rgb(17, 218, 44);
+    transition: all 0.5s ease-in-out;
+}
+
+.twitter:hover {
+    font-size: 1rem;
+    color: rgb(1, 129, 248);
+    transition: all 0.5s ease-in-out;
+}
+
+.linkedin:hover {
+    font-size: 1rem;
+    color: rgb(61, 25, 221);
+    transition: all 0.5s ease-in-out;
+}
+
+.copyright {
+    font-size: 10px;
+    text-align: center;
+    font-family: 'Urbanist', sans-serif;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.copyrightspan {
+    color: blueviolet;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1rem
+}
+
+
+/* media queary */
+
+@media only screen and (max-width: 350px) {
+    .navbar {
+        width: 100%;
+        background-color: rgb(0, 0, 0);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #ffffff;
+        flex-direction: column;
+    }
+
+    /* About container */
+
+    .container {
+        background-color: #EEEEEE;
+        width: 100vw;
+        height: 80vh;
+    }
+
+    .titlesection {
+        padding: 0;
+        margin-top: 0.5rem;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 1rem;
+        letter-spacing: .1rem;
+        font-weight: 400;
+        font-family: 'Urbanist', sans-serif;
+        color: blueviolet;
+    }
+
+    .about {
+        margin: 0.5rem;
+        padding: 0.5rem;
+    }
+
+
+    .descrisection {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+
+    .description {
+        width: 100%;
+        height: 100%;
+        padding: 1.2rem;
+        border-radius: 0;
+        outline: none;
+        font-size: 1rem;
+        font-weight: 400;
+        text-align: left;
+        font-family: 'Roboto', sans-serif;
+        color: rgb(0, 0, 0);
+        background-color: #E9E8E8;
+        box-shadow: none;
+    }
+
+    span {
+        color: red;
+        font-size: 1rem;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .brtag {
+        font-size: 0.8em;
+        color: blueviolet;
+        font-family: 'Urbanist', sans-serif;
+        font-weight: 600;
+    }
+
+    .language {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+
+    }
+
+    .box {
+        width: 50px;
+        height: 50px;
+        background-color: #ffffff;
+        border: 1px solid #000;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: .8rem;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 19px 38px, rgba(0, 0, 0, 0.12) 0px 15px 12px;
+    }
+
+    .boximg {
+        width: 30px;
+        cursor: pointer;
+    }
+
+    .box:hover {
+        background-color: #DAF5FF;
+        transition: all 1s ease-in-out;
+    }
+
+   
+/* footer */
+
+.footercontainer {
+    background-color: #000000;
+    width: 100%;
+    height: 60vh;
+    margin: auto;
+    color: #fff;
+}
+
+.footer {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.footerimg {
+    width: 150px;
+}
+
+.footermenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footermenulink {
+    list-style: none;
+    padding: 0.3rem;
+    font-size: 14px;
+    font-family: 'Urbanist', sans-serif;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.footermenulink:hover {
+    color: red;
+}
+
+.socialmedia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.socialmedialinks {
+    list-style: none;
+    padding: 0.5rem;
+    margin: 0.5px;
+}
+
+.socialmedialinks:hover {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.sociallinks {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Hover Effect */
+.instagram:hover {
+    font-size: 1rem;
+    color: rgb(209, 43, 106);
+    transition: all 0.5s ease-in-out;
+}
+
+.facebook:hover {
+    font-size: 1rem;
+    color: rgb(43, 101, 209);
+    transition: all 0.5s ease-in-out;
+}
+
+.gitub:hover {
+    font-size: 1rem;
+    color: rgb(17, 218, 44);
+    transition: all 0.5s ease-in-out;
+}
+
+.twitter:hover {
+    font-size: 1rem;
+    color: rgb(1, 129, 248);
+    transition: all 0.5s ease-in-out;
+}
+
+.linkedin:hover {
+    font-size: 1rem;
+    color: rgb(61, 25, 221);
+    transition: all 0.5s ease-in-out;
+}
+
+.copyright {
+    margin-top: 1rem;
+    font-size: 10px;
+    text-align: center;
+    font-family: 'Urbanist', sans-serif;
+position: fixed;
+right: 10px;
+bottom: 10px;
+}
+
+.copyrightspan {
+    color: blueviolet;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 0.8rem
+}
+}
+
+@media only screen and (max-width: 650px) {
+    .navbar {
+        width: 100%;
+        background-color: rgb(0, 0, 0);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #ffffff;
+        flex-direction: column;
+    }
+
+    /* About container */
+
+    .container {
+        background-color: #EEEEEE;
+        width: 100vw;
+        height: 80vh;
+    }
+
+    .titlesection {
+        padding: 0;
+        margin-top: 0.5rem;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 1rem;
+        letter-spacing: .1rem;
+        font-weight: 400;
+        font-family: 'Urbanist', sans-serif;
+        color: blueviolet;
+    }
+
+    .about {
+        margin: 0.5rem;
+        padding: 0.5rem;
+    }
+
+
+    .descrisection {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+
+    .description {
+        width: 100%;
+        height: 100%;
+        padding: 1.2rem;
+        border-radius: 0;
+        outline: none;
+        font-size: 1rem;
+        font-weight: 400;
+        text-align: left;
+        font-family: 'Roboto', sans-serif;
+        color: rgb(0, 0, 0);
+        background-color: #E9E8E8;
+        box-shadow: none;
+    }
+
+    span {
+        color: red;
+        font-size: 1rem;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .brtag {
+        font-size: 0.8em;
+        color: blueviolet;
+        font-family: 'Urbanist', sans-serif;
+        font-weight: 600;
+    }
+
+    .language {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+
+    }
+
+    .box {
+        width: 50px;
+        height: 50px;
+        background-color: #ffffff;
+        border: 1px solid #000;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: .8rem;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 19px 38px, rgba(0, 0, 0, 0.12) 0px 15px 12px;
+    }
+
+    .boximg {
+        width: 30px;
+        cursor: pointer;
+    }
+
+    .box:hover {
+        background-color: #DAF5FF;
+        transition: all 1s ease-in-out;
+    }
+
+   
+/* footer */
+
+.footercontainer {
+    background-color: #000000;
+    width: 100%;
+    height: 60vh;
+    margin: auto;
+    color: #fff;
+}
+
+.footer {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.footerimg {
+    width: 150px;
+}
+
+.footermenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footermenulink {
+    list-style: none;
+    padding: 0.3rem;
+    font-size: 14px;
+    font-family: 'Urbanist', sans-serif;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.footermenulink:hover {
+    color: red;
+}
+
+.socialmedia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.socialmedialinks {
+    list-style: none;
+    padding: 0.5rem;
+    margin: 0.5px;
+}
+
+.socialmedialinks:hover {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.sociallinks {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Hover Effect */
+.instagram:hover {
+    font-size: 1rem;
+    color: rgb(209, 43, 106);
+    transition: all 0.5s ease-in-out;
+}
+
+.facebook:hover {
+    font-size: 1rem;
+    color: rgb(43, 101, 209);
+    transition: all 0.5s ease-in-out;
+}
+
+.gitub:hover {
+    font-size: 1rem;
+    color: rgb(17, 218, 44);
+    transition: all 0.5s ease-in-out;
+}
+
+.twitter:hover {
+    font-size: 1rem;
+    color: rgb(1, 129, 248);
+    transition: all 0.5s ease-in-out;
+}
+
+.linkedin:hover {
+    font-size: 1rem;
+    color: rgb(61, 25, 221);
+    transition: all 0.5s ease-in-out;
+}
+
+.copyright {
+    margin-top: 1rem;
+    font-size: 10px;
+    text-align: center;
+    font-family: 'Urbanist', sans-serif;
+position: fixed;
+right: 10px;
+bottom: 10px;
+}
+
+.copyrightspan {
+    color: blueviolet;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 0.8rem
+}
+}
+
+@media only screen and (max-width: 950px) {
+    .navbar {
+        width: 100%;
+        background-color: rgb(0, 0, 0);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #ffffff;
+        flex-direction: column;
+    }
+
+    /* About container */
+
+    .container {
+        background-color: #EEEEEE;
+        width: 100vw;
+        height: 80vh;
+    }
+
+    .titlesection {
+        padding: 0;
+        margin-top: 0.5rem;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 1rem;
+        letter-spacing: .1rem;
+        font-weight: 400;
+        font-family: 'Urbanist', sans-serif;
+        color: blueviolet;
+    }
+
+    .about {
+        margin: 0.5rem;
+        padding: 0.5rem;
+    }
+
+
+    .descrisection {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+
+    .description {
+        width: 100%;
+        height: 100%;
+        padding: 1.2rem;
+        border-radius: 0;
+        outline: none;
+        font-size: 1rem;
+        font-weight: 400;
+        text-align: left;
+        font-family: 'Roboto', sans-serif;
+        color: rgb(0, 0, 0);
+        background-color: #E9E8E8;
+        box-shadow: none;
+    }
+
+    span {
+        color: red;
+        font-size: 1rem;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .brtag {
+        font-size: 0.8em;
+        color: blueviolet;
+        font-family: 'Urbanist', sans-serif;
+        font-weight: 600;
+    }
+
+    .language {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+
+    }
+
+    .box {
+        width: 50px;
+        height: 50px;
+        background-color: #ffffff;
+        border: 1px solid #000;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: .8rem;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 19px 38px, rgba(0, 0, 0, 0.12) 0px 15px 12px;
+    }
+
+    .boximg {
+        width: 30px;
+        cursor: pointer;
+    }
+
+    .box:hover {
+        background-color: #DAF5FF;
+        transition: all 1s ease-in-out;
+    }
+
+   
+/* footer */
+
+.footercontainer {
+    background-color: #000000;
+    width: 100%;
+    height: 60vh;
+    margin: auto;
+    color: #fff;
+}
+
+.footer {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.footerimg {
+    width: 150px;
+}
+
+.footermenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footermenulink {
+    list-style: none;
+    padding: 0.3rem;
+    font-size: 14px;
+    font-family: 'Urbanist', sans-serif;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.footermenulink:hover {
+    color: red;
+}
+
+.socialmedia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.socialmedialinks {
+    list-style: none;
+    padding: 0.5rem;
+    margin: 0.5px;
+}
+
+.socialmedialinks:hover {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.sociallinks {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Hover Effect */
+.instagram:hover {
+    font-size: 1rem;
+    color: rgb(209, 43, 106);
+    transition: all 0.5s ease-in-out;
+}
+
+.facebook:hover {
+    font-size: 1rem;
+    color: rgb(43, 101, 209);
+    transition: all 0.5s ease-in-out;
+}
+
+.gitub:hover {
+    font-size: 1rem;
+    color: rgb(17, 218, 44);
+    transition: all 0.5s ease-in-out;
+}
+
+.twitter:hover {
+    font-size: 1rem;
+    color: rgb(1, 129, 248);
+    transition: all 0.5s ease-in-out;
+}
+
+.linkedin:hover {
+    font-size: 1rem;
+    color: rgb(61, 25, 221);
+    transition: all 0.5s ease-in-out;
+}
+
+.copyright {
+    margin-top: 1rem;
+    font-size: 10px;
+    text-align: center;
+    font-family: 'Urbanist', sans-serif;
+position: fixed;
+right: 10px;
+bottom: 10px;
+}
+
+.copyrightspan {
+    color: blueviolet;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 0.8rem
+}
+}
+
+@media only screen and (max-width: 1450px) {
+    .navbar {
+        width: 100%;
+        background-color: rgb(0, 0, 0);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #ffffff;
+        flex-direction: column;
+    }
+
+    /* About container */
+
+    .container {
+        background-color: #EEEEEE;
+        width: 100vw;
+        height: 80vh;
+    }
+
+    .titlesection {
+        padding: 0;
+        margin-top: 0.5rem;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 1rem;
+        letter-spacing: .1rem;
+        font-weight: 400;
+        font-family: 'Urbanist', sans-serif;
+        color: blueviolet;
+    }
+
+    .about {
+        margin: 0.5rem;
+        padding: 0.5rem;
+    }
+
+
+    .descrisection {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+
+    .description {
+        width: 100%;
+        height: 100%;
+        padding: 1.2rem;
+        border-radius: 0;
+        outline: none;
+        font-size: 1rem;
+        font-weight: 400;
+        text-align: left;
+        font-family: 'Roboto', sans-serif;
+        color: rgb(0, 0, 0);
+        background-color: #E9E8E8;
+        box-shadow: none;
+    }
+
+    span {
+        color: red;
+        font-size: 1rem;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .brtag {
+        font-size: 0.8em;
+        color: blueviolet;
+        font-family: 'Urbanist', sans-serif;
+        font-weight: 600;
+    }
+
+    .language {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+
+    }
+
+    .box {
+        width: 50px;
+        height: 50px;
+        background-color: #ffffff;
+        border: 1px solid #000;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: .8rem;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 19px 38px, rgba(0, 0, 0, 0.12) 0px 15px 12px;
+    }
+
+    .boximg {
+        width: 30px;
+        cursor: pointer;
+    }
+
+    .box:hover {
+        background-color: #DAF5FF;
+        transition: all 1s ease-in-out;
+    }
+
+   
+/* footer */
+
+.footercontainer {
+    background-color: #000000;
+    width: 100%;
+    height: 35vh;
+    margin: auto;
+    color: #fff;
+}
+
+.footer {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.footerimg {
+    width: 150px;
+}
+
+.footermenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footermenulink {
+    list-style: none;
+    padding: 0.3rem;
+    font-size: 14px;
+    font-family: 'Urbanist', sans-serif;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.footermenulink:hover {
+    color: red;
+}
+
+.socialmedia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.socialmedialinks {
+    list-style: none;
+    padding: 0.5rem;
+    margin: 0.5px;
+}
+
+.socialmedialinks:hover {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.sociallinks {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Hover Effect */
+.instagram:hover {
+    font-size: 1rem;
+    color: rgb(209, 43, 106);
+    transition: all 0.5s ease-in-out;
+}
+
+.facebook:hover {
+    font-size: 1rem;
+    color: rgb(43, 101, 209);
+    transition: all 0.5s ease-in-out;
+}
+
+.gitub:hover {
+    font-size: 1rem;
+    color: rgb(17, 218, 44);
+    transition: all 0.5s ease-in-out;
+}
+
+.twitter:hover {
+    font-size: 1rem;
+    color: rgb(1, 129, 248);
+    transition: all 0.5s ease-in-out;
+}
+
+.linkedin:hover {
+    font-size: 1rem;
+    color: rgb(61, 25, 221);
+    transition: all 0.5s ease-in-out;
+}
+
+.copyright {
+    margin-top: 1rem;
+    font-size: 10px;
+    text-align: center;
+    font-family: 'Urbanist', sans-serif;
+position: fixed;
+right: 10px;
+bottom: 10px;
+}
+
+.copyrightspan {
+    color: blueviolet;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 0.8rem
+}
+}

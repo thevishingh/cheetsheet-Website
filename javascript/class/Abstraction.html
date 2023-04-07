@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/assests/jsfavicon.ico" type="image/x-icon" />
+    <!-- prism.css -->
+    <link rel="stylesheet" href="/prismScript/prism.css" />
+    <!-- custome css -->
+    <link rel="stylesheet" href="/style/html.css" />
+    <title>Abstraction</title>
+</head>
+
+<body>
+    <h1 class="title">
+        <span class="spantitle">Abstraction </span> Code Snippits
+    </h1>
+    <!-- container -->
+    <div class="main-container">
+        <div class="container">
+            <ol class="list">
+                <h3 class="listtitle">Abstraction</h3>
+                <p class="titledescription">
+                    Abstraction is a fundamental concept in object-oriented programming (OOP) that refers to the
+                    practice of hiding the implementation details of an object and exposing only the essential features
+                    to the user. In JavaScript, abstraction is achieved by using abstract classes and interfaces.
+                </p>
+                <p class="titledescription">
+                    An abstract class is a class that cannot be instantiated and is meant to be used as a base class for
+                    other classes. Abstract classes typically contain one or more abstract methods, which are methods
+                    that have a signature but no implementation. These methods must be implemented by the derived
+                    classes.
+                </p>
+                <p class="titledescription">
+                    JavaScript does not support abstract classes natively, but you can achieve similar functionality by
+                    using a combination of function constructors and prototypes.
+                </p>
+                <p class="titledescription">
+                    For example, consider the following code:
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+function Shape() {
+    if (this.constructor === Shape) {
+        throw new Error("Cannot instantiate abstract class Shape");
+    }
+    this.draw = function() {
+        throw new Error("Cannot call abstract method draw from Shape");
+    }
+}
+
+function Circle() {
+    Shape.call(this);
+    this.draw = function() {
+        console.log("Drawing a Circle");
+    }
+}
+Circle.prototype = Object.create(Shape.prototype);
+Circle.prototype.constructor = Circle;
+
+let circle = new Circle();
+circle.draw(); // "Drawing a Circle"
+let shape = new Shape(); // Error: Cannot instantiate abstract class Shape
+</code> </pre>
+                </li>
+                <p class="titledescription">
+                    In this example, the Shape class is an abstract class that cannot be instantiated and contains an
+                    abstract method draw() which throws an error when called. The Circle class inherits from the Shape
+                    class and implements the draw() method providing a specific implementation.
+                </p>
+                <p class="titledescription">
+
+                    Interfaces are another way to achieve abstraction in JavaScript, although it's not a native feature
+                    of javascript. Some libraries like TypeScript provide interfaces. An interface defines a set of
+                    methods that a class must implement but does not provide an implementation for those methods. This
+                    allows developers to ensure that a class has the required methods without specifying how those
+                    methods should be implemented.
+                </p>
+            </ol>
+        </div>
+    </div>
+</body>
+<!-- prism.js -->
+<script src="/prismScript/prism.js"></script>
+
+</html>

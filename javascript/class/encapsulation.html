@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="/assests/jsfavicon.ico"
+      type="image/x-icon"
+    />
+    <!-- prism.css -->
+    <link rel="stylesheet" href="/prismScript/prism.css" />
+    <!-- custome css -->
+    <link rel="stylesheet" href="/style/html.css" />
+    <title>Encapsulation</title>
+  </head>
+
+  <body>
+    <h1 class="title">
+      <span class="spantitle">Encapsulation </span> Code Snippits
+    </h1>
+    <!-- container -->
+    <div class="main-container">
+      <div class="container">
+        <ol class="list">
+          <h3 class="listtitle">Encapsulation</h3>
+          <p class="titledescription">
+            Encapsulation is a fundamental concept in object-oriented programming (OOP) that refers to the practice of hiding the internal details of an object from other objects and code. In JavaScript, encapsulation is achieved by using closures and access modifiers, such as the private and public keywords.
+          </p>
+          <p class="titledescription">
+            JavaScript uses closures to implement encapsulation, which allows developers to create private variables and methods that cannot be accessed from outside the object. For example, consider the following code:
+          </p>
+          <li class="links">
+            <pre class="language-js"><code>
+function Person(name, age) {
+    let privateAge = age;
+    this.name = name;
+
+    this.getAge = function() {
+        return privateAge;
+    }
+}
+
+let person = new Person("John", 30);
+console.log(person.name); // "John"
+console.log(person.privateAge); // undefined
+console.log(person.getAge()); // 30
+</code> </pre>
+          </li>
+          <p class="titledescription">
+            In this example, the privateAge variable is defined inside the constructor function and can only be accessed using the getAge method. This means that the internal state of the object is hidden from other objects and code, providing a level of protection and security.
+          </p>
+          <p class="titledescription">
+            Access modifiers such as private, public and protected are not natively supported in javascript, but it can be implemented using closures as well. In addition, other libraries and frameworks such as TypeScript provide a way to use access modifiers.
+          </p>
+          <p class="titledescription">
+            In conclusion, encapsulation is a fundamental concept in OOP that allows developers to hide the internal details of an object from other objects and code. In JavaScript, encapsulation is achieved by using closures and access modifiers, such as the private and public keywords. This allows developers to protect the internal state of an object and create more robust and maintainable code. Encapsulation is not natively supported in javascript but it can be implemented using closures and other libraries like TypeScript.
+          </p>
+        </ol>
+      </div>
+    </div>
+  </body>
+  <!-- prism.js -->
+  <script src="/prismScript/prism.js"></script>
+</html>

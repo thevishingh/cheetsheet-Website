@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../assests/jsfavicon.ico" type="image/x-icon" />
+    <!-- prism.css -->
+    <link rel="stylesheet" href="../prismScript/prism.css" />
+    <!-- custome css -->
+    <link rel="stylesheet" href="../style/html.css" />
+    <title>Date</title>
+</head>
+
+<body>
+    <h1 class="title"><span class="spantitle">Date</span> Code Snippits</h1>
+    <!-- container -->
+    <div class="main-container">
+        <div class="container">
+            <ol class="list">
+                <h3 class="listtitle">Date</h3>
+                <p class="titledescription">
+                    JavaScript's Date object allows you to work with dates and times in your scripts. It can be used to
+                    get the current date and time, or to manipulate and format dates and times in various ways.
+                </p>
+                <p class="titledescription">
+                    Creating a new Date object is simple. You can either create a new date object with the current date
+                    and time by calling new Date() with no arguments, or you can create a date object with a specific
+                    date and time by passing in a string or numerical values.
+                </p>
+                <!-- methods -->
+                <p class="titledescription">
+                    Here's an example of how you can use the Date object to get the current date and time:
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+var currentDate = new Date();
+console.log(currentDate);
+</code> </pre>
+                </li>
+                <p class="titledescription">
+                    Output: Thu Jan 14 2021 15:15:38 GMT+0530 (India Standard Time)
+                </p>
+                <p class="titledescription">
+                    You can also manipulate the date and time using the various methods available on the Date object.
+                    For example, you can use the setDate() method to set the day of the month, and the setFullYear()
+                </p>
+                <p class="titledescription">
+                    method to set the year.
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+var date = new Date();
+date.setDate(15);
+date.setFullYear(2022);
+console.log(date);
+</code></pre>
+                </li>
+                <p class="titledescription">
+                    Output: Sat Jan 15 2022 15:15:38 GMT+0530 (India Standard Time)
+                </p>
+                <p class="titledescription">
+                    You can also format the date and time using the toLocaleString() method, which allows you to specify
+                    the format and time zone.
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+var date = new Date();
+console.log(date.toLocaleString());
+console.log(date.toLocaleString('en-US', {timeZone: 'UTC'}));
+</code></pre>
+                </li>
+                <p class="titledescription">
+                    Output: 1/14/2021, 3:45:38 PM 1/14/2021, 10:15:38 AM
+                </p>
+                <p class="titledescription">
+                    In this way, you can use the Date object in JavaScript to work with dates and times in your scripts,
+                    and to format and manipulate dates and times in various ways.
+                </p>
+            </ol>
+        </div>
+    </div>
+</body>
+<!-- prism.js -->
+<script src="../prismScript/prism.js"></script>
+
+</html>

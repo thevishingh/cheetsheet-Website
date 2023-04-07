@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../assests/jsfavicon.ico" type="image/x-icon" />
+    <!-- prism.css -->
+    <link rel="stylesheet" href="../prismScript/prism.css" />
+    <!-- custome css -->
+    <link rel="stylesheet" href="../style/html.css" />
+    <title>Document   Object</title>
+</head>
+
+<body>
+    <h1 class="title"><span class="spantitle">Document   Object </span> Code Snippits</h1>
+    <!-- container -->
+    <div class="main-container">
+        <div class="container">
+            <ol class="list">
+                <h3 class="listtitle">Document   Object</h3>
+                <p class="titledescription">
+                    The JavaScript document object is a part of the window object and represents the current web page. It allows developers to access and manipulate the elements of the web page, as well as the Document Object Model (DOM) tree that represents the structure of the web page.
+                </p>
+                <p class="titledescription">
+                    Model (DOM) tree that represents the structure of the web page.
+
+                    One of the most commonly used methods of the document object is the getElementById() method. This method allows developers to access a specific element on the web page by its unique ID. For example, the following code can be used to change the text of an element with the ID "myElement":
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+document.getElementById("myElement").innerHTML = "This is my new text";
+</code> </pre>
+                </li>
+                <p class="titledescription">
+                    Another important method is getElementsByClassName() method which returns a live HTMLCollection of elements with the given class name. It can be used to access multiple elements with the same class name.
+                </p>
+
+                <li class="links">
+                    <pre class="language-js"><code>
+let elements = document.getElementsByClassName("myClass");
+for (let i = 0; i < elements.length; i++) {
+    elements[i].innerHTML = "This is my new text";
+}
+</code></pre>
+                </li>
+                <p class="titledescription">
+                    The document object also provides several methods for creating new elements and adding them to the web page, such as createElement() and createTextNode(). For example, the following code can be used to create a new div element and add it to the web page:
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+let newDiv = document.createElement("div");
+document.body.appendChild(newDiv);
+</code></pre>
+                </li>
+                <p class="titledescription">
+                    It's important to note that the document object is a part of the DOM API and it is supported by all modern browsers, but it's important to check for browser compatibility before using it.
+                </p>
+                <p class="titledescription">
+                    In conclusion, the JavaScript document object provides a powerful set of tools for accessing and manipulating the elements of the web page and the Document Object Model (DOM) tree. Understanding how to use the document object is essential for creating dynamic and interactive web pages, but it's important to keep in mind its limitations and check browser compatibility before using it.
+                </p>
+            </ol>
+        </div>
+    </div>
+</body>
+<!-- prism.js -->
+<script src="../prismScript/prism.js"></script>
+
+</html>

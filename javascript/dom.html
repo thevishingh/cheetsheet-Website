@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../assests/jsfavicon.ico" type="image/x-icon" />
+    <!-- prism.css -->
+    <link rel="stylesheet" href="../prismScript/prism.css" />
+    <!-- custome css -->
+    <link rel="stylesheet" href="../style/html.css" />
+    <title>Dom-Manipulation</title>
+</head>
+
+<body>
+    <h1 class="title"><span class="spantitle">Dom-Manipulation </span> Code Snippits</h1>
+    <!-- container -->
+    <div class="main-container">
+        <div class="container">
+            <ol class="list">
+                <h3 class="listtitle">Dom-Manipulation</h3>
+                <h3 class="listtitle">getElementbyId</h3>
+                <p class="titledescription">
+                    The getElementById() method is a part of the JavaScript document object and it allows developers to
+                    access a specific element on a web page by its unique ID. This method returns the first element that
+                    matches the specified ID, or null if no such element is found.
+                </p>
+                <p class="titledescription">
+                    For example, consider the following HTML code:
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+&ltdiv id="myDiv"&gtThis is my div&lt/div&gt
+</code> </pre>
+                </li>
+                <p class="titledescription">
+                    The following JavaScript code can be used to access the element with the ID "myDiv" and change its
+                    text:
+                </p>
+
+                <li class="links">
+                    <pre class="language-js"><code>
+let myDiv = document.getElementById("myDiv");
+myDiv.innerHTML = "This is my new text";
+</code></pre>
+                </li>
+                <p class="titledescription">
+                    The getElementById() method is a convenient way to access a specific element on a web page, as it
+                    saves developers from having to traverse the entire DOM tree to find the element. This method is
+                    especially useful when working with large and complex web pages, as it allows developers to quickly
+                    and easily access the elements they need.
+                </p>
+                <p class="titledescription">
+                    It's important to note that the ID of an element must be unique within the web page, as the
+                    getElementById() method only returns the first element that matches the specified ID. Also, the
+                    getElementById() method is case-sensitive, meaning that "myDiv" and "mydiv" are considered to be
+                    different IDs.
+                </p>
+                <p class="titledescription">
+                    In conclusion, the getElementById() method is a powerful tool for accessing specific elements on a
+                    web page by their unique ID. Understanding how to use this method is essential for creating dynamic
+                    and interactive web pages, as it allows developers to quickly and easily access the elements they
+                    need. However, it's important to keep in mind that the ID of an element must be unique within the
+                    web page and the method is case-sensitive.
+                </p>
+                <!-- getElementsByClassName -->
+                <h3 class="listtitle">getElementsByClassName</h3>
+                <p class="titledescription">
+                    The getElementsByClassName() method is a part of the JavaScript document object and it allows
+                    developers to access multiple elements on a web page by their class name. This method returns a live
+                </p>
+                <p class="titledescription">
+                    HTMLCollection of elements with the given class name, or an empty HTMLCollection if no such elements
+                    are found.
+                </p>
+                <p class="titledescription">
+                    For example, consider the following HTML code:
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+&ltdiv class="myClass"&gtThis is my div&lt/div&gt
+&ltdiv class="myClass"&gtThis is my div&lt/div&gt
+&ltdiv class="myClass"&gtThis is my div&lt/div&gt
+</code></pre>
+                </li>
+
+                <p class="titledescription">
+                    The following JavaScript code can be used to access the elements with the class name "myClass" and
+                    change their text:
+                </p>
+
+                <li class="links">
+                    <pre class="language-js"><code>
+let elements = document.getElementsByClassName("myClass");
+for (let i = 0; i < elements.length; i++) {
+    elements[i].innerHTML = "This is my new text";
+}
+</code></pre>
+                </li>
+                <p class="titledescription">
+                    The getElementsByClassName() method is a convenient way to access multiple elements on a web page,
+                    as it allows developers to select elements based on their class name rather than their unique ID.
+                    This method is especially useful when working with large and complex web pages, as it allows
+                    developers to quickly and easily access multiple elements that share the same class name.
+                </p>
+                <p class="titledescription">
+                    It's important to note that the getElementsByClassName() method returns a live HTMLCollection, which
+                    means that the collection is updated automatically as elements are added or removed from the web
+                    page. Also, this method is case-sensitive, meaning that "myClass" and "myclass" are considered to be
+                    different class names.
+                </p>
+                <p class="titledescription">
+                    In conclusion, the getElementsByClassName() method is a powerful tool for accessing multiple
+                    elements on a web page by their class name. Understanding how to use this method is essential for
+                    creating dynamic and interactive web pages, as it allows developers to quickly and easily access
+                    multiple elements that share the same class name. However, it's important to keep in mind that the
+                    method returns a live HTMLCollection and is case-sensitive.
+                </p>
+                <!-- getElementsByName -->
+                <h3 class="listtitle">getElementsByName</h3>
+                <p class="titledescription">
+                    The getElementsByName() method is a part of the JavaScript document object and it allows developers
+                    to access multiple elements on a web page by their name attribute. This method returns a live
+                </p>
+                <p class="titledescription">
+                    HTMLCollection of elements with the given name attribute, or an empty HTMLCollection if no such
+                    elements are found.
+                </p>
+                <p class="titledescription">
+                    For example, consider the following HTML code:
+                </p>
+
+                <li class="links">
+                    <pre class="language-js"><code>
+&ltinput type="text" name="myName" value=""&gt
+&ltinput type="text" name="myName" value=""&gt
+&ltinput type="text" name="myName" value=""&gt
+</code></pre>
+                </li>
+                <p class="titledescription">
+                    The following JavaScript code can be used to access the elements with the name attribute "myName"
+                    and change their value:
+                </p>
+
+                <li class="links">
+                    <pre class="language-js"><code>
+let elements = document.getElementsByName("myName");
+for (let i = 0; i < elements.length; i++) {
+    elements[i].value = "This is my new value";
+}</code></pre>
+                </li>
+                <p class="titledescription">
+                    The getElementsByName() method is a convenient way to access multiple elements on a web page, as it
+                    allows developers to select elements based on their name attribute, which is a common way to group
+                    elements with similar functionality. For example, radio buttons or checkboxes that are related to a
+                    certain topic should have the same name attribute. This method is especially useful when working
+                    with large and complex web pages, as it allows developers to quickly and easily access multiple
+                    elements that share the same name attribute.
+                </p>
+                <p class="titledescription">
+                    It's important to note that the getElementsByName() method returns a live HTMLCollection, which
+                    means that the collection is updated automatically as elements are added or removed from the web
+                    page. Also, this method is case-sensitive, meaning that "myName" and "myname" are considered to be
+                    different name attributes.
+                </p>
+                <p class="titledescription">
+                    In conclusion, the getElementsByName() method is a powerful tool for accessing multiple elements on
+                    a web page by their name attribute. Understanding how to use this method is essential for creating
+                    dynamic and interactive web pages, as it allows developers to quickly and easily access multiple
+                    elements that share the same name attribute. However, it's important to keep in mind that the method
+                    returns a live HTMLCollection and is case-sensitive. Additionally, this method is mostly used for
+                    form elements like radio buttons, checkboxes and input fields.
+                </p>
+                <!--  -->
+                <!-- getElementsByName -->
+                <h3 class="listtitle">getElementsByTagName</h3>
+                <p class="titledescription">
+                    The getElementsByTagName() method is a part of the JavaScript document object and it allows
+                    developers to access multiple elements on a web page by their HTML tag name. This method returns a
+                    live
+                </p>
+                <p class="titledescription">
+                    HTMLCollection of elements with the given tag name, or an empty HTMLCollection if no such elements
+                    are found.
+                </p>
+                <p class="titledescription">
+                    For example, consider the following HTML code:
+                </p>
+
+                <li class="links">
+                    <pre class="language-js"><code>
+&ltp&gtThis is my paragraph &lt/p&gt
+&ltp&gtThis is my paragraph&lt/p&gt
+&ltp&gtThis is my paragraph&lt/p&gt
+</code></pre>
+                </li>
+                <p class="titledescription">
+                    The following JavaScript code can be used to access the &ltp&gt elements on the web page and change
+                    their text:
+                </p>
+
+                <li class="links">
+                    <pre class="language-js"><code>
+let elements = document.getElementsByTagName("p");
+for (let i = 0; i < elements.length; i++) {
+    elements[i].innerHTML = "This is my new text";
+}</code></pre>
+                </li>
+                <p class="titledescription">
+                    The getElementsByTagName() method is a convenient way to access multiple elements on a web page, as
+                    it allows developers to select elements based on their HTML tag name. This method is especially
+                    useful when working with large and complex web pages, as it allows developers to quickly and easily
+                    access multiple elements of the same type.
+                </p>
+                <p class="titledescription">
+                    It's important to note that the getElementsByTagName() method returns a live HTMLCollection, which
+                    means that the collection is updated automatically as elements are added or removed from the web
+                    page. Also, this method is case-sensitive, meaning that "p" and "P" are considered to be different
+                    tag names.
+                </p>
+                <p class="titledescription">
+                    In conclusion, the getElementsByTagName() method is a powerful tool for accessing multiple elements
+                    on a web page by their HTML tag name. Understanding how to use this method is essential for creating
+                    dynamic and interactive web pages, as it allows developers to quickly and easily access multiple
+                    elements of the same type. However, it's important to keep in mind that the method returns a live
+                    HTMLCollection and is case-sensitive. It's a good practice to use this method in combination with
+                    other methods like getElementById and getElementsByClassName to target specific elements on the web
+                    p
+                </p>
+                <!--  innerHTML -->
+                <h3 class="listtitle">innerHTML</h3>
+                <p class="titledescription">
+                    The innerHTML property is a part of the JavaScript HTMLElement object and it allows developers to
+                    access and manipulate the HTML content of an element. The innerHTML property returns the content
+                    between the
+                </p>
+                <p class="titledescription">
+                    opening and closing tags of an element, as a string of HTML.
+                </p>
+                <p class="titledescription">
+                    For example, consider the following HTML code:
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+<div id="myDiv">
+    &ltp&gtThis is my paragraph &lt/p&gt
+    &ltp&gtThis is my paragraph&lt/p&gt
+    &ltp&gtThis is my paragraph&lt/p&gt
+</div>
+</code></pre>
+                </li>
+                <p class="titledescription">
+                    The following JavaScript code can be used to access the content of the
+                <div> element with the ID "myDiv" and change its text:
+                    </p>
+
+                    <li class="links">
+                        <pre class="language-js"><code>
+let myDiv = document.getElementById("myDiv");
+myDiv.innerHTML = "&ltp&gtThis is my new text&lt/p&gt";
+</code></pre>
+                    </li>
+
+                    <p class="titledescription">
+                        The innerHTML property is a powerful tool for manipulating the HTML content of an element.
+                        Developers can use it to add, remove, or replace elements, as well as change the text and
+                        attributes of existing elements.
+                    </p>
+
+                    <p class="titledescription">
+                        elements.
+
+                        It's important to note that the innerHTML property can be used to insert any valid HTML code,
+                        including scripts and event handlers. This can be a powerful feature, but it can also pose a
+                        security risk if the HTML is not properly sanitized. Also, it's important to note that when you
+                        set the innerHTML property, the content is completely replaced, any previous content, event
+                        handlers, and other properties are lost.
+                    </p>
+
+                    <p class="titledescription">
+                        In conclusion, the innerHTML property is a powerful tool for manipulating the HTML content of an
+                        element in JavaScript. Understanding how to use this property is essential for creating dynamic
+                        and interactive web pages, as it allows developers to easily add, remove, or replace elements,
+                        as well as change the text and attributes of existing elements. However, it's important to keep
+                        in mind that this property can pose a security risk if the HTML is not properly sanitized and
+                        also, it completely replaces the content when set.
+                    </p>
+                    <!-- outerHTML -->
+                    <h3 class="listtitle">outerHTML</h3>
+                    <p class="titledescription">
+                        The outerHTML property is a part of the JavaScript HTMLElement object and it allows developers
+                        to access and manipulate the entire HTML of an element, including the element's own tags. The
+                        outerHTML property returns the entire HTML of an element, as a string of HTML.
+                    </p>
+                    <p class="titledescription">
+                        For example, consider the following HTML code:
+                    </p>
+
+                    <li class="links">
+                        <pre class="language-js"><code>
+<div id="myDiv">
+    &ltp&gtThis is my paragraph &lt/p&gt
+    &ltp&gtThis is my paragraph&lt/p&gt
+    &ltp&gtThis is my paragraph&lt/p&gt
+</div>
+</code></pre>
+                    </li>
+                    <p class="titledescription">
+                        The following JavaScript code can be used to access the
+                    <div> element with the ID "myDiv" and change its content:
+                        </p>
+
+                        <li class="links">
+                            <pre class="language-js"><code>
+let myDiv = document.getElementById("myDiv");
+myDiv.outerHTML = "&ltdiv&gt&ltp&gtThis is my new text&lt/p&gt&ltdiv&gt";
+</code></pre>
+                        </li>
+
+                        <p class="titledescription">
+                            The outerHTML property is a powerful tool for manipulating the entire HTML of an element.
+                            Developers can use it to add, remove, or replace elements, as well as change the text and
+                            attributes of existing elements. The main difference between outerHTML and innerHTML is that
+                            outerHTML allows you to change the entire element, including its own tags, whereas innerHTML
+                            only allows you to change the content within the element.
+                        </p>
+
+                        <p class="titledescription">
+                            It's important to note that the outerHTML property can be used to insert any valid HTML
+                            code, including scripts and event handlers. This can be a powerful feature, but it can also
+                            pose a security risk if the HTML is not properly sanitized. Also, it's important to note
+                            that when you set the outerHTML property, the entire element is replaced, any previous
+                            content, event handlers, and other properties are lost.
+                        </p>
+
+                        <p class="titledescription">
+                            In conclusion, the outerHTML property is a powerful tool for manipulating the entire HTML of
+                            an element in JavaScript. Understanding how to use this property is essential for creating
+                            dynamic and interactive web pages, as it allows developers to easily add, remove, or replace
+                            elements, as well as change the text and attributes of existing elements. However, it's
+                            important to keep in mind that this property can pose a security risk if the HTML is not
+                            properly sanitized and also, it completely replaces the entire element when set.
+                        </p>
+
+
+
+            </ol>
+        </div>
+    </div>
+</body>
+<!-- prism.js -->
+<script src="../prismScript/prism.js"></script>
+
+</html>

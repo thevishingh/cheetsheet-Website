@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../assests/jsfavicon.ico" type="image/x-icon">
+    <!-- prism.css -->
+    <link rel="stylesheet" href="../prismScript/prism.css">
+    <!-- custome css -->
+    <link rel="stylesheet" href="../style/html.css">
+    <title>Primitives and Objects </title>
+</head>
+<style>
+    .rarr {
+        color: #fff;
+        font-family: cursive;
+    }
+</style>
+
+<body>
+    <h1 class="title"><span class="spantitle">Primitives and Objects </span> Code Snippits</h1>
+
+    <!-- container -->
+    <div class="main-container">
+        <div class="container">
+            <ol class="list">
+                <h3 class="listtitle">Primitives and Objects ?</h3>
+                <p class="titledescription">
+                    In JavaScript, there are two main types of data: primitives and objects.
+                </p>
+                <h3 class="listtitle">Primitives</h3>
+                <p class="titledescription">
+                    Primitives are the simplest and most basic data types in JavaScript. They include
+                </p>
+                <li class="rarr">&rarr;Numbers (e.g. 10, 3.14)</li>
+                <li class="rarr">&rarr; Strings (e.g. "hello", 'world')</li>
+                <li class="rarr">&rarr; Booleans (e.g. true, false)</li>
+                <li class="rarr">&rarr; Null (a special value that represents an absence of value)</li>
+                <li class="rarr">&rarr;Undefined (a special value that represents an uninitialized variable)</li>
+                <li class="links">
+                    <p class="titledescription">
+                        Primitives are immutable, which means that once they are created, they cannot be changed. For
+                        example:
+                    </p>
+                    <pre class="language-js"><code>let x = 10;
+x = 20; // x is now 20
+                        </code>
+              </pre>
+                    <p class="titledescription">
+                        In this example, the value of "x" is changed from 10 to 20. However, this does not change the
+                        value of the primitive itself, but rather creates a new primitive with the value of 20.
+                    </p>
+                </li>
+
+                <!-- Object -->
+                <h3 class="listtitle">Object</h3>
+                <p class="titledescription">
+                    Objects are more complex data types in JavaScript and are used to represent real-world objects or
+                    abstract concepts. They are composed of key-value pairs, where the keys are strings and the values
+                    can be any data type (including primitives and other objects).
+                </p>
+                <p class="titledescription">
+                    Objects are mutable, which means that they can be changed after they are created. For example:
+                </p>
+                <pre class="language-js"><code>let obj = { name: "John", age: 30 };
+obj.age = 31; // the age property of obj is now 31</code> </pre>
+
+                <p class="titledescription">
+                    In this example, the "age" property of the "obj" object is changed from 30 to 31. This changes the
+                    value of the object itself, rather than creating a new object.
+
+                    There are several other data types in JavaScript that are classified as objects, including arrays,
+                    functions, and dates. These data types behave similarly to objects in that they are mutable and can
+                    be modified after they are created.
+                </p>
+                <!-- conclusion -->
+                <h3 class="listtitle">Conclusion</h3>
+                <p class="titledescription">
+                    In summary, primitives are the simplest data types in JavaScript and are immutable. Objects are more complex data types that are used to represent real-world objects or abstract concepts and are mutable. It is important to understand the differences between these two types of data in order to write effective and maintainable code in JavaScript.
+                </p>
+            </ol>
+        </div>
+    </div>
+</body>
+<!-- prism.js -->
+<script src="../prismScript/prism.js"></script>
+
+</html>

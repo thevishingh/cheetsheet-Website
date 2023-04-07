@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="/assests/jsfavicon.ico"
+      type="image/x-icon"
+    />
+    <!-- prism.css -->
+    <link rel="stylesheet" href="/prismScript/prism.css" />
+    <!-- custome css -->
+    <link rel="stylesheet" href="/style/html.css" />
+    <title>Inheritance</title>
+  </head>
+
+  <body>
+    <h1 class="title">
+      <span class="spantitle">Inheritance </span> Code Snippits
+    </h1>
+    <!-- container -->
+    <div class="main-container">
+      <div class="container">
+        <ol class="list">
+          <h3 class="listtitle">Inheritance</h3>
+          <p class="titledescription">
+            Polymorphism is a fundamental concept in object-oriented programming (OOP) that refers to the ability of different objects to respond to the same method call in different ways. In JavaScript, polymorphism is achieved by using function overloading and function overriding.
+          </p>
+          <p class="titledescription">
+            Function overloading refers to the ability of a function to have multiple implementations based on the number and/or types of arguments passed to it. JavaScript does not support function overloading natively, however, you can achieve similar functionality by using the arguments object and checking the number and/or types of arguments passed to the function.
+          </p>
+          <p class="titledescription">
+            Function overriding refers to the ability of a subclass to provide a different implementation of a method that is already provided by its superclass. In JavaScript, this can be achieved by reassigning the prototype of the subclass.
+          </p>
+          <p class="titledescription">
+            For example, consider the following code:
+          </p>
+          <li class="links">
+            <pre class="language-js"><code>
+class Shape {
+    constructor(name) {
+        this.name = name;
+    }
+    draw() {
+        console.log(`Drawing a ${this.name}`);
+    }
+}
+
+class Circle extends Shape {
+    draw() {
+        console.log(`Drawing a Circle`);
+    }
+}
+
+class Square extends Shape {
+    draw() {
+        console.log(`Drawing a Square`);
+    }
+}
+
+let shape = new Shape("Shape");
+let circle = new Circle();
+let square = new Square();
+
+shape.draw(); //Drawing a Shape
+circle.draw(); //Drawing a Circle
+square.draw(); //Drawing a Square
+</code> </pre>
+          </li>
+          <p class="titledescription">
+            In this example, the draw() method is overridden in the subclasses Circle and Square, providing a different implementation of the method that is already provided by the superclass Shape
+          </p>
+          <p class="titledescription">
+            In conclusion, polymorphism is a fundamental concept in OOP that refers to the ability of different objects to respond to the same method call in different ways.
+          </p>
+        </ol>
+      </div>
+    </div>
+  </body>
+  <!-- prism.js -->
+  <script src="/prismScript/prism.js"></script>
+</html>

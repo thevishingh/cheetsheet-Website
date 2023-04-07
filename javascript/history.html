@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../assests/jsfavicon.ico" type="image/x-icon" />
+    <!-- prism.css -->
+    <link rel="stylesheet" href="../prismScript/prism.css" />
+    <!-- custome css -->
+    <link rel="stylesheet" href="../style/html.css" />
+    <title>History Object</title>
+</head>
+
+<body>
+    <h1 class="title"><span class="spantitle">History Object </span> Code Snippits</h1>
+    <!-- container -->
+    <div class="main-container">
+        <div class="container">
+            <ol class="list">
+                <h3 class="listtitle">History Object</h3>
+                <p class="titledescription">
+                    The JavaScript history object is a part of the window object and provides access to the browser's history. It allows developers to manipulate the browser's history and change the current URL without reloading the page.
+                </p>
+                <p class="titledescription">
+                    One of the most commonly used methods of the history object is the pushState() method. This method allows developers to add a new entry to the browser's history and change the current URL without reloading the page. For example, the following code can be used to change the current URL to <a href="https://www.example.com/">https://www.example.com/</a> and add an entry to the browser's history:
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+history.pushState(null, null, "https://www.example.com");
+</code> </pre>
+                </li>
+                <p class="titledescription">
+                    Another important method is the replaceState() method which is similar to pushState() but it replaces the current entry in the history instead of creating a new one.
+                </p>
+                <p class="titledescription">
+                    It is also possible to navigate through the browser's history using the back() and forward() methods. These methods allow developers to navigate to the previous or next page in the history, respectively. For example, the following code can be used to navigate to the previous page in the history:
+                </p>
+
+                <li class="links">
+                    <pre class="language-js"><code>
+history.back();
+</code></pre>
+                </li>
+                <p class="titledescription">
+                    The length property of the history object returns the number of entries in the browser's history. Developers can use this property to check how many pages the user has visited and provide appropriate navigation options.
+                </p>
+                <p class="titledescription">
+                    It's important to note that the history object is not a perfect solution for all navigation needs and it can only be used to navigate within the same origin. Also, the history object is part of the HTML5 specification and it is not supported in all browsers, so it's important to check the browser compatibility before using it.
+
+                    In conclusion, the JavaScript history object provides a powerful set of tools for manipulating the browser's history and changing the current URL without reloading the page. Understanding how to use the history object is essential for creating single-page applications (SPA) and improving the user experience. However, it's important to keep in mind its limitations and check the browser compatibility before using it.
+                </p>
+            </ol>
+        </div>
+    </div>
+</body>
+<!-- prism.js -->
+<script src="../prismScript/prism.js"></script>
+
+</html>

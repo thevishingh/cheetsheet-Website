@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="/assests/jsfavicon.ico"
+      type="image/x-icon"
+    />
+    <!-- prism.css -->
+    <link rel="stylesheet" href="/prismScript/prism.css" />
+    <!-- custome css -->
+    <link rel="stylesheet" href="/style/html.css" />
+    <title>Objects</title>
+  </head>
+
+  <body>
+    <h1 class="title"><span class="spantitle">Objects </span> Code Snippits</h1>
+    <!-- container -->
+    <div class="main-container">
+      <div class="container">
+        <ol class="list">
+          <h3 class="listtitle">Objects</h3>
+          <p class="titledescription">
+            Object-oriented programming (OOP) is a programming paradigm that
+            uses objects and their interactions to design applications and
+            computer programs. In JavaScript, objects are a fundamental concept,
+            and they are used to represent real-world entities, such as a
+            person, a car, or a bank account.
+          </p>
+          <p class="titledescription">
+            JavaScript objects are created using the {} notation, also known as
+            object literal notation. For example, the following code creates an
+            object that represents a person:
+          </p>
+          <li class="links">
+            <pre class="language-js"><code>
+let person = {
+    name: "John",
+    age: 30,
+    greet: function() {
+        return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
+    }
+};
+</code> </pre>
+          </li>
+          <p class="titledescription">
+            You can access the properties of an object using the dot notation
+            (.) or the bracket notation ([]). For example, you can access the
+            name and age properties of the person object using:
+          </p>
+          <li class="links">
+            <pre class="language-js"><code>
+console.log(person.name); // "John"
+console.log(person["age"]); // 30
+</code></pre>
+          </li>
+          <p class="titledescription">
+            You can also add, update and delete properties to an object by using
+            the dot notation or the bracket notation.
+          </p>
+          <li class="links">
+            <pre class="language-js"><code>
+person.address = "New York";
+person["phone"] = "123-456-7890";
+delete person.age;
+</code></pre>
+          </li>
+          <p class="titledescription">
+            JavaScript objects also have built-in methods such as
+            hasOwnProperty(), valueOf(), toString() etc. Objects in JavaScript
+            can also be created using a constructor function, which is a special
+            kind of function that is used to create and initialize new objects.
+            For example, the following code defines a constructor function
+            Person that can be used to create new Person objects:
+          </p>
+          <li class="links">
+            <pre class="language-js"><code>
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+    this.greet = function() {
+        return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
+    }
+}
+let person1 = new Person("John", 30);
+let person2 = new Person("Jane", 25);
+</code></pre>
+          </li>
+          <p class="titledescription">
+            In addition, JavaScript also provides a Object() constructor
+            function that can be used to create an empty object with no
+            properties.
+          </p>
+          <p class="titledescription">
+            In conclusion, objects in JavaScript are a fundamental concept that
+            are used to represent real-world entities. They can be created using
+            object literal notation or constructor functions, and they have
+            properties and methods that can be accessed and manipulated.
+            Understanding how to work with objects in JavaScript is essential
+            for creating robust and maintainable code, and also it's the
+            foundation of OOP in JavaScript
+          </p>
+        </ol>
+      </div>
+    </div>
+  </body>
+  <!-- prism.js -->
+  <script src="/prismScript/prism.js"></script>
+</html>

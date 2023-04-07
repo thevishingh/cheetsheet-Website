@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../assests/jsfavicon.ico" type="image/x-icon" />
+    <!-- prism.css -->
+    <link rel="stylesheet" href="../prismScript/prism.css" />
+    <!-- custome css -->
+    <link rel="stylesheet" href="../style/html.css" />
+    <title>String</title>
+</head>
+
+<body>
+    <h1 class="title"><span class="spantitle">Strings </span> Code Snippits</h1>
+
+    <!-- container -->
+    <div class="main-container">
+        <div class="container">
+            <ol class="list">
+                <h3 class="listtitle">Strings</h3>
+                <p class="titledescription">
+                    One of the most important aspects of JavaScript is its ability to
+                    manipulate strings, which are sequences of characters. In this blog
+                    post, we will explore the basics of JavaScript strings and the
+                    various string methods that can be used to manipulate them.
+                </p>
+                <p class="titledescription">
+                    A string in JavaScript is a sequence of characters enclosed in
+                    either single or double quotes. For example, the following are valid
+                    strings in JavaScript:
+                </p>
+
+                <li class="links">
+                    <pre class="language-js"><code>
+"Hello World"
+'Hello World'</code></pre>
+                </li>
+                <p class="titledescription">
+                    JavaScript provides a number of built-in methods for manipulating strings. Some of the most commonly
+                    used string methods are:
+                </p>
+                <p class="titledescription">
+                    <span>length</span> - This method returns the number of characters in a string. For example, the
+                    following code will return 11:
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+var str = "Hello World";
+console.log(str.length);
+</code></pre>
+                </li>
+                <p class="titledescription">
+                    <span>concat</span> - This method is used to concatenate (combine) two or more strings. For example,
+                    the following code will return "Hello World":
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+var str1 = "Hello";
+var str2 = " World";
+console.log(str1.concat(str2));
+           </code></pre>
+                </li>
+                <p class="titledescription">
+                    <span>slice</span> - This method is used to extract a portion of a string. For example, the
+                    following code will return "World":"Hello World"
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+var str = "Hello World";
+console.log(str.slice(6));
+            </code></pre>
+                </li>
+                <p class="titledescription">
+                    <span>indexOf </span> - This method is used to find the index of a specific character or substring
+                    in a string. For example, the following code will return 6:
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+var str = "Hello World";
+console.log(str.indexOf("W"));
+
+            </code></pre>
+                </li>
+                <p class="titledescription">
+                    <span>replace </span> - This method is used to replace a specific character or substring in a
+                    string. For example, the following code will return "Hello Universe":
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+var str = "Hello World";
+console.log(str.replace("World", "Universe"));
+            </code></pre>
+                </li>
+                <p class="titledescription">
+                    <span>toUpperCase </span> and <span>toLowerCase</span> - These methods are used to convert a string
+                    to uppercase or lowercase letters. For example, the following code will return "HELLO WORLD" and
+                    "hello world" respectively:
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+var str = "Hello World";
+console.log(str.toUpperCase());
+console.log(str.toLowerCase());</code></pre>
+                </li>
+                <p class="titledescription">
+                    These are just a few of the many string methods available in JavaScript. By understanding the basics
+                    of strings and the various methods that can be used to manipulate them, you can create more dynamic
+                    and interactive web pages. So, start experimenting with different string methods and see what you
+                    can create!
+                </p>
+            </ol>
+        </div>
+    </div>
+</body>
+<!-- prism.js -->
+<script src="../prismScript/prism.js"></script>
+
+</html>

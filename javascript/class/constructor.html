@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/assests/jsfavicon.ico" type="image/x-icon" />
+    <!-- prism.css -->
+    <link rel="stylesheet" href="/prismScript/prism.css" />
+    <!-- custome css -->
+    <link rel="stylesheet" href="/style/html.css" />
+    <title>Constructor</title>
+</head>
+
+<body>
+    <h1 class="title"><span class="spantitle">Constructor </span> Code Snippits</h1>
+    <!-- container -->
+    <div class="main-container">
+        <div class="container">
+            <ol class="list">
+                <h3 class="listtitle">Constructor</h3>
+                <p class="titledescription">
+                    The constructor is a special method that is used in object-oriented programming (OOP) to create and
+                    initialize new objects. In JavaScript, constructors are used to create objects that share the same
+                    properties and methods, and they are defined using the constructor <span>keyword</span>.
+                </p>
+                <p class="titledescription">
+                    A constructor function is defined using the function keyword, followed by the function name, which
+                    is typically the name of the class. The constructor function takes in any required parameters and
+                    assigns them to the object's properties.
+                </p>
+                <p class="titledescription">
+                    For example, consider the following constructor function Person that defines a person's name and
+                    age:
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+}
+</code> </pre>
+                </li>
+                <p class="titledescription">
+                    To create a new object using the constructor function, you use the new keyword followed by the
+                    function name and any required parameters:
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+let person1 = new Person("John", 30);
+let person2 = new Person("Jane", 25);
+</code></pre>
+                </li>
+                <p class="titledescription">
+                    The this keyword inside the constructor function refers to the current object being created. The
+                    this keyword is used to assign the properties passed in as arguments to the new object being
+                    created.
+                </p>
+                <p class="titledescription">
+                    In addition to initializing properties, constructors can also define methods for objects created
+                    from the constructor. For example, you can add a method called greet() that returns a greeting
+                    message
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+function Person(name, age) {
+this.name = name;
+this.age = age;
+this.greet = function() {
+return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
+}
+}</code></pre>
+                </li>
+            </ol>
+        </div>
+    </div>
+</body>
+<!-- prism.js -->
+<script src="/prismScript/prism.js"></script>
+
+</html>

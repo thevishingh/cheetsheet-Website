@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../assests/jsfavicon.ico" type="image/x-icon">
+    <!-- prism css -->
+    <link rel="stylesheet" href="../prismScript/prism.css">
+    <!-- custome css -->
+    <link rel="stylesheet" href="../style/html.css">
+    <title>Variables</title>
+</head>
+<style>
+    .rarr {
+        color: #fff;
+        font-family: cursive;
+    }
+</style>
+
+<body>
+    <h1 class="title"><span class="spantitle">Variables</span> Code Snippits</h1>
+
+    <!-- container -->
+    <div class="main-container">
+        <div class="container">
+            <ol class="list">
+                <h3 class="listtitle">What are Variables?</h3>
+                <p class="titledescription">
+                    In JavaScript, variables are used to store data. They are an essential part of any programming
+                    language, as they allow you to store, retrieve, and manipulate data in your programs.
+
+                    There are a few different ways to declare variables in JavaScript, each with its own syntax and
+                    rules. In this blog post, we'll take a look at the different types of variables available in
+                    JavaScript and how to use them.
+                </p>
+                <h3 class="listtitle">Declaring Variables</h3>
+                <p class="titledescription">
+                    To declare a variable in JavaScript, you use the "var" keyword followed by the name of the variable
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>var x;</code>
+                    </pre>
+                </li>
+                <!-- assined value -->
+                <p class="titledescription">
+                    This declares a variable called "x" but does not assign any value to it. You can also assign a value
+                    to a variable when you declare it, like this
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>var x = 10;</code>
+                    </pre>
+                </li>
+                <p class="titledescription">
+                    In JavaScript, you can also use the "let" and "const" keywords to declare variables. The "let"
+                    keyword is used to declare a variable that can be reassigned later, while the "const" keyword is
+                    used to declare a variable that cannot be reassigned. For example
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>let y = 20;
+const z = 30;</code>
+                    </pre>
+                    <p class="titledescription">In this example, "y" is a variable that can be reassigned, while "z" is
+                        a constant that cannot be reassigned</p>
+                </li>
+                <!-- Data types -->
+                <h3 class="listtitle">Data Types</h3>
+                <p class="titledescription">
+                    In JavaScript, there are several data types that you can use to store different types of data. Some
+                    common data types include:
+                </p>
+                <li class="rarr">&rarr; Numbers (e.g. 10, 3.14)</li>
+                <li class="rarr">&rarr; Strings (e.g. "hello", 'world')</li>
+                <li class="rarr">&rarr; Booleans (e.g. true, false)</li>
+                <li class="rarr">&rarr; Arrays (e.g. [1, 2, 3])</li>
+                <li class="rarr">&rarr; Objects (e.g. { name: "John", age: 30 })</li>
+                <!-- Variables Naming rule -->
+                <h3 class="listtitle">Variable Naming Rules</h3>
+                <p class="titledescription">
+                    JavaScript is a dynamically-typed language, which means that you don't have to specify the data type
+                    of a variable when you declare it. The data type of a variable is determined by the value that is
+                    assigned to it. For example
+                </p>
+                <pre class="language-js"><code>var x = 10; // x is a number
+var y = "hello"; // y is a string
+var z = [1, 2, 3]; // z is an array</code></pre>
+                <!-- rulw -->
+                <h3 class="listtitle">Rules</h3>
+                <p class="titledescription">
+                    There are a few rules that you need to follow when naming variables in JavaScript
+                </p>
+                <li class="rarr">&rarr; Variable names can only contain letters, digits, underscores, and dollar signs
+                </li>
+                <li class="rarr">&rarr;Variable names cannot start with a digit</li>
+                <li class="rarr">&rarr; Variable names are case-sensitive.</li>
+                <p class="titledescription">
+                    It is also a good practice to use descriptive and meaningful names for your variables, as this makes
+                    your code easier to read and understand.
+                </p>
+                <h3 class="listtitle">Using Variables</h3>
+                <p class="titledescription">
+                    Once you have declared a variable, you can use it to store and retrieve data in your program. For
+                    example:
+                </p>
+                <pre class="language-js"><code>var x = 10;
+console.log(x); // prints 10
+x = "hello";
+console.log(x); // prints "hello"
+                    </code></pre>
+                <p class="titledescription">
+                    You can also perform various operations on variables, such as mathematical calculations, string
+                    concatenation, and more. For example:
+                </p>
+                <pre class="language-js"><code>var x = 10;
+var y = 20;
+var z = x + y; // z is 30
+
+var str1 = "hello";
+var str2 = "world";
+var str3 = str1 + " " + str2; // str3 is "hello world"
+                        </code></pre>
+
+                <!-- Var, le And const  -->
+                <h3 class="listtitle">var vs let vs const</h3>
+                <p class="titledescription">
+                    In JavaScript, there are three ways to declare variables: var, let, and const. Each of these
+                    keywords has its own rules and uses, and it is important to understand the differences between them
+                    in order to write effective and maintainable code
+                </p>
+                <!-- Var -->
+                <h3 class="listtitle">var </h3>
+                <p class="titledescription">
+                    The "var" keyword is used to declare variables in JavaScript. It was introduced in the early days of
+                    the language and was the only way to declare variables for a long time. However, the "var" keyword
+                    has some limitations and has been largely replaced by the "let" and "const" keywords in modern
+                    JavaScript.
+
+                    One of the main issues with "var" is that it is function-scoped, rather than block-scoped. This
+                    means that variables declared with "var" are accessible within the entire function in which they are
+                    declared, rather than just within the block of code in which they appear. This can lead to
+                    unexpected behavior and can make it difficult to reason about the scope of variables in your code.
+                </p>
+                <!-- let -->
+                <h3 class="listtitle">let </h3>
+                <p class="titledescription">
+                    The "let" keyword was introduced in ECMAScript 6 (also known as ES6) and is used to declare
+                    variables that can be reassigned later. "let" variables are block-scoped, which means that they are
+                    only accessible within the block of code in which they are declared. This makes them more
+                    predictable and easier to reason about than "var" variables.
+
+                    For example:
+                </p>
+                <!-- codes snippites -->
+                <pre class="language-js"><code>
+if (x > 10) {
+let y = 20;
+console.log(y); // 20
+}
+console.log(y); // ReferenceError: y is not defined
+                          
+                        </code></pre>
+                        <p class="titledescription">
+                            In this example, the "y" variable is declared with the "let" keyword and is only accessible within the block of the if statement. If you try to access it outside of the block, you will get a "ReferenceError" because "y" is not defined in that scope.
+                        </p>
+                <!-- const -->
+                <h3 class="listtitle">const</h3>
+                <p class="titledescription">
+                    The "const" keyword was also introduced in ES6 and is used to declare variables that cannot be reassigned later. "const" variables are also block-scoped and behave similarly to "let" variables in that respect. However, the main difference is that "const" variables must be initialized with a value when they are declared and cannot be reassigned later.
+
+                    For example:
+                    <pre class="language-js"><code>
+const PI = 3.14;
+PI = 3.14159; // TypeError: Assignment to constant variable.
+<code></pre>
+                </p>
+
+                <!-- conclusion -->
+                <h3 class="listtitle">Conclusion</h3>
+                <p class="titledescription">
+                    In summary, "var" is an old way of declaring variables that is function-scoped and can be reassigned. "let" is a newer way of declaring variables that is block-scoped and can be reassigned. "const" is a newer way of declaring variables that is block-scoped and cannot be reassigned. In modern JavaScript, it is generally recommended to use "let" and "const" instead of "var," as they provide better scoping and make it easier to write maintainable code.
+                </p>
+            </ol>
+
+        </div>
+    </div>
+</body>
+<script src="../prismScript/prism.js"></script>
+
+</html>

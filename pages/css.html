@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- prism css -->
+    <link rel="stylesheet" href="../prismScript/prism.css">
+    <!-- custome css -->
+    <link rel="stylesheet" href="../style/html.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class="title">
+        <h1 class="title"><span class="spantitle">CSS</span> Code Snippits</h1>
+
+        <!-- container -->
+        <div class="main-container">
+            <div class="container">
+                <ol class="list">
+                    <h3 class="listtitle">INTRODUCTION TO CSS</h3>
+                    <p class="titledescription">
+                        To specify formatting within an HTML document (fonts, layout, background, colours, etc. )
+                        <br>
+                        Authors have to apply separate tags to different parts to format The term CSS pertains to
+                        <span style="text-decoration: underline;">Cascading Style Sheets</span> which are used to
+                        specify your document's style <br> While
+                        HTML is utilized
+                        for structuring a web page <br> (the headlines and paragraphs, as well as the ability to include
+                        images, video, and other elements), <br> CSS specifies your page layout, colours, and fonts. CSS
+                        is
+                        used to bring style to your web pages.
+                    </p>
+                    <h3 class="listtitle">1. TYPES OF CSS</h3>
+                    <p class="titledescription">
+                        There are 3 types of CSS
+                        <br>
+                        <br>
+                        &rarr; <span class="brtag">External CSS</span> <br>
+                        &rarr; <span class="brtag">Internal CSS</span> <br>
+                        &rarr; <span class="brtag">Inline CSS</span> <br>
+                    </p>
+                    <!-- External css -->
+                    <h3 class="listtitle"> &rarr; External CSS</h3>
+                    <p class="titledescription">
+                        For using an external style sheet, your .html files need to include a header section that links
+                        to an external style sheet. Since the CSS code is in a separate document, your HTML files will
+                        have a cleaner structure and are smaller in size.
+                    </p>
+
+                    <li class="links">
+                        <pre class="language-js"><code>&lthead&gt
+&ltlink rel=”stylesheet”  type=”text/css”  href=mysitestyle.css”&gt
+&lt/head&gt</code>
+            </pre>
+                    </li>
+                </ol>
+                <!-- internal css -->
+                <ol class="list">
+                    <h3 class="listtitle"> &rarr; Internal CSS</h3>
+                    <p class="titledescription">These CSS instructions are written directly into the header of a
+                        specific .html page. This CSS style is an effective method of styling a single page.
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>&lthead&gt
+&ltstyle&gt
+Body{  background-color:thistle;  }
+P{font-size:20px;  color:mediumblue;  }
+&lt/style&gt
+&lt/head&gt</code>
+                      </pre>
+                    </li>
+                </ol>
+                <!-- Inline  css -->
+                <ol class="list">
+                    <h3 class="listtitle"> &rarr; Inline CSS</h3>
+                    <p class="titledescription">Lastly, Inline styles are CSS blocks that are written directly into a
+                        single instance of HTML code.
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>&lth1  style=”font-size:55px;color:orange;”&gtCheck out this headline!&lt/h1&gt</code>
+                      </pre>
+                    </li>
+                </ol>
+                <!--  Pseudo-classes and Pseudo-elements -->
+                <ol class="list">
+                    <h3 class="listtitle"> 2. Pseudo-classes and Pseudo-elements</h3>
+                    <p class="titledescription">A pseudo-class is used to define a special state of an element. A CSS
+                        pseudo-element is used to style specified parts of an element.
+                    </p>
+                    <!-- hover -->
+                    <h3 class="listtitle"> Mouse over selector</h3>
+                    <p class="titledescription">Triggered when the user hovers over an element with the cursor. You can
+                        use the hover selection to target an element that a user hovers over with their cursor.
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>a:hover {}</code>
+                      </pre>
+                    </li>
+                    <!-- active link -->
+                    <h3 class="listtitle"> Active Link Selector</h3>
+                    <p class="titledescription">The :active pseudo-class is commonly used on <span>&lt a &gt</span> and
+                        <span>&lt button &gt</span> elements. When a link is clicked, you can provide a style for it
+                        with this selector.
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>a:active {}</code>
+                      </pre>
+                    </li>
+                    <!-- Focus Selector -->
+                    <h3 class="listtitle"> Focus Selector</h3>
+                    <p class="titledescription">Triggered when the user clicks or taps on an element or selects it with
+                        the keyboard's Tab key.
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>input:focus {}</code>
+                      </pre>
+                    </li>
+                    <!-- Visited Links Selector -->
+                    <h3 class="listtitle"> Visited Links Selector</h3>
+                    <p class="titledescription">Represents that the link has already been visited. Its styles for URLs
+                        that the user has already visited are defined.
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>:visited {}</code>
+                      </pre>
+                    </li>
+                    <!--  Links Selector -->
+                    <h3 class="listtitle"> Links Selector</h3>
+                    <p class="titledescription"> This represents that the link has not yet been visited.
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>.class:link {}</code>
+                      </pre>
+                    </li>
+                    <!--  Checked selector element -->
+                    <h3 class="listtitle"> Checked selector element</h3>
+                    <p class="titledescription"> Represents radio, checkbox, or option element that is checked or
+                        toggled to an on-state. When the page loads, it specifies that an <span>&lt input &gt</span>
+                        element should be already selected (checked).
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>input:checked {}</code>
+                      </pre>
+                    </li>
+                    <!--  Disabled elements selector -->
+                    <h3 class="listtitle"> Disabled elements selector</h3>
+                    <p class="titledescription">An element is disabled. It represents that the element is currently
+                        disabled, To pick the disabled element, the :disabled selector is used
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>input:disabled {}</code>
+                      </pre>
+                    </li>
+                    <!-- Enabled elements selector-->
+                    <h3 class="listtitle"> Enabled elements selector</h3>
+                    <p class="titledescription">An element is enabled. It represents that the element is currently
+                        available.
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>input:enabled {}</code>
+                      </pre>
+                    </li>
+                    <!-- Not a Specified Element Selector-->
+                    <h3 class="listtitle">Not a Specified Element Selector</h3>
+                    <p class="titledescription">Represents elements that do not match a list of selectors
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>:not(p) {}</code>
+                      </pre>
+                    </li>
+                    <!-- First Line Selector -->
+                    <h3 class="listtitle">First Line Selector</h3>
+                    <p class="titledescription">Applies styles to the first line of a block-level element. It is used in
+                        the first line of an element to style it
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>p::first-line {}</code>
+                      </pre>
+                    </li>
+                    <!-- First Letter Selector-->
+                    <h3 class="listtitle">First Letter Selector</h3>
+                    <p class="titledescription">Applies styles to the first letter of the first line. The style is
+                        applied to the first letter of the first line of a block-level element if it is not preceded by
+                        other content.
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>::first-letter {}</code>
+                      </pre>
+                    </li>
+                    <!-- First Child Selector-->
+                    <h3 class="listtitle">First Child Selector</h3>
+                    <p class="titledescription">Represents the first element among a group of sibling elements. It is
+                        used to find all elements that are children of a given element
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>:first-child {}</code>
+                      </pre>
+                    </li>
+                    <!--Last Child Selector-->
+                    <h3 class="listtitle">Last Child Selector</h3>
+                    <p class="titledescription">Represents the last. It indicates the last sibling element in a
+                        collection of siblings
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>:last-child {}</code>
+                      </pre>
+                    </li>
+                    <!--only Child Selector-->
+                    <h3 class="listtitle">Only Child Selector</h3>
+                    <p class="titledescription">Represents an element without any siblings. You can use the
+                        CSS:only-child selector to target an element which is the only child of its parent
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>:only-child {}</code>
+                      </pre>
+                    </li>
+                    <!--:nth-child Selector-->
+                    <h3 class="listtitle">:nth-child Selector</h3>
+                    <p class="titledescription">Matches elements based on their position
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>:nth-child()</code>
+                      </pre>
+                    </li>
+                    <!--First Element of its Parent Selector -->
+                    <h3 class="listtitle">First Element of its Parent Selector </h3>
+                    <p class="titledescription">Represents the first element. In CSS, you may use the:first-of-type
+                        selector to target an element's first appearance within the container
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>P:first-of-type {}</code>
+                      </pre>
+                    </li>
+                    <!--Elements that have no Children Selector -->
+                    <h3 class="listtitle">Elements that have no Children Selector</h3>
+                    <p class="titledescription">Represents any element that has no children. Any element with no
+                        children is represented by this. Either element nodes or text can be children
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>p:empty {}</code>
+                      </pre>
+                    </li>
+                    <!--Before Element -->
+                    <h3 class="listtitle">Before Element</h3>
+                    <p class="titledescription"> Used to add cosmetic content to an element with the content
+                        property.The::before pseudo-element is used to define created stuff that comes before the
+                        content of an element.
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>class::before {}</code>
+                      </pre>
+                    </li>
+                    <!--After Element-->
+                    <h3 class="listtitle">Elements that have no Children Selector</h3>
+                    <p class="titledescription">Used to add cosmetic content to an element with the content
+                        propertyThe::after pseudo-element is used to define created stuff that comes after the content
+                        of an element
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>.class::after {}</code>
+                      </pre>
+                    </li>
+                    <!-- CSS Position-->
+                    <h3 class="listtitle"> 3. CSS Position</h3>
+                    <h3 class="listtitle">Position</h3>
+                    <p class="titledescription">Set the position of the elements in a document
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>position: static | relative | absolute | fixed | sticky</code>
+                      </pre>
+                    </li>
+                    <!-- Position Properties-->
+                    <h3 class="listtitle">Position Properties</h3>
+                    <p class="titledescription">Defines the position of an element in a document
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>top | right | bottom | left</code>
+                      </pre>
+                    </li>
+                    <!-- Float Element-->
+                    <h3 class="listtitle">Float Element</h3>
+                    <p class="titledescription">Defines the position of an element in a document text and inline
+                        elements to wrap around
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>float: left | right | none</code>
+                      </pre>
+                    </li>
+                    <!-- Clear Floating Elements-->
+                    <h3 class="listtitle">Clear Floating Elements</h3>
+                    <p class="titledescription">Whether an element must be moved below (cleared) floating elements that
+                        precede it
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>clear: none | left | right | both</code>
+                      </pre>
+                    </li>
+                    <!-- Z Index-->
+                    <h3 class="listtitle">Z Index</h3>
+                    <p class="titledescription"> Sets overlapping elements with a larger z-index cover those with a
+                        smaller one
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>z-index: 3 | auto | inherit</code>
+                      </pre>
+                    </li>
+                    <!-- CSS Background-->
+                    <h3 class="listtitle">4. CSS Background </h3>
+                    <h3 class="listtitle">Background Image</h3>
+                    <p class="titledescription">Sets the background image in a div. An element's background-image
+                        attribute specifies one or more background images
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>background-image: url()</code>
+                      </pre>
+                    </li>
+                    <!-- Background Repeat-->
+                    <h3 class="listtitle">Background Repeat</h3>
+                    <p class="titledescription">Sets whether the background is to be repeated or not, in other words, it
+                        determines whether or not the background picture will be repeated
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>background-repeat: repeat-x | repeat-y | repeat | space | round | no-repeat</code>
+                      </pre>
+                    </li>
+                    <!-- Background Attachment-->
+                    <h3 class="listtitle">Background Attachment</h3>
+                    <p class="titledescription">Sets the background image scroll or fixed. CSS's background-attachment
+                        attribute controls how the background moves in relation to the viewport
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>background-attachment: scroll | fixed | local | initial | inherit</code>
+                      </pre>
+                    </li>
+                    <!-- Background Color -->
+                    <h3 class="listtitle">Background Color</h3>
+                    <p class="titledescription">Set the background colour of the div or container
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>background-color: #2AA9E0</code>
+                      </pre>
+                    </li>
+                    <!-- Background position -->
+                    <h3 class="listtitle">Background position</h3>
+                    <p class="titledescription">Sets the position of the background
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>background-position: top | right | bottom | left | center</code>
+                      </pre>
+                    </li>
+                    <!-- Background OPacity -->
+                    <h3 class="listtitle">Background Opacity</h3>
+                    <p class="titledescription">The opacity property specifies the opacity/transparency of an element.
+                        It can take a value from 0.0 - 1.0. The lower value, the more transparent it is
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>div {background-color: green; and opacity: 0.3};</code>
+                      </pre>
+                    </li>
+                    <!--  CSS Box Model -->
+                    <h3 class="listtitle"> 5. CSS Box Model</h3>
+                    <h3 class="listtitle">Box Sizing</h3>
+                    <p class="titledescription">Sets the width and height of the box. Building CSS layouts with the
+                        box-sizing property may be a lot more straightforward
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>box-sizing: border-box | content-box</code>
+                      </pre>
+                    </li>
+                    <!-- Margin -->
+                    <h3 class="listtitle">Margin</h3>
+                    <p class="titledescription">Sets the margin from all the sides of the box. This CSS tutorial
+                        explains how to use the CSS property called margin with syntax and examples
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>margin: 2px 4px 6px 8px | 0 auto | inherit</code>
+                      </pre>
+                    </li>
+                    <!-- Padding -->
+                    <h3 class="listtitle">Padding</h3>
+                    <p class="titledescription"> Sets the area inside the box from the content. CSS's box-sizing
+                        attribute determines how the box model is applied to the element to which it applies
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>padding: 2px 4px 6px 8px | 100% | inherit |</code>
+                      </pre>
+                    </li>
+                    <!-- Border Color  -->
+                    <h3 class="listtitle">Border Color </h3>
+                    <p class="titledescription"> Sets the colour of the border of the box
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>border-color: #2AA9E0</code>
+                      </pre>
+                    </li>
+                    <!--Border Style   -->
+                    <h3 class="listtitle">Border Style </h3>
+                    <p class="titledescription">Sets the style of the border
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>border-style: none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset</code>
+                      </pre>
+                    </li>
+                    <h3 class="listtitle">Border Width </h3>
+                    <p class="titledescription">Sets the width of the border. The width of an element's borders is
+                        determined by the border-width attribute. The value of this characteristic can range from one to
+                        four
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>border-width: 10px</code>
+                      </pre>
+                    </li>
+                    <!-- CSS Flexbox -->
+                    <h3 class="listtitle">5. CSS Flexbox</h3>
+                    <h3 class="listtitle">Flex </h3>
+                    <p class="titledescription">Make Container flex
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>display: flex;</code>
+                      </pre>
+                    </li>
+                    <!-- Flex Direction -->
+                    <h3 class="listtitle">Flex Direction </h3>
+                    <p class="titledescription">Sets how flex items are placed in the flex container
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>flex-direction: row | row-reverse | column | column-reverse</code>
+                      </pre>
+                    </li>
+                    <!-- Flex Wrap -->
+                    <h3 class="listtitle">Flex Wrap </h3>
+                    <p class="titledescription">Sets whether flex items are forced onto one line or can wrap onto
+                        multiple lines
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>flex-wrap: nowrap | wrap | wrap-reverse</code>
+                      </pre>
+                    </li>
+                    <!-- Justify Content-->
+                    <h3 class="listtitle">Justify Content</h3>
+                    <p class="titledescription">Defines how the browser distributes space between and around content
+                        items
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly</code>
+                      </pre>
+                    </li>
+                    <!-- Align Items-->
+                    <h3 class="listtitle">Align Items</h3>
+                    <p class="titledescription">It sets the align-self value on all direct children as a group
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>gn-items: flex-start | flex-end | center | baseline | stretch</code>
+                      </pre>
+                    </li>
+                    <!-- Align Content-->
+                    <h3 class="listtitle">Align Content</h3>
+                    <p class="titledescription">Sets the distribution of space between and around content
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>align-content: flex-start | flex-end | center | space-between | space-around | stretch</code>
+                      </pre>
+                    </li>
+                    <!-- Order-->
+                    <h3 class="listtitle">Order</h3>
+                    <p class="titledescription">Sets the order to lay out an item in a flex or grid container
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>order: 0</code>
+                      </pre>
+                    </li>
+                    <!-- Flex Grow-->
+                    <h3 class="listtitle">Flex Grow</h3>
+                    <p class="titledescription"> It sets the flex-grow factor. Flex-grow is a term that refers to a
+                        system that allows you to The flex-grow factor of a flex item's main size to be controlled by
+                        the CSS property flex grow factor
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>flex-grow: 0</code>
+                      </pre>
+                    </li>
+                    <!-- Flex Shrink-->
+                    <h3 class="listtitle">Flex Shrink</h3>
+                    <p class="titledescription">It sets the flex shrink factor of a flex item. The flex-shrink is a
+                        method of reducing the size of a flexible object The flex-shrink factor of a flex item is
+                        controlled by the CSS attribute
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>flex-shrink: 0</code>
+                      </pre>
+                    </li>
+                    <!-- Flex Basis-->
+                    <h3 class="listtitle">Flex Basis</h3>
+                    <p class="titledescription">Sets the size of the content box. The flex-basis is a system that allows
+                        you to change your mind at any A flex item's initial primary size is determined by a CSS
+                        attribute. Unless box-sizing is used, it determines the size of the content box
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>flex-basis: 3px | auto</code>
+                      </pre>
+                    </li>
+                    <!-- Align Self-->
+                    <h3 class="listtitle">Align Self</h3>
+                    <p class="titledescription">It aligns the item inside the grid area
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>gn-self: auto | flex-start | flex-end | center | baseline | stretch</code>
+                      </pre>
+                    </li>
+                    <!-- Css Grid-->
+                    <h1 class="listtitle">6. Grid</h1>
+                    <h3 class="listtitle">Grid</h3>
+                    <p class="titledescription">Make Container grid
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>display:grid;</code>
+                      </pre>
+                    </li>
+                    <!-- Grid Template Columns -->
+                    <h3 class="listtitle">Grid Template Columns</h3>
+                    <p class="titledescription">Specifies the size of the columns, and how many columns are in a grid
+                        layout
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>grid-template-columns: 40px 50px auto 50px 40px</code>
+                      </pre>
+                    </li>
+                    <!-- Grid Template rows -->
+                    <h3 class="listtitle">Grid Template Rows</h3>
+                    <p class="titledescription">Specifies the size of the rows in a grid layout
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>grid-template-rows: 25% 100px auto</code>
+                      </pre>
+                    </li>
+                    <!-- Grid Template Areas -->
+                    <h3 class="listtitle">Grid Template Areas</h3>
+                    <p class="titledescription">Specifies how to display columns and rows, using named grid items
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>grid-template-areas: "a b c" | none</code>
+                      </pre>
+                    </li>
+                    <!-- Grid Template  -->
+                    <h3 class="listtitle">Grid Template </h3>
+                    <p class="titledescription">Property for defining grid columns, rows, and areas
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>grid-template: "a a a" 20% "b b b" auto | 100px 1fr / 50px 1fr</code>
+                      </pre>
+                    </li>
+                    <!--Grid Column Gap -->
+                    <h3 class="listtitle">Grid Column Gap </h3>
+                    <p class="titledescription">Sets the size of the gap between columns
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>grid-column-gap: 10px</code>
+                      </pre>
+                    </li>
+                    <!--Grid Row Gap -->
+                    <h3 class="listtitle">Grid Row Gap </h3>
+                    <p class="titledescription">Sets the size of the gap between columns
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>grid-row-gap: 10px</code>
+                      </pre>
+                    </li>
+                    <!--Justify Items -->
+                    <h3 class="listtitle">Justify Items </h3>
+                    <p class="titledescription">Defines the default justify-self for all items of the box
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>justify-items: start | end | center | stretch;</code>
+                      </pre>
+                    </li>
+                    <!--Align Items -->
+                    <h3 class="listtitle">Align Items </h3>
+                    <p class="titledescription">Sets the align-self value on all direct children as a group
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>align-items: start | end | center | stretch;</code>
+                      </pre>
+                    </li>
+                    <!--Justify Content -->
+                    <h3 class="listtitle">Justify Content</h3>
+                    <p class="titledescription">Specifies how the browser distributes space between and around content
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly;</code>
+                      </pre>
+                    </li>
+                    <!--Align Content -->
+                    <h3 class="listtitle">Align Content</h3>
+                    <p class="titledescription">Distribution of space between and around content items
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>align-content: flex-start | flex-end | center | space-between | space-around | space-evenly;</code>
+                      </pre>
+                    </li>
+                    <!--grid Auto Column-->
+                    <h3 class="listtitle">Grid Auto Column</h3>
+                    <p class="titledescription">Specifies the size of an implicitly-created grid column track or pattern
+                        of tracks
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>grid-auto-columns: 100px | max-content | min-content</code>
+                      </pre>
+                    </li>
+                    <!--grid Auto Row-->
+                    <h3 class="listtitle">Grid Auto Rows</h3>
+                    <p class="titledescription">Specifies the size of an implicitly-created grid Rows track or pattern
+                        of tracks
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>grid-auto-rows: 100px | max-content | min-content</code>
+                      </pre>
+                    </li>
+                    <!-- Grid Auto Flow -->
+                    <h3 class="listtitle">Grid Auto Flow</h3>
+                    <p class="titledescription"> Property controls how the auto-placement algorithm works
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>grid-auto-flow: row | column | row dense | column dense</code>
+                      </pre>
+                    </li>
+                    <!-- Grid Column Start-->
+                    <h3 class="listtitle">Grid Auto Flow</h3>
+                    <p class="titledescription">CSS property specifies a grid item’s start position within the grid
+                        column.
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>grid-column-start: 2 | areaname | span 2 | span areaname | auto</code>
+                      </pre>
+                    </li>
+                    <!-- Grid Column End-->
+                    <h3 class="listtitle">Grid Column End</h3>
+                    <p class="titledescription">Specifies a grid item’s start position within the grid column by
+                        contributing a line, a span
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>grid-column-end: 2 | areaname | span 2 | span areaname | auto</code>
+                      </pre>
+                    </li>
+                    <!-- Grid Row Start-->
+                    <h3 class="listtitle">Grid Row Start</h3>
+                    <p class="titledescription">A grid item’s start position within the grid row by contributing a line
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>grid-row-start: 2 | areaname | span 2 | span areaname | auto</code>
+                      </pre>
+                    </li>
+                    <!-- Grid Row End-->
+                    <h3 class="listtitle">Grid Row End</h3>
+                    <p class="titledescription">Specifies a grid item’s end position within the grid row by contributing
+                        a line
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>grid-row-end: 2 | areaname | span 2 | span areaname | auto</code>
+                      </pre>
+                    </li>
+                    <!-- Grid Column -->
+                    <h3 class="listtitle">Grid Column </h3>
+                    <p class="titledescription">Specifies a grid item's size and location within a grid column by
+                        contributing a line
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>grid-column: 3 / span 2</code>
+                      </pre>
+                    </li>
+                    <!-- Grid Row -->
+                    <h3 class="listtitle">Grid Row </h3>
+                    <p class="titledescription">Specifies a grid item’s size and location within the grid row
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>grid-row: 3 / span 2</code>
+                      </pre>
+                    </li>
+                    <!-- Justify Self  -->
+                    <h3 class="listtitle">Justify Self </h3>
+                    <p class="titledescription">Sets the way a box is justified inside its alignment container along the
+                        appropriate axis
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>justify-self: start | end | center | stretch</code>
+                      </pre>
+                    </li>
+                    <!-- Align Self  -->
+                    <h3 class="listtitle">Align Self </h3>
+                    <p class="titledescription">Overrides a grid or flex item's align-items value
+                    </p>
+                    <li class="links">
+                        <pre class="language-js"><code>align-self: start | end | center | stretch</code>
+                      </pre>
+                    </li>
+                    <!-- css-media-queries-cheat-sheet.css -->
+                    <h3 class="listtitle">CSS media-queries-cheat-sheet </h3>
+                    <p class="titledescription">The Media query in CSS is used to create a responsive web design. It
+                        means that the view of a web page differs from system to system based on screen or media types.
+                        The breakpoint specifies for what device-width size, the content is just starting to break or
+                        deform
+                    </p>
+                    <h3 class="listtitle" style="text-decoration: underline; cursor: pointer;">Don't Use It Just See And
+                        Understand It For Use See Below This
+                        <h3 />
+                        <li class="links">
+                            <pre class="language-js"><code>
+Responsive Grid Media Queries - 1280, 1024, 768, 480
+1280-1024   - desktop (default grid)
+1024-768    - tablet landscape
+768-480     - tablet 
+480-less    - phone landscape & smaller
+
+@media all and (min-width: 1024px) and (max-width: 1280px) { }
+  
+@media all and (min-width: 768px) and (max-width: 1024px) { }
+  
+@media all and (min-width: 480px) and (max-width: 768px) { }
+ 
+@media all and (max-width: 480px) { }
+
+Foundation Media Queries - http://foundation.zurb.com/docs/media-queries.html
+  
+/* Small screens - MOBILE */
+@media only screen { } /* Define mobile styles - Mobile First */
+                           
+@media only screen and (max-width: 40em) { } /* max-width 640px, mobile-only styles, use when QAing mobile issues */
+                           
+/* Medium screens - TABLET */
+@media only screen and (min-width: 40.063em) { } /* min-width 641px, medium screens */
+                           
+@media only screen and (min-width: 40.063em) and (max-width: 64em) { } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+                           
+/* Large screens - DESKTOP */
+@media only screen and (min-width: 64.063em) { } /* min-width 1025px, large screens */
+                           
+@media only screen and (min-width: 64.063em) and (max-width: 90em) { } /* min-width 1024px and max-width 1440px, use when QAing large screen-only issues */
+                           
+/* XLarge screens */
+@media only screen and (min-width: 90.063em) { } /* min-width 1441px, xlarge screens */
+                           
+@media only screen and (min-width: 90.063em) and (max-width: 120em) { } /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
+                           
+/* XXLarge screens */
+@media only screen and (min-width: 120.063em) { } /* min-width 1921px, xlarge screens */
+                           
+/*------------------------------------------*/
+ /* Portrait */
+ @media screen and (orientation:portrait) { /* Portrait styles here */ }
+/* Landscape */
+@media screen and (orientation:landscape) { /* Landscape styles here */ }
+                           
+                           
+/* CSS for iPhone, iPad, and Retina Displays */
+/* Non-Retina */
+@media screen and (-webkit-max-device-pixel-ratio: 1) { }
+                           
+/* Retina */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {  }
+                           
+/* iPhone Portrait */
+@media screen and (max-device-width: 480px) and (orientation:portrait) { } 
+                           
+/* iPhone Landscape */
+@media screen and (max-device-width: 480px) and (orientation:landscape) { }
+ 
+/* iPad Portrait */
+@media screen and (min-device-width: 481px) and (orientation:portrait) { }
+ 
+/* iPad Landscape */
+@media screen and (min-device-width: 481px) and (orientation:landscape) { }
+ 
+&ltmeta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" /&gt;
+
+Live demo samples - http://andrelion.github.io/mediaquery/livedemo.html</code>
+                      </pre>
+                        </li>
+                        <!-- Commom used Media Quaries -->
+                        <h3 class="listtitle"> Commom used Media Quaries</h3>
+                        <p class="titledescription">As I said Below, these breakpoints can differ and there is no
+                            standard exactly defined, but these are some commonly used ones.
+                        </p>
+                        <li class="links">
+                            <pre class="language-js"><code>320px — 480px: Mobile devices
+481px — 768px: iPads, Tablets
+769px — 1024px: Small screens, laptops
+1025px — 1200px: Desktops, large screens
+1201px and more —  Extra large screens, TV</code>
+                   </pre>
+                        </li>
+                        <!-- button-->
+                        <h3 class="listtitle"> For More Information </h3>
+                        <p class="titledescription">You Could Click Here And Learn more About Css <a href="https://www.interviewbit.com/css-cheat-sheet/#css-text-styling" target="_blank">Read More</a>
+                        </p>
+                </ol>
+            </div>
+        </div>
+        <!-- footer -->
+        <footer class="footercontainer">
+            <div class="footer">
+                <!-- logo  -->
+                <div class="footerlogo">
+                    <img src="../assests/logo_png.png" alt="" class="footerimg" />
+                </div>
+                <!-- about company -->
+                <div class="content">
+                    <ul class="footermenu">
+                        <li class="footermenulink">Home</li>
+                        <li class="footermenulink">About</li>
+                        <li class="footermenulink">Portfolio</li>
+                        <li class="footermenulink">Contact</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="copyright">
+                All Right Reserved &copy; By
+                <span class="copyrightspan"> Vishal singh</span>
+            </p>
+        </footer>
+</body>
+<!-- prism js -->
+<script src="../prismScript/prism.js"></script>
+
+</html>

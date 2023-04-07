@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../assests/htmlfavicon.ico" type="image/x-icon">
+  <!-- prism css -->
+  <link rel="stylesheet" href="../prismScript/prism.css" />
+  <!-- cuwstome css -->
+  <link rel="stylesheet" href="../style/html.css" />
+  <!-- title -->
+  <title>Html Cheetsheet</title>
+</head>
+<style>
+  .rarr {
+    color: #fff;
+    font-family: cursive;
+  }
+</style>
+
+<body>
+  <h1 class="title"><span class="spantitle">HTML</span> Code Snippits</h1>
+
+  <!-- container -->
+  <div class="main-container">
+    <div class="container">
+      <ol class="list">
+        <!-- INTRODUCTION TO HTML -->
+        <h3 class="listtitle">HTML Introduction</h3>
+        <p class="titledescription">
+          HTML is the standard markup language for creating Web pages.
+        </p>
+        <h3 class="listtitle">What is HTML</h3>
+        <li class="rarr">&rarr; HTML stands for Hyper Text Markup Language</li>
+        <li class="rarr">&rarr; HTML is the standard markup language for creating Web pages</li>
+        <li class="rarr">&rarr; HTML describes the structure of a Web page</li>
+        <li class="rarr">&rarr; HTML consists of a series of elements</li>
+        <li class="rarr">&rarr; HTML elements tell the browser how to display the conte</li>
+        <li class="rarr">&rarr; HTML elements label pieces of content such as "this is a heading", "this is a
+          paragraph", "this is a link", etc.</li>
+
+        <!-- BOILER PLATE -->
+        <h3 class="listtitle">What is an HTML 5 boilerplate?</h3>
+        <p class="titledescription">
+          A boilerplate in HTML is a template you will add at the start of
+          your project. You should add this boilerplate to all of your HTML
+          pages
+        </p>
+        <li class="links">
+          <pre class="language-js"><code>&lt!DOCTYPE html&gt
+&lthtml lang="en"&gt
+&lthead&gt
+&ltmeta charset="UTF-8"&gt
+&ltmeta http-equiv="X-UA-Compatible" content="IE=edge"&gt
+&ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt
+&lttitle&gtDocument&lt/title&gt
+&lt/head&gt
+&ltbody&gt
+     &lrarr; Your Code &rarr;
+&lt/body&gt
+&lt/html&gt
+                </code>
+            </pre>
+        </li>
+      </ol>
+      <!-- heading -->
+      <ol class="list">
+        <h3 class="listtitle">HTML Headings</h3>
+        <p class="titledescription">
+          HTML headings are defined with the <span>&lt h1 &gt</span> to
+          <span>&lt h6 &gt</span> tags.
+
+          <span>&lt h1 &gt</span> defines the most important heading.
+          <span>&lt h6 &gt</span> defines the least important heading
+        </p>
+        <li class="links">
+          <pre class="language-js"><code>&lth1&gtHeading 1&lt/h1&gt
+&lth2&gtHeading 2&lt/h2&gt
+&lth3&gtHeading 3&lt/h3&gt
+&lth4&gtHeading 4&lt/h4&gt
+&lth5&gtHeading 5&lt/h5&gt
+&lth6&gtHeading 6&lt/h6&gt</code>
+              </pre>
+        </li>
+      </ol>
+      <!-- p tag -->
+      <ol class="list">
+        <h3 class="listtitle">HTML <span>&lt p &gt</span> Tag</h3>
+        <p class="titledescription">
+          The <span>&lt p &gt</span> tag defines a paragraph. Browsers
+          automatically add a single blank line before and after each
+          <span>&lt p &gt</span> element
+        </p>
+        <li class="links">
+          <pre class="language-js"><code>&ltp&gtThis is some text in a paragraph&lt/p&gt</code>
+              </pre>
+        </li>
+      </ol>
+      <!-- anchor tag -->
+      <ol class="list">
+        <h3 class="listtitle">HTML <span>&lt a &gt</span> Tag</h3>
+        <p class="titledescription">
+          The <span>&lt a &gt</span> tag defines a hyperlink, which is used to
+          link from one page to another. The most important attribute of the
+          <span>&lt a &gt</span> element is the href attribute, which
+          indicates the link's destination.
+        </p>
+        <li class="links">
+          <pre class="language-js"><code>&lta href=""&gt This is anchor tag &lt/a&gt</code>
+            </pre>
+        </li>
+      </ol>
+      <!-- img tag -->
+      <ol class="list">
+        <h3 class="listtitle">HTML Images Syntax</h3>
+        <p class="titledescription">
+          The HTML <span>&lt img &gt</span> tag is used to embed an image in a
+          web page
+          <br />
+
+          Images are not technically inserted into a web page; images are
+          linked to web pages. The <span>&lt img &gt</span> tag creates a
+          holding space for the referenced image.
+          <br />
+          The <span>&lt img &gt</span> tag is empty, it contains attributes
+          only, and does not have a closing tag.
+          <br />
+          The <span>&lt img &gt</span> tag has two required attributes:
+          <br />
+          src - Specifies the path to the image
+          <br />
+          alt - Specifies an alternate text for the image
+        </p>
+        <li class="links">
+          <pre class="language-js"><code>&ltimg src="" alt=""&gt</code>
+              </pre>
+        </li>
+      </ol>
+      <!-- form tag -->
+      <ol class="list">
+        <h3 class="listtitle">HTML Forms With input Fields</h3>
+        <p class="titledescription">
+          An HTML form is used to collect user input. The user input is most
+          often sent to a server for processing
+          <br />
+          The <span>&lt form &gt</span> element is a container for different
+          types of input elements, such as: text fields, checkboxes, radio
+          buttons, submit buttons, etc.
+          <a href="https://www.w3schools.com/html/html_form_elements.asp" target="_blank">Read more</a>
+        </p>
+        <li class="links">
+          <pre class="language-js"><code>&ltform action="/path"&gt
+&ltlabel for="fname"&gtFirst name:&lt/label&gt&ltbr&gt
+&ltinput type="text" id="fname" name="fname"&gt&ltbr&gt
+&ltlabel for="lname"&gtLast name:&lt/label&gt&ltbr&gt
+&ltinput type="text" id="lname" name="lname"&gt
+&lt/form&gt</code>
+              </pre>
+        </li>
+      </ol>
+      <!-- form radio type -->
+      <ol class="list">
+        <h3 class="listtitle">HTML <span>&ltinput type="radio"&gt</span></h3>
+        <p class="titledescription">
+          Radio buttons are normally presented in radio groups
+          <br>(a collection of radio buttons describing a set of related options). Only one radio button in a group can
+          be selected at the same time.
+          <br>
+          Note: The radio group must have share the same name (the value of the name attribute) to be treated as a
+          group. Once the radio group is created, selecting any radio button in that group automatically deselects any
+          other selected radio button in the same group. You can have as many radio groups on a page as you want, as
+          long as each group has its own name.
+          <br>
+          <a href="https://www.w3schools.com/tags/att_input_type_radio.asp" target="_blank">Read more</a>
+        </p>
+        <li class="links">
+          <pre class="language-js"><code>&ltform&gt
+&ltinput type="radio" id="html" name="fav_language" value="HTML"&gt
+&ltlabel for="html"&gtHTML&lt/label&gt&ltbr&gt
+&ltinput type="radio" id="css" name="fav_language" value="CSS"&gt
+&ltlabel for="css"&gtCSS&lt/label&gt&ltbr&gt
+&ltinput type="radio" id="javascript" name="fav_language" value="JavaScript"&gt
+&ltlabel for="javascript"&gtJavaScript&lt/label&gt
+&lt/form&gt</code>
+              </pre>
+        </li>
+      </ol>
+      <!-- Define an HTML Table -->
+      <ol class="list">
+        <h3 class="listtitle"> HTML Table</h3>
+        <p class="titledescription">
+          A table in HTML consists of table cells inside rows and columns.
+          <a href="https://www.w3schools.com/html/html_tables.asp" target="_blank">Read more</a>
+        </p>
+        <li class="links">
+          <pre class="language-js"><code>&lttable&gt
+&lttr&gt
+&ltth&gtCompany&lt/th&gt
+&ltth&gtContact&lt/th&gt
+&ltth&gtCountry&lt/th&gt
+&lt/tr&gt
+&lttr&gt
+&lttd&gtAlfreds Futterkiste&lt/td&gt
+&lttd&gtMaria Anders&lt/td&gt
+&lttd&gtGermany&lt/td&gt
+&lt/tr&gt
+&lttr&gt
+&lttd&gtCentro comercial Moctezuma&lt/td&gt
+&lttd&gtFrancisco Chang&lt/td&gt
+&lttd&gtMexico&lt/td&gt
+&lt/tr&gt
+&lt/table&gt</code>
+              </pre>
+        </li>
+        <!-- Semantic Elements -->
+        <h3 class="listtitle"> Semantic Elements</h3>
+        <p class="titledescription">Semantic elements are those elements that are self describable, i.e., from their
+          name itself, you can understand their meaning
+        </p>
+        <h3 class="listtitle"> <span>&ltsection&gt</span> tag</h3>
+        <p class="titledescription">It defines a section in the document
+        </p>
+        <li class="links">
+          <pre class="language-js"><code>&ltsection&gt This is a section &lt/section&gt </code>
+              </pre>
+        </li>
+        <!-- article tag -->
+        <h3 class="listtitle"> <span>&ltarticle&gt</span> tag</h3>
+        <p class="titledescription">It represents self-contained content
+        </p>
+        <li class="links">
+          <pre class="language-js"><code>&ltarticle&gt Enter your Data Here &lt/article&gt </code>
+              </pre>
+        </li>
+        <!-- aside tag -->
+        <h3 class="listtitle"> <span>&ltaside&gt</span> tag</h3>
+        <p class="titledescription">It is used to place content in the sidebar
+        </p>
+        <li class="links">
+          <pre class="language-js"><code>&ltaside&gt This is aside &lt/aside&gt </code>
+              </pre>
+        </li>
+      </ol>
+    </div>
+  </div>
+  <!-- footer -->
+  <footer class="footercontainer">
+    <div class="footer">
+      <!-- logo  -->
+      <div class="footerlogo">
+        <img src="../assests/logo_png.png" alt="" class="footerimg" />
+      </div>
+      <!-- about company -->
+      <div class="content">
+        <ul class="footermenu">
+          <li class="footermenulink">Home</li>
+          <li class="footermenulink">About</li>
+          <li class="footermenulink">Portfolio</li>
+          <li class="footermenulink">Contact</li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright">
+      All Right Reserved &copy; By
+      <span class="copyrightspan"> Vishal singh</span>
+    </p>
+  </footer>
+</body>
+<!-- prism.js -->
+<script src="../prismScript/prism.js"></script>
+
+</html>

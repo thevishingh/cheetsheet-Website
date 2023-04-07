@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../assests/jsfavicon.ico" type="image/x-icon" />
+    <!-- prism.css -->
+    <link rel="stylesheet" href="../prismScript/prism.css" />
+    <!-- custome css -->
+    <link rel="stylesheet" href="../style/html.css" />
+    <title>Screen  Object</title>
+</head>
+
+<body>
+    <h1 class="title"><span class="spantitle">Screen  Object </span> Code Snippits</h1>
+    <!-- container -->
+    <div class="main-container">
+        <div class="container">
+            <ol class="list">
+                <h3 class="listtitle">Screen  Object</h3>
+                <p class="titledescription">
+                    The JavaScript screen object is a part of the window object and provides information about the device's screen properties. It allows developers to gather information about the screen resolution, color depth, and available screen area.
+                </p>
+                <p class="titledescription">
+                    One of the most commonly used properties of the screen object is the width and height properties. These properties return the width and height of the device's screen in pixels, respectively. Developers can use these properties to create responsive designs and adjust the layout based on the screen size. For example, the following code can be used to log the screen resolution:
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+console.log(`The screen resolution is ${screen.width}x${screen.height} pixels`);
+</code> </pre>
+                </li>
+                <p class="titledescription">
+                    Another important property is the colorDepth property which returns the number of bits used to represent the color of a single pixel. This property can be used to check the color depth of the screen and make sure that images and videos are displayed correctly.
+                </p>
+
+                <li class="links">
+                    <pre class="language-js"><code>
+console.log(`The screen color depth is ${screen.colorDepth} bits`);
+</code></pre>
+                </li>
+                <p class="titledescription">
+                    The screen object also provides the availWidth and availHeight properties, which return the width and height of the available screen area, respectively. This means the area available to the browser, not including the taskbar or other system interface elements.
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+console.log(`The available screen width is ${screen.availWidth} pixels and the available screen height is ${screen.availHeight} pixels`);
+</code></pre>
+                </li>
+                <p class="titledescription">
+                    It's important to note that the screen object is a part of the DOM API and it is supported by all modern browsers, but it's important to check for browser compatibility before using it. Also, the screen object properties will return the screen size of the device the browser is running on, and not the size of the window that the browser is running in.
+                </p>
+                <p class="titledescription">
+                    In conclusion, the JavaScript screen object provides a powerful set of tools for gathering information about the device's screen properties such as resolution, color depth and available screen area. Understanding how to use the screen object is essential for creating responsive designs and adjusting the layout based on the screen size, but it's important to keep in mind its limitations and check browser compatibility before using it.
+                </p>
+            </ol>
+        </div>
+    </div>
+</body>
+<!-- prism.js -->
+<script src="../prismScript/prism.js"></script>
+
+</html>

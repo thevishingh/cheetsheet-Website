@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../assests/jsfavicon.ico" type="image/x-icon">
+    <!-- prism.css -->
+    <link rel="stylesheet" href="../prismScript/prism.css">
+    <!-- custome css -->
+    <link rel="stylesheet" href="../style/html.css">
+    <title>Operators and Expressions</title>
+</head>
+<style>
+    .rarr {
+        color: #fff;
+        font-family: cursive;
+    }
+</style>
+<body>
+    <h1 class="title"><span class="spantitle">Operators and Expressions</span> Code Snippits</h1>
+
+    <!-- container -->
+    <div class="main-container">
+        <div class="container">
+            <ol class="list">
+                <h3 class="listtitle">Operators and Expressions</h3>
+                <p class="titledescription">
+                    Operators in JavaScript are symbols that perform specific operations on one or more operands (values
+                    or variables). For example, the addition operator (+) adds two operands together and the assignment
+                    operator (=) assigns a value to a variable.
+                </p>
+                <p class="titledescription">
+                    There are several types of operators in JavaScript, including:
+                </p>
+                <li class="rarr">&rarr; Arithmetic operators (e.g. +, -, *, /, %)</li>
+                <li class="rarr">&rarr; Comparison operators (e.g. >, <, >=, <=, ==, !=)</li>
+                <li class="rarr">&rarr; Logical operators (e.g. &&, ||, !)</li>
+                <li class="rarr">&rarr; Assignment operators (e.g. =, +=, -=, *=, /=)</li>
+                <li class="rarr">&rarr; Conditional (ternary) operator (e.g. ?:)</li>
+                <li class="links">
+                    <p class="titledescription">
+                        Expressions are combinations of values, variables, and operators that produce a result. For example:
+                    </p>
+                    <pre class="language-js"><code>let x = 10;
+let y = 20;
+let z = x + y; // z is 30
+</code>
+          </pre>
+                </li>
+                <p class="titledescription">
+                    In this example, the expression "x + y" is evaluated to 30 and assigned to the "z" variable.
+                    Operator precedence determines the order in which operators are applied when an expression has multiple operators. For example:
+                </p>
+                <pre class="language-js"><code>let x = 10 + 5 * 3; // x is 25
+                </code></pre>
+                <p class="titledescription">
+                    In this example, the multiplication operator (*) has a higher precedence than the addition operator (+), so the multiplication is performed before the addition. As a result, the expression is evaluated as 10 + (5 * 3) = 25.
+                </p>
+                <p class="titledescription">
+                    You can use parentheses to specify the order of operations in an expression. For example:
+                </p>
+                <pre class="language-js"><code>let x = (10 + 5) * 3; // x is 45
+                </code></pre>
+                <p class="titledescription">
+                    In this example, the parentheses indicate that the addition should be performed before the multiplication. As a result, the expression is evaluated as (10 + 5) * 3 = 45.
+                </p>
+                <h3 class="listtitle">Conclusion</h3>
+                <p class="titledescription">
+                    In summary, operators are symbols that perform specific operations on one or more operands, and expressions are combinations of values, variables, and operators that produce a result. Operator precedence determines the order in which operators are applied in an expression, and parentheses can be used to specify the order of operations. Understanding how to use operators and expressions is an important part of programming in JavaScript.
+                </p>
+            </ol>
+        </div>
+    </div>
+</body>
+<!-- prism.js -->
+<script src="../prismScript/prism.js"></script>
+</html>

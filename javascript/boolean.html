@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../assests/jsfavicon.ico" type="image/x-icon" />
+    <!-- prism.css -->
+    <link rel="stylesheet" href="../prismScript/prism.css" />
+    <!-- custome css -->
+    <link rel="stylesheet" href="../style/html.css" />
+    <title>Boolean</title>
+</head>
+
+<body>
+    <h1 class="title"><span class="spantitle">Boolean </span> Code Snippits</h1>
+    <!-- container -->
+    <div class="main-container">
+        <div class="container">
+            <ol class="list">
+                <h3 class="listtitle">Boolean</h3>
+                <p class="titledescription">
+                    The JavaScript Boolean object is a built-in object that provides a way to work with Boolean (true/false) values in your scripts. The Boolean object can be used to create Boolean values and perform logical operations, such as and, or, and not.
+                </p>
+                <p class="titledescription">
+                    A boolean value can be created by using the Boolean() function or by assigning a value of true or false to a variable.
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+var isTrue = Boolean(1);
+console.log(isTrue); // Output: true
+var isFalse = Boolean(0);
+console.log(isFalse); // Output: false
+</code> </pre>
+                </li>
+                <p class="titledescription">
+                    You can also use the logical && operator to check if both expressions are true and the || operator to check if at least one of the expressions is true.
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+var x = true;
+var y = false;
+console.log(x && y); // Output: false
+console.log(x || y); // Output: true           
+</code></pre>
+                </li>
+                <p class="titledescription">
+                    You can also use the ! operator to invert a boolean value.
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+console.log(!x); // Output: false
+console.log(!y); // Output: true
+</code></pre>
+                </li>
+                <p class="titledescription">
+                    The Boolean object also provides a valueOf() method that returns the primitive value of the Boolean object
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+var b = new Boolean(true);
+console.log(b.valueOf()); // Output: true
+</code></pre>
+                </li>
+                <p class="titledescription">
+                    In this way, you can use the Boolean object in JavaScript to work with Boolean values, perform logical operations, and invert Boolean values. It is a fundamental part of programming and helps to control the flow of the program.
+                </p>
+            </ol>
+        </div>
+    </div>
+</body>
+<!-- prism.js -->
+<script src="../prismScript/prism.js"></script>
+
+</html>
