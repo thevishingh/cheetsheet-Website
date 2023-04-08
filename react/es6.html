@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../assests/reactfavicon.ico" type="image/x-icon">
+    <!-- prism.css -->
+    <link rel="stylesheet" href="../prismScript/prism.css">
+    <!-- custome css -->
+    <link rel="stylesheet" href="../style/html.css">
+    <title>React-Es6-CheetSheet</title>
+</head>
+<style>
+    strong {
+        color: red;
+    }
+
+    .rarr {
+        color: #fff;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .linkstitle {
+        /* margin: 1rem; */
+        text-align: left;
+        font-size: 1rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 1px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    a:hover {
+        color: red;
+    }
+</style>
+
+<body>
+    <!-- title -->
+    <h1 class="title"><span class="spantitle">React Es6 </span> Code Snippits</h1>
+    <!-- container -->
+    <div class="main-container">
+        <div class="container">
+            <ol class="list">
+                <h3 class="listtitle"><span>React ES6</span></h3>
+                <h3 class="listtitle">What is ES6</h3>
+                <p class="titledescription">
+                    ES6 stands for ECMAScript 6. ECMAScript is a JavaScript standard intended to ensure a common
+                    language across different browsers. ES6 is the 6th version of ECMAScript.
+                </p>
+                <p class="titledescription">
+                    <strong>Why ES6? / Features of ES6 / Upgrades in ES6</strong>
+                </p>
+                <p class="titledescription">
+                    React uses ES6 and all of these new features will make your coding experience in react much much
+                    better. You will be able to do things with much more ease and in very less lines! Features like:
+                </p>
+                <!-- Arrow Function -->
+                <h3 class="listtitle">Arrow Function</h3>
+                <li class="links">
+                    <pre class="language-js"><code>
+const hello = () => {
+  return "Hello World!";
+}</code></pre>
+                </li>
+                <span>Or</span>
+                <li class="links">
+                    <pre class="language-js"><code>
+const hello = () => "Hello World!";</code> </pre>
+                </li>
+
+                <!-- map -->
+                <p class="titledescription">
+                    <strong>.map() &rarr;</strong> map can be used for alot of things, one of it's use case is, we can
+                    make any number of cards through loop and just put it in jsx, like this:
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+const data = ['title1', 'title2', 'title3'];
+let cards = data.map((item) => <card>{item}</card>)</code> </pre>
+                </li>
+                <h3 class="listtitle">Destructuring</h3>
+                <h3 class="listtitle"><strong>Old Way</strong></h3>
+                <li class="links">
+                    <pre class="language-js"><code>
+const languages = ['JS', 'Python', 'Java'];
+const js = languages[0]
+const python = languages[1]
+const java = languages[2]</card>)</code> </pre>
+                </li>
+                <h3 class="listtitle"><strong>New Way</strong></h3>
+                <li class="links">
+                    <pre class="language-js"><code>
+const languages = ['JS', 'Python', 'Java'];
+const [ js, python, java ] = languages</code> </pre>
+                </li>
+                <h3 class="listtitle"><strong>Ternary Operators</strong></h3>
+                <li class="links">
+                    <pre class="language-js"><code>
+condition ? &ltexpression if true&gt: &ltexpression if false&gt</code> </pre>
+                </li>
+                <span>Example:</span>
+                <li class="links">
+                    <pre class="language-js"><code>
+const hello = () => {
+  return "Hello World!";
+}</code> </pre>
+                </li>
+                <h3 class="listtitle"><strong> Spread Operators</strong></h3>
+                <li class="links">
+                    <pre class="language-js"><code>
+const languages = ['JS', 'Python', 'Java'];
+const morelanguages = ['C', 'C++', 'C#']
+const allLanguages = [...languages, ...morelanguages]</code> </pre>
+                </li>
+                <p class="titledescription">
+                    <span>Output &rarr;</span>
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+["JS","Python","Java","C","C++","C#"]</code> </pre>
+                </li>
+            </ol>
+        </div>
+    </div>
+</body>
+<!-- prism.js -->
+<script src="../prismScript/prism.js"></script>
+
+</html>

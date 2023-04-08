@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../assests/reactfavicon.ico" type="image/x-icon">
+    <!-- prism.css -->
+    <link rel="stylesheet" href="../prismScript/prism.css">
+    <!-- custome css -->
+    <link rel="stylesheet" href="../style/html.css">
+    <title>React Form</title>
+</head>
+<style>
+    strong {
+        color: rgb(14, 117, 49);
+    }
+
+    .rarr {
+        color: #fff;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .linkstitle {
+        /* margin: 1rem; */
+        text-align: left;
+        font-size: 1rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 1px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    a:hover {
+        color: red;
+    }
+</style>
+
+<body>
+    <!-- title -->
+    <h1 class="title"><span class="spantitle">React Form </span> Code Snippits</h1>
+    <!-- container -->
+    <div class="main-container">
+        <div class="container">
+            <ol class="list">
+                <h3 class="listtitle"><span>React Form</span></h3>
+                <p class="titledescription">
+                    React Forms are mostly like normal HTML forms, except we use state in this to handle inputs
+                </p>
+                <h3 class="listtitle"> Handling Forms</h3>
+                <p class="titledescription">
+                    In React all the data is handled by component and stored in component state. We can change state
+                    with event handlers in the <strong>onChange</strong> attribute, like this:
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+import { useState } from 'react';
+function Form() {
+const [email, setEmail] = useState('');
+return (
+   &ltform&gt
+     &ltlabel&gt
+        Enter your email:&ltinput type="email" value={email} onChange={(e) =&gt setEmail(e.target.value)} /&gt
+     &lt/label&gt
+   &lt/form&gt
+  )
+}
+export default Form;
+</code></pre>
+                </li>
+                <h3 class="listtitle"> Submitting Form</h3>
+                <p class="titledescription">
+                    We can submit form with onSubmit attribute for the <strong>&ltform&gt</strong>
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+import { useState } from 'react';
+
+function Form() {
+  const [email, setEmail] = useState('');
+  const handleSubmit = (e) =&gt {
+    e.preventDefault();
+    alert(`Your email is: ${email}`)
+  }
+  return (
+&ltform onSubmit={handleSubmit}&gt
+    &ltlabel&gt
+        Enter your email: &ltinput type="email" value={email} onChange={(e) =&gt setEmail(e.target.value)} /&gt
+    &lt/label&gt
+    &ltinput type="submit" /&gt
+&lt/form&gt
+  )
+}
+export default Form;
+</code></pre>
+                </li>
+                <h3 class="listtitle"> Multiple Inputs</h3>
+                <p class="titledescription">
+                    We don't have to make multiple states for multiple inputs, we can save all values in one, like this
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+import { useState } from 'react';
+
+function Form() {
+const [data, setData] = useState({});
+
+const handleChange = (e)=&gt{
+  setData({...data, [e.target.name]: e.target.value})
+  }
+
+const handleSubmit = (e) =&gt {
+    e.preventDefault();
+    alert(`Your email is: ${data.email} and your name is: ${data.name}`)
+  }
+
+return (
+&ltform onSubmit={handleSubmit}&gt
+     &ltlabel&gt
+        Enter your email:&ltinput type="email" name='email' value={data.email} onChange={handleChange} /&gt
+     &lt/label&gt
+     &ltlabel&gt
+        Enter your name:&ltinput type="text" name='name' value={data.name} onChange={handleChange} /&gt
+     &lt/label&gt
+     &ltinput type="submit" /&gt
+   &lt/form&gt
+  )
+}
+
+export default Form;
+</code></pre>
+                </li>
+                <p class="titledescription">
+                    Here in handleChange we used Spread Operators. We are basically saying keep whole data as it was,
+                    just change this name's value. Then it is saved as an object so we are getting that by data.email
+                    and data.name
+                </p>
+            </ol>
+        </div>
+    </div>
+</body>
+<!-- prism.js -->
+<script src="../prismScript/prism.js"></script>
+
+</html>

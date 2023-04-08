@@ -1,0 +1,35 @@
+<li class="links">
+  <pre class="language-js"><code>
+    .button {
+      background-color: 'purple';
+      color: 'white';
+    }
+</li>
+
+
+
+
+
+<p class="titledescription">
+
+</p>
+
+<h3 class="listtitle">
+
+</h3>
+
+import { useState, useEffect } from "react";
+
+function Home() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setCount((count) => count + 1);
+    }, 1000);
+  });
+
+  return &lth1&gtI have rendered {count} times!&lt/h1&gt;
+}
+
+export default Home;

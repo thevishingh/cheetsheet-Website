@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../../assests/reactfavicon.ico" type="image/x-icon" />
+    <!-- prism.css -->
+    <link rel="stylesheet" href="../../prismScript/prism.css" />
+    <!-- custome css -->
+    <link rel="stylesheet" href="../../style/html.css" />
+    <title>React useState</title>
+</head>
+<style>
+    strong {
+        color: rgb(14, 117, 49);
+    }
+
+    .rarr {
+        color: #fff;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+            Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+            sans-serif;
+    }
+
+    .linkstitle {
+        /* margin: 1rem; */
+        text-align: left;
+        font-size: 1rem;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 1px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+            Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+            sans-serif;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    a:hover {
+        color: red;
+    }
+</style>
+
+<body>
+    <!-- title -->
+    <h1 class="title">
+        <span class="spantitle">React useState </span> Code Snippits
+    </h1>
+    <!-- container -->
+    <div class="main-container">
+        <div class="container">
+            <ol class="list">
+                <h3 class="listtitle"><span>React useState Hook</span></h3>
+                <p class="titledescription">
+                    <strong>useState </strong> is a Hook that lets you add React state to function component
+                </p>
+                <!-- importing useState -->
+                <h3 class="listtitle">Importing useState</h3>
+                <p class="titledescription">To use useState, first we need to import useState and initialize it, you can
+                    <strong>import</strong> it from <strong>react</strong> like this:
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+import { useState } from "react";
+</code></pre>
+                </li>
+
+                <!-- initilizing useState -->
+                <h3 class="listtitle">Initializing useState</h3>
+                <p class="titledescription">You can initialize state like this</p>
+                <li class="links">
+                    <pre class="language-js"><code>
+import { useState } from "react";
+
+const App = () => {
+    const [name, setName] = useState('')
+};
+     </code></pre>
+                </li>
+                <p class="titledescription">
+                    useState takes initial state as argument and gives a state and a function(setName in this case) to
+                    update that state as we can't directly change/update a state. Also, these state names are just like
+                    variables, hence you can name them anything you like.
+                </p>
+                <!-- Reading  useState -->
+                <h3 class="listtitle">Reading useState</h3>
+                <p class="titledescription">As mentioned earlier, it returns a state and a function to change/update
+                    that state. Hence, everything is stored in name. We can read states just like variables</p>
+                <li class="links">
+                    <pre class="language-js"><code>
+import { useState } from "react";
+const App = () => {
+const [name, setName] = useState('')
+                        
+return &lth1&gtMy name is {name}&lt/h1&gt
+};</code></pre>
+                </li>
+                <!-- updating  useState -->
+                <h3 class="listtitle">updating useState</h3>
+                <p class="titledescription">To update state we use the function it returns to update state, in this
+                    case: setName. State can be updated like this</p>
+                <li class="links">
+                    <pre class="language-js"><code>
+import { useState } from "react";
+const App = () => {
+const [name, setName] = useState('')
+setName('Lovish')
+return &lth1&gtMy name is {name}&lt/h1&gt
+};</code></pre>
+                </li>
+                <!-- What can state hold? -->
+                <h3 class="listtitle">What can state hold</h3>
+                <p class="titledescription">Like normal variables, state can hold any datatype like strings, numbers, booleans, arrays, objects, objects in arrays, arrays in objects. For example</p>
+                <li class="links">
+                    <pre class="language-js"><code>
+import { useState } from "react";
+const App = () => {
+const [data, setData] = useState({
+name: 'Lovish',
+age: 21
+})                       
+return &lth1&gtMy name is {data.name} and my age is {data.age}&lt/h1&gt
+};</code></pre>
+                </li>
+                <!-- Updating Objects and Arrays in State -->
+                <h3 class="listtitle">Updating Objects and Arrays in State</h3>
+                <li class="links">
+                    <pre class="language-js"><code>
+import { useState } from "react";
+const App = () =&gt {
+const [data, setData] = useState({
+name: 'lovish',
+age: 21
+})
+return &lt&gt
+&lth1&gtMy name is {data.name} and my age is {data.age}&lt/h1&gt
+&ltbutton onClick={() =&gt setData({ ...data, name: 'CWH' })}&gtClick Me&lt/button&gt&lt/&gt
+};
+export default App;</code></pre>
+                </li>
+                <h3 class="listtitle">OutPut &rarr;</h3>
+                <!-- video -->
+                <video src="../../assests/object-state-change.mp4" width="350px" autoplay controls ></video>
+            </ol>
+        </div>
+    </div>
+</body>
+<!-- prism.js -->
+<script src="../../prismScript/prism.js"></script>
+
+</html>

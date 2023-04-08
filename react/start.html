@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../assests/reactfavicon.ico" type="image/x-icon">
+    <!-- prism.css -->
+    <link rel="stylesheet" href="../prismScript/prism.css">
+    <!-- custome css -->
+    <link rel="stylesheet" href="../style/html.css">
+    <title>React-Start</title>
+</head>
+<style>
+    strong {
+        color: red;
+    }
+
+    .rarr {
+        color: #fff;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .linkstitle {
+        /* margin: 1rem; */
+        text-align: left;
+        font-size: 1rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 1px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    a:hover {
+        color: red;
+    }
+</style>
+
+<body>
+    <!-- title -->
+    <h1 class="title"><span class="spantitle">React Start </span> Code Snippits</h1>
+    <!-- container -->
+    <div class="main-container">
+        <div class="container">
+            <ol class="list">
+                <h3 class="listtitle">React Getting Started</h3>
+                <h3 class="listtitle">Run and Check</h3>
+                <p class="titledescription">
+                    Run the React Application with this command
+                    A new browser window will pop up, if it does't then go on <span> http://localhost:3000/ </span>
+                    Check if it is showing the same page:
+                </p>
+                <img src="../assests/startpage.PNG" alt="start png" width="150px">
+                <p class="titledescription">
+                    If it's the same page then you are good to go!
+                    <span>Hello World</span>
+                </p>
+                <p class="titledescription">
+                    For this first you need to navigate to src/App.js, it will look like
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+import logo from './logo.svg';
+import './App.css';
+
+function App() {
+  return (
+    &ltdiv className="App"&gt
+      &ltheader className="App-header"&gt
+        &ltimg src={logo} className="App-logo" alt="logo" /&gt
+        &ltp&gt
+          Edit &ltcode&gtsrc/App.js&lt/code&gt and save to reload.
+        &lt/p&gt
+        &lta
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        &gt
+          Learn React
+        &lt/a&gt
+      &lt/header&gt
+    &lt/div&gt
+  );
+}
+export default App;
+                    </code></pre>
+                </li>
+                <p class="titledescription">
+                    Whatever you put in return will be rendered as HTML on the page, you can change it like:
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+function App() {
+  return (
+    &ltdiv className="App"&gt
+      Hello World
+    &lt/div&gt
+  );
+}</code> </pre>
+                </li>
+                <p class="titledescription">
+                    <strong>Note &rarr;</strong> Remember to wrap whole return value in an HTML element as you can't return multiple elements
+                    but you can return multiple elements in one element.
+                    Page would look like this:
+                </p>
+                <!-- img -->
+                <img src="../assests/Capture.PNG" alt="hello World" width="150px">
+            </ol>
+        </div>
+    </div>
+</body>
+<!-- prism.js -->
+<script src="../prismScript/prism.js"></script>
+
+</html>

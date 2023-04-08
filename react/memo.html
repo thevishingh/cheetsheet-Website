@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../assests/reactfavicon.ico" type="image/x-icon">
+    <!-- prism.css -->
+    <link rel="stylesheet" href="../prismScript/prism.css">
+    <!-- custome css -->
+    <link rel="stylesheet" href="../style/html.css">
+    <title>React memo</title>
+</head>
+<style>
+    strong {
+        color: rgb(14, 117, 49);
+    }
+
+    .rarr {
+        color: #fff;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .linkstitle {
+        /* margin: 1rem; */
+        text-align: left;
+        font-size: 1rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 1px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    a:hover {
+        color: red;
+    }
+</style>
+
+<body>
+    <!-- title -->
+    <h1 class="title"><span class="spantitle">React Memo </span> Code Snippits</h1>
+    <!-- container -->
+    <div class="main-container">
+        <div class="container">
+            <ol class="list">
+                <h3 class="listtitle"><span>React Memo</span></h3>
+                <p class="titledescription">
+                    By default React re-renders components again and again. Using memo will stop that if props have not
+                    changed
+                </p>
+                <h3 class="listtitle"> Problem</h3>
+                <p class="titledescription">
+                    When we make components like Navbar, Footer, they re-render even if there is no change in them. To
+                    test this you can make a Navbar component and import it. Put a <strong> console.log</strong> <br> if it is logging, it
+                    means navbar is re-rendering.
+                </p>
+                <h3 class="listtitle"> Solution</h3>
+                <p class="titledescription">
+                    So what's the solution for this? Because this re-rendering is just wastage of resources. 
+
+                    memo is a simple solution for this! What memo does is, it just monitors if props have changed, if they have it re-renders, if they haven't it doesn't render again. 
+                    
+                    props is an object and javascript is very fast in comparing objects as it doesn't compare the whole object, it just checks the address! 
+                </p>
+                <h3 class="listtitle">Importing memo</h3>
+                <p class="titledescription">
+                    To use it, first we need to import memo. It can be imported like this
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+import { memo } from "react";
+</code></pre>
+                </li>
+                <!-- Using memo -->
+                <h3 class="listtitle">Using memo</h3>
+                <p class="titledescription">
+                    Everything remains the same, just when you are exporting the Navbar, you have to wrap it in <strong>memo</strong> like this:
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+export default memo(Navbar);
+</code></pre>
+                </li>
+            </ol>
+        </div>
+    </div>
+</body>
+<!-- prism.js -->
+<script src="../prismScript/prism.js"></script>
+
+</html>

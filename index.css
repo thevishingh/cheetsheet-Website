@@ -23,8 +23,12 @@ body {
     color: #ffffff;
 }
 
+.logo {
+    padding: 0.2rem;
+}
+
 .image {
-    width: 200px;
+    width: 185px;
 }
 
 .menu {
@@ -63,7 +67,7 @@ body {
 .container {
     background-color: #EEEEEE;
     width: 100vw;
-    height: 80vh;
+    height: 100vh;
 }
 
 .titlesection {
@@ -95,8 +99,7 @@ body {
 .description {
     width: 30vw;
     padding: 1.2rem;
-    /* border:2px solid blueviolet; */
-    border-radius: 40px 0 40px 0;
+    margin: 1rem;
     outline: none;
     font-size: 1.2rem;
     font-weight: 400;
@@ -105,6 +108,19 @@ body {
     color: rgb(0, 0, 0);
     background-color: #E9E8E8;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.descriptionlist {
+    padding: 1rem;
+    margin: 1rem;
+    list-style: none;
+}
+
+.descriptionlistlink {
+    font-family: 'Urbanist', sans-serif;
+    padding: 0.3em;
+    color: blueviolet;
+    font-weight: 500;
 }
 
 span {
@@ -265,7 +281,7 @@ span {
 
 /* media queary */
 
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 320px) {
     .navbar {
         width: 100%;
         background-color: rgb(0, 0, 0);
@@ -276,12 +292,16 @@ span {
         flex-direction: column;
     }
 
+    .logo {
+        display: none;
+    }
+
     /* About container */
 
     .container {
         background-color: #EEEEEE;
-        width: 100vw;
-        height: 80vh;
+        width: 80%;
+        /* height: 80vh; */
     }
 
     .titlesection {
@@ -299,25 +319,24 @@ span {
     }
 
     .about {
-        margin: 0.5rem;
-        padding: 0.5rem;
+        margin: 0;
+        padding: 0;
     }
-
 
     .descrisection {
         display: flex;
         align-items: center;
         justify-content: space-around;
-        flex-direction: column;
+        flex-direction: row;
     }
 
     .description {
-        width: 100%;
-        height: 100%;
-        padding: 1.2rem;
+        width: 80%;
+        height: 80%;
+        padding: 0.3rem;
         border-radius: 0;
         outline: none;
-        font-size: 1rem;
+        font-size: 0.4rem;
         font-weight: 400;
         text-align: left;
         font-family: 'Roboto', sans-serif;
@@ -328,162 +347,123 @@ span {
 
     span {
         color: red;
-        font-size: 1rem;
+        font-size: 0.2rem;
         font-family: Georgia, 'Times New Roman', Times, serif;
     }
 
-    .brtag {
-        font-size: 0.8em;
-        color: blueviolet;
-        font-family: 'Urbanist', sans-serif;
-        font-weight: 600;
+
+    /* footer */
+
+    .footercontainer {
+        background-color: #000000;
+        width: 100%;
+        /* height: 60vh; */
+        margin: auto;
+        color: #fff;
     }
 
-    .language {
-        width: 100%;
+    .footer {
+        padding: 1rem;
         display: flex;
         align-items: center;
         justify-content: space-around;
-        flex-direction: row;
-
+        flex-direction: column;
     }
 
-    .box {
-        width: 50px;
-        height: 50px;
-        background-color: #ffffff;
-        border: 1px solid #000;
-        border-radius: 50%;
+    .footerimg {
+        width: 80px;
+    }
+
+    .footermenu {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: .8rem;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 19px 38px, rgba(0, 0, 0, 0.12) 0px 15px 12px;
     }
 
-    .boximg {
-        width: 30px;
+    .footermenulink {
+        list-style: none;
+        padding: 0.3rem;
+        font-size: 14px;
+        font-family: 'Urbanist', sans-serif;
+        letter-spacing: 1px;
         cursor: pointer;
     }
 
-    .box:hover {
-        background-color: #DAF5FF;
-        transition: all 1s ease-in-out;
+    .footermenulink:hover {
+        color: red;
     }
 
-   
-/* footer */
+    .socialmedia {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
 
-.footercontainer {
-    background-color: #000000;
-    width: 100%;
-    height: 60vh;
-    margin: auto;
-    color: #fff;
-}
+    .socialmedialinks {
+        list-style: none;
+        padding: 0.5rem;
+        margin: 0.5px;
+    }
 
-.footer {
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
-}
+    .socialmedialinks:hover {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #fff;
+    }
 
-.footerimg {
-    width: 150px;
-}
+    .sociallinks {
+        color: #fff;
+        text-decoration: none;
+    }
 
-.footermenu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    /* Hover Effect */
+    .instagram:hover {
+        font-size: 1rem;
+        color: rgb(209, 43, 106);
+        transition: all 0.5s ease-in-out;
+    }
 
-.footermenulink {
-    list-style: none;
-    padding: 0.3rem;
-    font-size: 14px;
-    font-family: 'Urbanist', sans-serif;
-    letter-spacing: 1px;
-    cursor: pointer;
-}
+    .facebook:hover {
+        font-size: 1rem;
+        color: rgb(43, 101, 209);
+        transition: all 0.5s ease-in-out;
+    }
 
-.footermenulink:hover {
-    color: red;
-}
+    .gitub:hover {
+        font-size: 1rem;
+        color: rgb(17, 218, 44);
+        transition: all 0.5s ease-in-out;
+    }
 
-.socialmedia {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
+    .twitter:hover {
+        font-size: 1rem;
+        color: rgb(1, 129, 248);
+        transition: all 0.5s ease-in-out;
+    }
 
-.socialmedialinks {
-    list-style: none;
-    padding: 0.5rem;
-    margin: 0.5px;
-}
+    .linkedin:hover {
+        font-size: 1rem;
+        color: rgb(61, 25, 221);
+        transition: all 0.5s ease-in-out;
+    }
 
-.socialmedialinks:hover {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #fff;
-}
+    .copyright {
+        margin-top: 1rem;
+        font-size: 10px;
+        text-align: center;
+        font-family: 'Urbanist', sans-serif;
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+    }
 
-.sociallinks {
-    color: #fff;
-    text-decoration: none;
-}
-
-/* Hover Effect */
-.instagram:hover {
-    font-size: 1rem;
-    color: rgb(209, 43, 106);
-    transition: all 0.5s ease-in-out;
-}
-
-.facebook:hover {
-    font-size: 1rem;
-    color: rgb(43, 101, 209);
-    transition: all 0.5s ease-in-out;
-}
-
-.gitub:hover {
-    font-size: 1rem;
-    color: rgb(17, 218, 44);
-    transition: all 0.5s ease-in-out;
-}
-
-.twitter:hover {
-    font-size: 1rem;
-    color: rgb(1, 129, 248);
-    transition: all 0.5s ease-in-out;
-}
-
-.linkedin:hover {
-    font-size: 1rem;
-    color: rgb(61, 25, 221);
-    transition: all 0.5s ease-in-out;
-}
-
-.copyright {
-    margin-top: 1rem;
-    font-size: 10px;
-    text-align: center;
-    font-family: 'Urbanist', sans-serif;
-position: fixed;
-right: 10px;
-bottom: 10px;
-}
-
-.copyrightspan {
-    color: blueviolet;
-    font-family: 'Urbanist', sans-serif;
-    font-size: 0.8rem
-}
+    .copyrightspan {
+        color: blueviolet;
+        font-family: 'Urbanist', sans-serif;
+        font-size: 0.8rem
+    }
 }
 
 @media only screen and (max-width: 650px) {
@@ -496,13 +476,15 @@ bottom: 10px;
         color: #ffffff;
         flex-direction: column;
     }
-
+    .logo {
+        display: none;
+    }
     /* About container */
 
     .container {
         background-color: #EEEEEE;
         width: 100vw;
-        height: 80vh;
+        height: 100vh;
     }
 
     .titlesection {
@@ -535,6 +517,7 @@ bottom: 10px;
     .description {
         width: 100%;
         height: 100%;
+        margin: 1rem;
         padding: 1.2rem;
         border-radius: 0;
         outline: none;
@@ -592,119 +575,119 @@ bottom: 10px;
         transition: all 1s ease-in-out;
     }
 
-   
-/* footer */
 
-.footercontainer {
-    background-color: #000000;
-    width: 100%;
-    height: 60vh;
-    margin: auto;
-    color: #fff;
-}
+    /* footer */
 
-.footer {
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
-}
+    .footercontainer {
+        background-color: #000000;
+        width: 100%;
+        height: 60vh;
+        margin: auto;
+        color: #fff;
+    }
 
-.footerimg {
-    width: 150px;
-}
+    .footer {
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+    }
 
-.footermenu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    .footerimg {
+        width: 150px;
+    }
 
-.footermenulink {
-    list-style: none;
-    padding: 0.3rem;
-    font-size: 14px;
-    font-family: 'Urbanist', sans-serif;
-    letter-spacing: 1px;
-    cursor: pointer;
-}
+    .footermenu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-.footermenulink:hover {
-    color: red;
-}
+    .footermenulink {
+        list-style: none;
+        padding: 0.3rem;
+        font-size: 14px;
+        font-family: 'Urbanist', sans-serif;
+        letter-spacing: 1px;
+        cursor: pointer;
+    }
 
-.socialmedia {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
+    .footermenulink:hover {
+        color: red;
+    }
 
-.socialmedialinks {
-    list-style: none;
-    padding: 0.5rem;
-    margin: 0.5px;
-}
+    .socialmedia {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
 
-.socialmedialinks:hover {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #fff;
-}
+    .socialmedialinks {
+        list-style: none;
+        padding: 0.5rem;
+        margin: 0.5px;
+    }
 
-.sociallinks {
-    color: #fff;
-    text-decoration: none;
-}
+    .socialmedialinks:hover {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #fff;
+    }
 
-/* Hover Effect */
-.instagram:hover {
-    font-size: 1rem;
-    color: rgb(209, 43, 106);
-    transition: all 0.5s ease-in-out;
-}
+    .sociallinks {
+        color: #fff;
+        text-decoration: none;
+    }
 
-.facebook:hover {
-    font-size: 1rem;
-    color: rgb(43, 101, 209);
-    transition: all 0.5s ease-in-out;
-}
+    /* Hover Effect */
+    .instagram:hover {
+        font-size: 1rem;
+        color: rgb(209, 43, 106);
+        transition: all 0.5s ease-in-out;
+    }
 
-.gitub:hover {
-    font-size: 1rem;
-    color: rgb(17, 218, 44);
-    transition: all 0.5s ease-in-out;
-}
+    .facebook:hover {
+        font-size: 1rem;
+        color: rgb(43, 101, 209);
+        transition: all 0.5s ease-in-out;
+    }
 
-.twitter:hover {
-    font-size: 1rem;
-    color: rgb(1, 129, 248);
-    transition: all 0.5s ease-in-out;
-}
+    .gitub:hover {
+        font-size: 1rem;
+        color: rgb(17, 218, 44);
+        transition: all 0.5s ease-in-out;
+    }
 
-.linkedin:hover {
-    font-size: 1rem;
-    color: rgb(61, 25, 221);
-    transition: all 0.5s ease-in-out;
-}
+    .twitter:hover {
+        font-size: 1rem;
+        color: rgb(1, 129, 248);
+        transition: all 0.5s ease-in-out;
+    }
 
-.copyright {
-    margin-top: 1rem;
-    font-size: 10px;
-    text-align: center;
-    font-family: 'Urbanist', sans-serif;
-position: fixed;
-right: 10px;
-bottom: 10px;
-}
+    .linkedin:hover {
+        font-size: 1rem;
+        color: rgb(61, 25, 221);
+        transition: all 0.5s ease-in-out;
+    }
 
-.copyrightspan {
-    color: blueviolet;
-    font-family: 'Urbanist', sans-serif;
-    font-size: 0.8rem
-}
+    .copyright {
+        margin-top: 1rem;
+        font-size: 10px;
+        text-align: center;
+        font-family: 'Urbanist', sans-serif;
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+    }
+
+    .copyrightspan {
+        color: blueviolet;
+        font-family: 'Urbanist', sans-serif;
+        font-size: 0.8rem
+    }
 }
 
 @media only screen and (max-width: 950px) {
@@ -813,119 +796,119 @@ bottom: 10px;
         transition: all 1s ease-in-out;
     }
 
-   
-/* footer */
 
-.footercontainer {
-    background-color: #000000;
-    width: 100%;
-    height: 60vh;
-    margin: auto;
-    color: #fff;
-}
+    /* footer */
 
-.footer {
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
-}
+    .footercontainer {
+        background-color: #000000;
+        width: 100%;
+        height: 60vh;
+        margin: auto;
+        color: #fff;
+    }
 
-.footerimg {
-    width: 150px;
-}
+    .footer {
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+    }
 
-.footermenu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    .footerimg {
+        width: 150px;
+    }
 
-.footermenulink {
-    list-style: none;
-    padding: 0.3rem;
-    font-size: 14px;
-    font-family: 'Urbanist', sans-serif;
-    letter-spacing: 1px;
-    cursor: pointer;
-}
+    .footermenu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-.footermenulink:hover {
-    color: red;
-}
+    .footermenulink {
+        list-style: none;
+        padding: 0.3rem;
+        font-size: 14px;
+        font-family: 'Urbanist', sans-serif;
+        letter-spacing: 1px;
+        cursor: pointer;
+    }
 
-.socialmedia {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
+    .footermenulink:hover {
+        color: red;
+    }
 
-.socialmedialinks {
-    list-style: none;
-    padding: 0.5rem;
-    margin: 0.5px;
-}
+    .socialmedia {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
 
-.socialmedialinks:hover {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #fff;
-}
+    .socialmedialinks {
+        list-style: none;
+        padding: 0.5rem;
+        margin: 0.5px;
+    }
 
-.sociallinks {
-    color: #fff;
-    text-decoration: none;
-}
+    .socialmedialinks:hover {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #fff;
+    }
 
-/* Hover Effect */
-.instagram:hover {
-    font-size: 1rem;
-    color: rgb(209, 43, 106);
-    transition: all 0.5s ease-in-out;
-}
+    .sociallinks {
+        color: #fff;
+        text-decoration: none;
+    }
 
-.facebook:hover {
-    font-size: 1rem;
-    color: rgb(43, 101, 209);
-    transition: all 0.5s ease-in-out;
-}
+    /* Hover Effect */
+    .instagram:hover {
+        font-size: 1rem;
+        color: rgb(209, 43, 106);
+        transition: all 0.5s ease-in-out;
+    }
 
-.gitub:hover {
-    font-size: 1rem;
-    color: rgb(17, 218, 44);
-    transition: all 0.5s ease-in-out;
-}
+    .facebook:hover {
+        font-size: 1rem;
+        color: rgb(43, 101, 209);
+        transition: all 0.5s ease-in-out;
+    }
 
-.twitter:hover {
-    font-size: 1rem;
-    color: rgb(1, 129, 248);
-    transition: all 0.5s ease-in-out;
-}
+    .gitub:hover {
+        font-size: 1rem;
+        color: rgb(17, 218, 44);
+        transition: all 0.5s ease-in-out;
+    }
 
-.linkedin:hover {
-    font-size: 1rem;
-    color: rgb(61, 25, 221);
-    transition: all 0.5s ease-in-out;
-}
+    .twitter:hover {
+        font-size: 1rem;
+        color: rgb(1, 129, 248);
+        transition: all 0.5s ease-in-out;
+    }
 
-.copyright {
-    margin-top: 1rem;
-    font-size: 10px;
-    text-align: center;
-    font-family: 'Urbanist', sans-serif;
-position: fixed;
-right: 10px;
-bottom: 10px;
-}
+    .linkedin:hover {
+        font-size: 1rem;
+        color: rgb(61, 25, 221);
+        transition: all 0.5s ease-in-out;
+    }
 
-.copyrightspan {
-    color: blueviolet;
-    font-family: 'Urbanist', sans-serif;
-    font-size: 0.8rem
-}
+    .copyright {
+        margin-top: 1rem;
+        font-size: 10px;
+        text-align: center;
+        font-family: 'Urbanist', sans-serif;
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+    }
+
+    .copyrightspan {
+        color: blueviolet;
+        font-family: 'Urbanist', sans-serif;
+        font-size: 0.8rem
+    }
 }
 
 @media only screen and (max-width: 1450px) {
@@ -1034,117 +1017,117 @@ bottom: 10px;
         transition: all 1s ease-in-out;
     }
 
-   
-/* footer */
 
-.footercontainer {
-    background-color: #000000;
-    width: 100%;
-    height: 35vh;
-    margin: auto;
-    color: #fff;
-}
+    /* footer */
 
-.footer {
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
-}
+    .footercontainer {
+        background-color: #000000;
+        width: 100%;
+        height: 35vh;
+        margin: auto;
+        color: #fff;
+    }
 
-.footerimg {
-    width: 150px;
-}
+    .footer {
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+    }
 
-.footermenu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    .footerimg {
+        width: 150px;
+    }
 
-.footermenulink {
-    list-style: none;
-    padding: 0.3rem;
-    font-size: 14px;
-    font-family: 'Urbanist', sans-serif;
-    letter-spacing: 1px;
-    cursor: pointer;
-}
+    .footermenu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-.footermenulink:hover {
-    color: red;
-}
+    .footermenulink {
+        list-style: none;
+        padding: 0.3rem;
+        font-size: 14px;
+        font-family: 'Urbanist', sans-serif;
+        letter-spacing: 1px;
+        cursor: pointer;
+    }
 
-.socialmedia {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
+    .footermenulink:hover {
+        color: red;
+    }
 
-.socialmedialinks {
-    list-style: none;
-    padding: 0.5rem;
-    margin: 0.5px;
-}
+    .socialmedia {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
 
-.socialmedialinks:hover {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #fff;
-}
+    .socialmedialinks {
+        list-style: none;
+        padding: 0.5rem;
+        margin: 0.5px;
+    }
 
-.sociallinks {
-    color: #fff;
-    text-decoration: none;
-}
+    .socialmedialinks:hover {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #fff;
+    }
 
-/* Hover Effect */
-.instagram:hover {
-    font-size: 1rem;
-    color: rgb(209, 43, 106);
-    transition: all 0.5s ease-in-out;
-}
+    .sociallinks {
+        color: #fff;
+        text-decoration: none;
+    }
 
-.facebook:hover {
-    font-size: 1rem;
-    color: rgb(43, 101, 209);
-    transition: all 0.5s ease-in-out;
-}
+    /* Hover Effect */
+    .instagram:hover {
+        font-size: 1rem;
+        color: rgb(209, 43, 106);
+        transition: all 0.5s ease-in-out;
+    }
 
-.gitub:hover {
-    font-size: 1rem;
-    color: rgb(17, 218, 44);
-    transition: all 0.5s ease-in-out;
-}
+    .facebook:hover {
+        font-size: 1rem;
+        color: rgb(43, 101, 209);
+        transition: all 0.5s ease-in-out;
+    }
 
-.twitter:hover {
-    font-size: 1rem;
-    color: rgb(1, 129, 248);
-    transition: all 0.5s ease-in-out;
-}
+    .gitub:hover {
+        font-size: 1rem;
+        color: rgb(17, 218, 44);
+        transition: all 0.5s ease-in-out;
+    }
 
-.linkedin:hover {
-    font-size: 1rem;
-    color: rgb(61, 25, 221);
-    transition: all 0.5s ease-in-out;
-}
+    .twitter:hover {
+        font-size: 1rem;
+        color: rgb(1, 129, 248);
+        transition: all 0.5s ease-in-out;
+    }
 
-.copyright {
-    margin-top: 1rem;
-    font-size: 10px;
-    text-align: center;
-    font-family: 'Urbanist', sans-serif;
-position: fixed;
-right: 10px;
-bottom: 10px;
-}
+    .linkedin:hover {
+        font-size: 1rem;
+        color: rgb(61, 25, 221);
+        transition: all 0.5s ease-in-out;
+    }
 
-.copyrightspan {
-    color: blueviolet;
-    font-family: 'Urbanist', sans-serif;
-    font-size: 0.8rem
-}
+    .copyright {
+        margin-top: 1rem;
+        font-size: 10px;
+        text-align: center;
+        font-family: 'Urbanist', sans-serif;
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+    }
+
+    .copyrightspan {
+        color: blueviolet;
+        font-family: 'Urbanist', sans-serif;
+        font-size: 0.8rem
+    }
 }

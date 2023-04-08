@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../assests/reactfavicon.ico" type="image/x-icon">
+    <!-- prism.css -->
+    <link rel="stylesheet" href="../prismScript/prism.css">
+    <!-- custome css -->
+    <link rel="stylesheet" href="../style/html.css">
+    <title>React router</title>
+</head>
+<style>
+    strong {
+        color: rgb(14, 117, 49);
+    }
+
+    .rarr {
+        color: #fff;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .linkstitle {
+        /* margin: 1rem; */
+        text-align: left;
+        font-size: 1rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 1px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    a:hover {
+        color: red;
+    }
+</style>
+
+<body>
+    <!-- title -->
+    <h1 class="title"><span class="spantitle">React Rouer </span> Code Snippits</h1>
+    <!-- container -->
+    <div class="main-container">
+        <div class="container">
+            <ol class="list">
+                <h3 class="listtitle"><span>React Router</span></h3>
+                <p class="titledescription">
+                    React router is used for page routing as React App doesn't include it as default
+                </p>
+                <h3 class="listtitle"> Add React Router</h3>
+                <p class="titledescription">
+                    To install React router, run this in your terminal
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+npm i -D react-router-dom
+</code></pre>
+                </li>
+                <h3 class="listtitle"> Creating Multiple Routes</h3>
+                <p class="titledescription">
+                    To do this first we need to create multiple files and to keep code clean, we will make a folder and
+                    make all the pages there, hence we will create a folder named <strong>pages</strong> in
+                    <strong>src.</strong>
+                </p>
+                <h3 class="listtitle">Folder Structure:</h3>
+                <li class="rarr">&rarr; Home.js</li>
+                <li class="rarr">&rarr; Blog.js</li>
+                <li class="rarr">&rarr; Contact.js</li>
+                <li class="rarr">&rarr; Nopage.js</li>
+
+                <h3 class="listtitle"> Usage</h3>
+                <p class="titledescription">
+                    Now we will make routes in src/index.js, like this
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import reportWebVitals from './reportWebVitals';
+import Home from "./pages/Home";
+import Blogs from "./pages/Blogs";
+import Contact from "./pages/Contact";
+import NoPage from "./pages/NoPage";
+export default function App() {
+  return (
+    &ltBrowserRouter&gt
+      &ltRoutes&gt
+        &ltRoute index element={&ltHome /&gt} /&gt
+        &ltRoute path="/blogs" element={&ltBlogs /&gt} /&gt
+        &ltRoute path="/contact" element={&ltContact /&gt} /&gt
+        &ltRoute path="*" element={&ltNoPage /&gt} /&gt
+      &lt/Routes&gt
+    &lt/BrowserRouter&gt
+  );
+}
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  &ltReact.StrictMode&gt
+    &ltApp /&gt
+  &lt/React.StrictMode&gt
+);
+reportWebVitals();
+</code></pre>
+                </li>
+
+                <h3 class="listtitle">
+                    <span>Home.js</span>
+                </h3>
+                <p class="titledescription">
+                    Make all the Navigation links using
+                    <Link> tag, like this
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+import { Link } from "react-router-dom";
+
+const Home = () =&gt {
+    return (
+        &lt&gt
+            &ltnav&gt
+                &ltul&gt
+                    &ltli&gt
+                        &ltLink to="/"&gtHome&lt/Link&gt
+                    &lt/li&gt
+                    &ltli&gt
+                        &ltLink to="/blogs"&gtBlogs&lt/Link&gt
+                    &lt/li&gt
+                    &ltli&gt
+                        &ltLink to="/contact"&gtContact&lt/Link&gt
+                    &lt/li&gt
+                &lt/ul&gt
+            &lt/nav&gt
+        &lt/&gt
+    )
+};
+export default Home;</code> </pre>
+                </li>
+                <h3 class="listtitle">
+                    <span>Blogs.js</span>
+                </h3>
+                <li class="links">
+                    <pre class="language-js"><code>
+const Blogs = () =&gt {
+  return &lth1&gtBlogs&lt/h1&gt
+};
+export default Blogs;</code> </pre>
+                </li>
+                <h3 class="listtitle">
+                    <span>Contact.js</span>
+                </h3>
+                <li class="links">
+                    <pre class="language-js"><code>
+const Blogs = () =&gt {
+  return &lth1&gtContact&lt/h1&gt
+};
+export default Contact;</code> </pre>
+                </li>
+                <h3 class="listtitle">
+                    <span>Home.js</span>
+                </h3>
+                <li class="links">
+                    <pre class="language-js"><code>
+const Blogs = () =&gt {
+  return &lth1&gt404&lt/h1&gt
+};
+export default Nopage;</code> </pre>
+                </li>
+                <p class="titledescription">
+                    This is made for any route that doesn't exist. To show 404 error there! 
+                </p>
+            </ol>
+        </div>
+    </div>
+</body>
+<!-- prism.js -->
+<script src="../prismScript/prism.js"></script>
+
+</html>

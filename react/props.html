@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../assests/reactfavicon.ico" type="image/x-icon">
+    <!-- prism.css -->
+    <link rel="stylesheet" href="../prismScript/prism.css">
+    <!-- custome css -->
+    <link rel="stylesheet" href="../style/html.css">
+    <title>React props</title>
+</head>
+<style>
+    strong {
+        color: rgb(14, 117, 49);
+    }
+
+    .rarr {
+        color: #fff;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .linkstitle {
+        /* margin: 1rem; */
+        text-align: left;
+        font-size: 1rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 1px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    a:hover {
+        color: red;
+    }
+</style>
+
+<body>
+    <!-- title -->
+    <h1 class="title"><span class="spantitle">React props </span> Code Snippits</h1>
+    <!-- container -->
+    <div class="main-container">
+        <div class="container">
+            <ol class="list">
+                <h3 class="listtitle"><span>React props</span></h3>
+                <p class="titledescription">
+                    Props are Arguments passed to React components via HTML attributes. Example:
+                </p>
+                <h3 class="listtitle">Component</h3>
+
+                <li class="links">
+                    <pre class="language-js"><code>
+function Cat(props) {
+  return &lth1&gtMeow color is {props.color}&lt/h1&gt
+}
+</code></pre>
+                </li>
+                <h3 class="listtitle">Main file</h3>
+                <p class="titledescription">
+                    Constructor gets called when the component is initiated. This is where you initiate the component's
+                    properties. In React we have states which update on page without reload. Constructor properties are
+                    kept in state.
+
+                    We also need to add <span> super() </span> statement, which executes the parent component's
+                    constructor and
+                    component gets access to all the functions of the parent component, like this:
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+&ltCat color="purple" /&gt
+</code></pre>
+                </li>
+                <span>Output &rarr;</span>
+                <p class="titledescription">
+                    Meow Color is Purple
+                </p>
+            </ol>
+        </div>
+    </div>
+</body>
+<!-- prism.js -->
+<script src="../prismScript/prism.js"></script>
+
+</html>

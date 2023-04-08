@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../assests/reactfavicon.ico" type="image/x-icon">
+    <!-- prism.css -->
+    <link rel="stylesheet" href="../prismScript/prism.css">
+    <!-- custome css -->
+    <link rel="stylesheet" href="../style/html.css">
+    <title>React-Es6-CheetSheet</title>
+</head>
+<style>
+    strong {
+        color: red;
+    }
+
+    .rarr {
+        color: #fff;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .linkstitle {
+        /* margin: 1rem; */
+        text-align: left;
+        font-size: 1rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 1px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    a:hover {
+        color: red;
+    }
+</style>
+
+<body>
+    <!-- title -->
+    <h1 class="title"><span class="spantitle">React JSX </span> Code Snippits</h1>
+    <!-- container -->
+    <div class="main-container">
+        <div class="container">
+            <ol class="list">
+                <h3 class="listtitle"><span>React JSX</span></h3>
+                <p class="titledescription">
+                    JSX stands for JavaScript XML. It is similar in appearance to HTML, hence provides a way to easily
+                    write HTML in react.
+                </p>
+                <p class="titledescription">
+                    Coding in JSX. That is where all this will be rendered!
+                </p>
+                <p class="titledescription">
+                    Earlier we had to make an HTML element or append it into existing ones with methods like createElement() / appendChild() 
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+const elem = React.createElement('h1', {}, 'Hello World!');
+</code></pre>
+                </li>
+                <p class="titledescription">
+                    Now we can just do it directly, like this
+                </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+const elem = &lth1&gtHello World!&lt/h1&gt
+</code></pre>
+                </li>
+                <!-- Expression in jsx -->
+                <h3 class="listtitle">Expressions in JSX</h3>
+                <p class="titledescription">You can write the expression in {}</p>
+                <p class="titledescription">You can write simple mathematical operations to variable to states to complicated operations with ternary operators and it will return the result, like:</p>
+                <p class="titledescription"><strong>Mathematical Operations:</strong></p>
+                <li class="links">
+                    <pre class="language-js"><code>
+const elem = &lth1&gtReact was released in {2010+3}&lt/h1&gt
+</code></pre>
+                </li>
+                <p class="titledescription"><strong>Variables/States</strong></p>
+                <li class="links">
+                    <pre class="language-js"><code>
+const name = "CWH"
+const elem = &lth1&gtMy name is {name}&lt/h1&gt
+</code></pre>
+                </li>
+                <p class="titledescription"><strong>Ternary Operators</strong></p>
+                <li class="links">
+                    <pre class="language-js"><code>
+const elem = &lth1&gtHello {name ? name : 'World'}&lt/h1&gt
+</code></pre>
+                </li>
+            </ol>
+        </div>
+    </div>
+</body>
+<!-- prism.js -->
+<script src="../prismScript/prism.js"></script>
+
+</html>
