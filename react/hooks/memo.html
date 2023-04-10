@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../../assests/reactfavicon.ico" type="image/x-icon" />
+    <!-- prism.css -->
+    <link rel="stylesheet" href="../../prismScript/prism.css" />
+    <!-- custome css -->
+    <link rel="stylesheet" href="../../style/html.css" />
+    <title>React useMemo</title>
+</head>
+<style>
+    strong {
+        color: rgb(14, 117, 49);
+    }
+
+    .rarr {
+        color: #fff;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+            Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+            sans-serif;
+    }
+
+    .linkstitle {
+        /* margin: 1rem; */
+        text-align: left;
+        font-size: 1rem;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 1px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+            Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+            sans-serif;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    a:hover {
+        color: red;
+    }
+</style>
+
+<body>
+    <!-- title -->
+    <h1 class="title">
+        <span class="spantitle">React useMemo</span> Code Snippits
+    </h1>
+    <!-- container -->
+    <div class="main-container">
+        <div class="container">
+            <ol class="list">
+                <h3 class="listtitle"><span>React useMemo Hook</span></h3>
+                <p class="titledescription">
+                    <strong>React useMemo </strong> Hook returns a memoized value
+                </p>
+                <p class="titledescription">
+                    It is similar to useCallback Hook. The main difference is useMemo returns a memoized value and
+                    <strong>useCallback</strong> returns a memoized function.
+                </p>
+                <p class="titledescription">
+                    The useMemo Hook only runs when any of its dependencies update
+                </p>
+                <p class="titledescription">
+                    <span>useMemo</span> can improve performance big time.
+                </p>
+
+                <!-- Problem -->
+                <h3 class="listtitle">When to use useMemo</h3>
+                <p class="titledescription">You may think we can use memo and stop a component from re-rendering but if
+                    there is a case where you are passing a function as prop to a component, then it will re-render
+                    irrespective of memo. It is because of something called "referential equality". In this every time a
+                    component re-renders, its function gets recreated. Hence, memo is working but because function is
+                    getting recreated, component will re-render. To avoid this, we can use <strong>useMemo</strong>
+                <h3 class="listtitle">Like this &rarr;</h3>
+                <li class="links">
+                    <pre class="language-js"><code>
+const expensiveFunction = (num) => {
+  console.log("Calculating...");
+  for (let i = 0; i < 1000000000; i++) {
+    num += 1;
+  }
+  return num;
+};
+</code></pre>
+                </li>
+                <!-- Runs on every render -->
+                <p class="titledescription">This function will run on every render resulting in slowing down of
+                    everything. To prevent this, we can memoize it's result and return it without calculating and only
+                    recalculate it when num changes
+                    For this we will make a state number because we have to give changing factor as dependency. Hence,
+                    code would be:</p>
+                <li class="links">
+                    <pre class="language-js"><code>
+   import { useMemo, useState } from "react";
+
+const App = () => {
+  const [number, setNumber] = useState(0);
+  const calculation = useMemo(() => expensiveFunction(number), [number]);
+  return (
+    &ltdiv&gt
+      {calculation}
+    &lt/div&gt
+  );
+};
+const expensiveFunction = (num) => {
+  console.log("Calculating...");
+  for (let i = 0; i < 1000000000; i++) {
+    num = num + i;
+  }
+  return num;
+};
+export default App;
+    </code></pre>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer class="footercontainer">
+        <div class="footer">
+            <!-- logo  -->
+            <div class="footerlogo">
+                <img src="../../assests/logo_png.png" alt="" class="footerimg" />
+            </div>
+            <!-- about company -->
+            <div class="content">
+                <ul class="footermenu">
+                    <li class="footermenulink"><a href="../../index.html" class="listlinks">Home</a></li>
+                    <li class="footermenulink">About</li>
+                    <li class="footermenulink">Portfolio</li>
+                    <li class="footermenulink">Contact</li>
+                </ul>
+            </div>
+        </div>
+        <p class="copyright">
+            All Right Reserved &copy; By
+            <span class="copyrightspan"> Vishal singh</span>
+        </p>
+    </footer>
+</body>
+<!-- prism.js -->
+<script src="../../prismScript/prism.js"></script>
+
+</html>

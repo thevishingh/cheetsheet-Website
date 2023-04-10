@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../../assests/reactfavicon.ico" type="image/x-icon" />
+    <!-- prism.css -->
+    <link rel="stylesheet" href="../../prismScript/prism.css" />
+    <!-- custome css -->
+    <link rel="stylesheet" href="../../style/html.css" />
+    <title>React useRef</title>
+</head>
+<style>
+    strong {
+        color: rgb(14, 117, 49);
+    }
+
+    .rarr {
+        color: #fff;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+            Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+            sans-serif;
+    }
+
+    .linkstitle {
+        /* margin: 1rem; */
+        text-align: left;
+        font-size: 1rem;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 1px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+            Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+            sans-serif;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    a:hover {
+        color: red;
+    }
+</style>
+
+<body>
+    <!-- title -->
+    <h1 class="title">
+        <span class="spantitle">React useRef</span> Code Snippits
+    </h1>
+    <!-- container -->
+    <div class="main-container">
+        <div class="container">
+            <ol class="list">
+                <h3 class="listtitle"><span>React useRef Hook</span></h3>
+                <p class="titledescription">
+                    <strong>useRef</strong> keeps the value stored between renders
+                </p>
+                <p class="titledescription">
+                    In this, value changed doesn't cause a re-render
+                </p>
+                <p class="titledescription">
+                    It can also be used to access a DOM element directly
+                </p>
+
+                <!-- Problem -->
+                <h3 class="listtitle">Doesn't cause re-render</h3>
+                <li class="links">
+                    <pre class="language-js"><code>
+
+import { useState, useRef } from "react";
+import ReactDOM from "react-dom/client";
+
+function App() {
+const [stateValue, setStateValue] = useState("");
+const refValue = useRef("");
+return (
+&lt&gt
+&lth1&&ltWill cause a re-render:&lt/h1&gt
+&ltbutton& onClick={()=>{setStateValue(Math.random())}}&ltstate&lt/button&gt : {stateValue}
+&lth1&&ltWill change but won't cause a re-render:</h1&gt
+&ltbutton& onClick={()=>{refValue.current=Math.random()}}&ltref&lt/button&gt : {refValue.current}
+    &lt/&gt
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(&ltApp/&gt);
+</code></pre>
+                </li>
+                <!-- Runs on every render -->
+                <p class="titledescription">In this, if you click on state button, state will update and it will
+                    re-render, whereas if you click on ref, nothing visible will happen, i.e. ref will change but it
+                    won't re-render. To verify this, you can again click on state, it will again update and re-render
+                    but this time ref has some value stored, so that will display </p>
+                <h3 class="listtitle">Accessing DOM elements with ref</h3>
+                <li class="links">
+                    <pre class="language-js"><code>
+import { useRef } from "react";
+import ReactDOM from "react-dom/client";
+function App() {
+  const inputElement = useRef();
+  const focusInput = () => {
+    inputElement.current.focus();
+  };
+  return (
+    &lt&gt
+      &ltinput type="text" ref={inputElement} /&gt
+      &ltbutton& onClick={focusInput}&gtFocus Input&lt/button&gt
+    &lt/&gt
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(&ltApp/&gt);
+</code></pre>
+                </li>
+                <p class="titledescription">In this, we initialized a useRef. In jsx, we used an attribute called ref to
+                    store reference, once we have reference then we can use it anyway we want</p>
+            </ol>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer class="footercontainer">
+        <div class="footer">
+            <!-- logo  -->
+            <div class="footerlogo">
+                <img src="../../assests/logo_png.png" alt="" class="footerimg" />
+            </div>
+            <!-- about company -->
+            <div class="content">
+                <ul class="footermenu">
+                    <li class="footermenulink"><a href="../../index.html" class="listlinks">Home</a></li>
+                    <li class="footermenulink">About</li>
+                    <li class="footermenulink">Portfolio</li>
+                    <li class="footermenulink">Contact</li>
+                </ul>
+            </div>
+        </div>
+        <p class="copyright">
+            All Right Reserved &copy; By
+            <span class="copyrightspan"> Vishal singh</span>
+        </p>
+    </footer>
+</body>
+<!-- prism.js -->
+<script src="../../prismScript/prism.js"></script>
+
+</html>

@@ -16,7 +16,14 @@ body {
     background-color: #000;
     color: #fff;
 }
-
+a{
+    text-decoration: none;
+    font-family: 'Urbanist', sans-serif;
+    color: #fff;
+}
+a:hover{
+    color: red;
+}
 span {
     color: rgb(226, 213, 27);
 }

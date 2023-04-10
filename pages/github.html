@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../assests/gitfav.ico" type="image/x-icon">
+    <!-- prism.css -->
+    <link rel="stylesheet" href="../prismScript/prism.css">
+    <!-- custome css -->
+    <link rel="stylesheet" href="../style/html.css">
+    <title>git-CheetSheet</title>
+</head>
+<style>
+    strong {
+        color: red;
+    }
+
+    .rar {
+        color: rgba(175, 204, 13, 0.774);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .linkstitle {
+        text-align: left;
+        font-size: 1rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 0.7rem;
+        font-weight: 200;
+        letter-spacing: 1px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    a:hover {
+        color: red;
+    }
+
+    .git {
+        font-size: 0.9rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        line-height: 1rem;
+    }
+</style>
+
+<body>
+    <!-- title -->
+    <h1 class="title"><span class="spantitle">git </span> Code Snippits</h1>
+    <!-- container -->
+    <div class="main-container">
+        <div class="container">
+            <ol class="list">
+                <h3 class="listtitle">What is git</h3>
+                <p class="titledescription">Git is a an open source distributed version control system that is available
+                    for free under the GNU General Public License version 2. The Git source code is hosted on GitHub,
+                    from where it can be downloaded or installed</p>
+                <!-- Quick start -->
+                <h3 class="listtitle">Git commands</h3>
+                <p class="titledescription">
+                <p class="titledescription">
+                    <li class="rar">&rarr; git-add</li>
+                <p class="titledescription">
+                    Moves changes from the working directory to the staging area. This gives you the opportunity to
+                    prepare a snapshot before committing it to the official history.
+                </p>
+                <li class="rar">&rarr; <a href="https://www.atlassian.com/git/tutorials/saving-changes?section=git-add"
+                        class="linkslist" target="_blank">Learn More About This Topic</a></li>
+                </p>
+
+                <p class="titledescription">
+                    <li class="rar">&rarr; git branch</li>
+                <p class="titledescription">
+                    This command is your general-purpose branch administration tool. It lets you create isolated
+                    development environments within a single repositor
+                </p>
+                <li class="rar">&rarr; <a
+                        href="https://www.atlassian.com/git/tutorials/using-branches?section=git-branch"
+                        class="linkslist" target="_blank">Learn More About This Topic</a></li>
+                </p>
+
+                <p class="titledescription">
+                    <li class="rar">&rarr; git checkout</li>
+                <p class="titledescription">
+                    In addition to checking out old commits and old file revisions, git checkout is also the means to
+                    navigate existing branches. Combined with the basic Git commands, it’s a way to work on a particular
+                    line of development.
+                </p>
+                <li class="rar">&rarr; <a
+                        href="https://www.atlassian.com/git/tutorials/using-branches?section=git-checkout"
+                        class="linkslist" target="_blank">Learn More About This Topic</a></li>
+                </p>
+
+                <p class="titledescription">
+                    <li class="rar">&rarr; git clean</li>
+                <p class="titledescription">
+                    Removes untracked files from the working directory. This is the logical counterpart to git reset,
+                    which (typically) only operates on tracked files.
+                </p>
+                <li class="rar">&rarr; <a
+                        href="https://www.atlassian.com/git/tutorials/undoing-changes?section=git-clean"
+                        class="linkslist" target="_blank">Learn More About This Topic</a></li>
+                </p>
+
+                <p class="titledescription">
+                    <li class="rar">&rarr; git clone</li>
+                <p class="titledescription">
+                    Creates a copy of an existing Git repository. Cloning is the most common way for developers to
+                    obtain a working copy of a central repository.
+                </p>
+                <li class="rar">&rarr; <a
+                        href="https://www.atlassian.com/git/tutorials/setting-up-a-repository?section=git-clone"
+                        class="linkslist" target="_blank">Learn More About This Topic</a></li>
+                </p>
+
+                <p class="titledescription">
+                    <li class="rar">&rarr; git commit</li>
+                <p class="titledescription">
+                    Takes the staged snapshot and commits it to the project history. Combined with git add, this defines
+                    the basic workflow for all Git users.
+                </p>
+                <li class="rar">&rarr; <a
+                        href="https://www.atlassian.com/git/tutorials/rewriting-history?section=git-commit--ammend"
+                        class="linkslist" target="_blank">Learn More About This Topic</a></li>
+                </p>
+
+                <p class="titledescription">
+                    <li class="rar">&rarr; git commit --amend</li>
+                <p class="titledescription">
+                    Passing the --amend flag to git commit lets you amend the most recent commit. This is very useful
+                    when you forget to stage a file or omit important information from the commit message.
+                </p>
+                <li class="rar">&rarr; <a
+                        href="https://www.atlassian.com/git/tutorials/rewriting-history?section=git-commit--amend"
+                        class="linkslist" target="_blank">Learn More About This Topic</a></li>
+                </p>
+
+                <p class="titledescription">
+                    <li class="rar">&rarr; git config</li>
+                <p class="titledescription">
+                    A convenient way to set configuration options for your Git installation. You’ll typically only need
+                    to use this immediately after installing Git on a new development machine.
+                </p>
+                <li class="rar">&rarr; <a
+                        href="https://www.atlassian.com/git/tutorials/setting-up-a-repository?section=git-config"
+                        class="linkslist" target="_blank">Learn More About This Topic</a></li>
+                </p>
+
+                <p class="titledescription">
+                    <li class="rar">&rarr; git fetch</li>
+                <p class="titledescription">
+                    Fetching downloads a branch from another repository, along with all of its associated commits and
+                    files. But, it doesn't try to integrate anything into your local repository. This gives you a chance
+                    to inspect changes before merging them with your project.
+                </p>
+                <li class="rar">&rarr; <a href="https://www.atlassian.com/git/tutorials/syncing?section=git-fetch"
+                        class="linkslist" target="_blank">Learn More About This Topic</a></li>
+                </p>
+
+                <p class="titledescription">
+                    <li class="rar">&rarr; git init</li>
+                <p class="titledescription">
+                    Initializes a new Git repository. If you want to place a project under revision control, this is the
+                    first command you need to learn.
+                </p>
+                <li class="rar">&rarr; <a
+                        href="https://www.atlassian.com/git/tutorials/setting-up-a-repository?section=git-init"
+                        class="linkslist" target="_blank">Learn More About This Topic</a></li>
+                </p>
+
+                <p class="titledescription">
+                    <li class="rar">&rarr; git log</li>
+                <p class="titledescription">
+                    Lets you explore the previous revisions of a project. It provides several formatting options for
+                    displaying committed snapshots.
+                </p>
+                <li class="rar">&rarr; <a
+                        href="https://www.atlassian.com/git/tutorials/inspecting-a-repository?section=git-log"
+                        class="linkslist" target="_blank">Learn More About This Topic</a></li>
+                </p>
+
+                <p class="titledescription">
+                    <li class="rar">&rarr; git merge</li>
+                <p class="titledescription">
+                    A powerful way to integrate changes from divergent branches. After forking the project history with
+                    git branch, git merge lets you put it back together again.
+                </p>
+                <li class="rar">&rarr; <a href="https://www.atlassian.com/git/tutorials/using-branches/git-merge"
+                        class="linkslist" target="_blank">Learn More About This Topic</a></li>
+                </p>
+
+                <p class="titledescription">
+                    <li class="rar">&rarr; git pull</li>
+                <p class="titledescription">
+                    Pulling is the automated version of git fetch. It downloads a branch from a remote repository, then
+                    immediately merges it into the current branch. This is the Git equivalent of svn update.
+                </p>
+                <li class="rar">&rarr; <a href="https://www.atlassian.com/git/tutorials/syncing?section=git-pull"
+                        class="linkslist" target="_blank">Learn More About This Topic</a></li>
+                </p>
+
+                <p class="titledescription">
+                    <li class="rar">&rarr; git push</li>
+                <p class="titledescription">
+                    Pushing is the opposite of fetching (with a few caveats). It lets you move a local branch to another
+                    repository, which serves as a convenient way to publish contributions. This is like svn commit, but
+                    it sends a series of commits instead of a single changeset.
+                </p>
+                <li class="rar">&rarr; <a href="https://www.atlassian.com/git/tutorials/syncing" class="linkslist"
+                        target="_blank">Learn More About This Topic</a></li>
+                </p>
+
+                <p class="titledescription">
+                    <li class="rar">&rarr; git rebase</li>
+                <p class="titledescription">
+                    Rebasing lets you move branches around, which helps you avoid unnecessary merge commits. The
+                    resulting linear history is often much easier to understand and explore.
+                </p>
+                <li class="rar">&rarr; <a
+                        href="https://www.atlassian.com/git/tutorials/rewriting-history?section=git-rebase"
+                        class="linkslist" target="_blank">Learn More About This Topic</a></li>
+                </p>
+
+                <p class="titledescription">
+                    <li class="rar">&rarr; git rebase -i</li>
+                <p class="titledescription">
+                    The -i flag is used to begin an interactive rebasing session. This provides all the benefits of a
+                    normal rebase, but gives you the opportunity to add, edit, or delete commits along the way.
+                </p>
+                <li class="rar">&rarr; <a
+                        href="https://www.atlassian.com/git/tutorials/rewriting-history?section=git-rebase-i"
+                        class="linkslist" target="_blank">Learn More About This Topic</a></li>
+                </p>
+
+                <p class="titledescription">
+                    <li class="rar">&rarr; git reflog</li>
+                <p class="titledescription">
+                    Git keeps track of updates to the tip of branches using a mechanism called reflog. This allows you
+                    to go back to changesets even though they are not referenced by any branch or tag.
+                </p>
+                <li class="rar">&rarr; <a
+                        href="https://www.atlassian.com/git/tutorials/rewriting-history?section=git-reflog"
+                        class="linkslist" target="_blank">Learn More About This Topic</a></li>
+                </p>
+
+                <p class="titledescription">
+                    <li class="rar">&rarr; git remote</li>
+                <p class="titledescription">
+                    A convenient tool for administering remote connections. Instead of passing the full URL to the
+                    fetch, pull, and push commands, it lets you use a more meaningful shortcut.
+                </p>
+                <li class="rar">&rarr; <a href="https://www.atlassian.com/git/tutorials/syncing?section=git-remote"
+                        class="linkslist" target="_blank">Learn More About This Topic</a></li>
+                </p>
+
+                <p class="titledescription">
+                    <li class="rar">&rarr; git reset</li>
+                <p class="titledescription">
+                    Undoes changes to files in the working directory. Resetting lets you clean up or completely remove
+                    changes that have not been pushed to a public repository.
+                </p>
+                <li class="rar">&rarr; <a
+                        href="https://www.atlassian.com/git/tutorials/undoing-changes?section=git-reset"
+                        class="linkslist" target="_blank">Learn More About This Topic</a></li>
+                </p>
+
+                <p class="titledescription">
+                    <li class="rar">&rarr; git revert</li>
+                <p class="titledescription">
+                    Undoes a committed snapshot. When you discover a faulty commit, reverting is a safe and easy way to
+                    completely remove it from the code base.
+                </p>
+                <li class="rar">&rarr; <a
+                        href="https://www.atlassian.com/git/tutorials/undoing-changes?section=git-revert"
+                        class="linkslist" target="_blank">Learn More About This Topic</a></li>
+                </p>
+
+                <p class="titledescription">
+                    <li class="rar">&rarr; git status</li>
+                <p class="titledescription">
+                    Displays the state of the working directory and the staged snapshot. You’ll want to run this in
+                    conjunction with git add and git commit to see exactly what’s being included in the next snapshot.
+                </p>
+                <li class="rar">&rarr; <a
+                        href="https://www.atlassian.com/git/tutorials/inspecting-a-repository?section=git-status"
+                        class="linkslist" target="_blank">Learn More About This Topic</a></li>
+                </p>
+
+                </p>
+                <!--    How to git push an existing project to GitHub-->
+                <h3 class="listtitle">
+                    How to git push an existing project to GitHub
+                </h3>
+                <h3 class="listtitle">
+                    Add an existing project to GitHub steps
+                </h3>
+                <p class="titledescription">
+                <ol>
+                    <li class="git">Create a GitHub repository for the existing project.</li>
+                    <br>
+                    <li class="git">Copy the GitHub URL for the new repo to the clipboard.</li>
+                    <br>
+                    <li class="git">Perform a git init command in the root folder of the existing project.</li>
+                    <br>
+                    <li class="git">Add all of the existing project’s files to the Git index and then commit.</li>
+                    <br>
+                    <li class="git">Add the GitHub repo as a remote reference for the existing project.</li>
+                    <br>
+                    <li class="git">Perform a git push operation with the -u and -f switches.</li>
+                    <br>
+                    <li class="git">Verify that the existing project’s files have been pushed to GitHub.</li>
+                    <br>
+                </ol>
+                </p>
+                <!-- GitHub push tutorial commands -->
+                <h3 class="listtitle">
+                    GitHub push tutorial commands
+                </h3>
+                <ul>
+                    <li class="git">git init</li>
+                    <br>
+                    <li class="git">git add .</li>
+                    <br>
+                    <li class="git">git commit -m "Add existing project files to Git"</li>
+                    <br>
+                    <li class="git">git remote add origin https://github.com/cameronmcnz/example-website.git</li>
+                    <br>
+                    <li class="git">git push -u -f origin master</li>
+                    <br>
+                </ul>
+            </ol>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer class="footercontainer">
+        <div class="footer">
+            <!-- logo  -->
+            <div class="footerlogo">
+                <img src="../../assests/logo_png.png" alt="" class="footerimg" />
+            </div>
+            <!-- about company -->
+            <div class="content">
+                <ul class="footermenu">
+                    <li class="footermenulink"><a href="../../index.html" class="listlinks">Home</a></li>
+                    <li class="footermenulink">About</li>
+                    <li class="footermenulink">Portfolio</li>
+                    <li class="footermenulink">Contact</li>
+                </ul>
+            </div>
+        </div>
+        <p class="copyright">
+            All Right Reserved &copy; By
+            <span class="copyrightspan"> Vishal singh</span>
+        </p>
+    </footer>
+</body>
+<!-- prism.js -->
+<script src="../prismScript/prism.js"></script>
+
+</html>

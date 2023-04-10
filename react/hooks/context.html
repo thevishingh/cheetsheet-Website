@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../../assests/reactfavicon.ico" type="image/x-icon" />
+  <!-- prism.css -->
+  <link rel="stylesheet" href="../../prismScript/prism.css" />
+  <!-- custome css -->
+  <link rel="stylesheet" href="../../style/html.css" />
+  <title>React useContext</title>
+</head>
+<style>
+  strong {
+    color: rgb(14, 117, 49);
+  }
+
+  .rarr {
+    color: #fff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+  }
+
+  .linkstitle {
+    /* margin: 1rem; */
+    text-align: left;
+    font-size: 1rem;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  a:hover {
+    color: red;
+  }
+</style>
+
+<body>
+  <!-- title -->
+  <h1 class="title">
+    <span class="spantitle">React useContext</span> Code Snippits
+  </h1>
+  <!-- container -->
+  <div class="main-container">
+    <div class="container">
+      <ol class="list">
+        <h3 class="listtitle"><span>React useContext Hook</span></h3>
+        <p class="titledescription">
+          The <span>useContext</span> is a Hook that lets you add React state to function components. useContext helps
+          to manage states globally, i.e. between components.
+        </p>
+
+        <!-- Problem -->
+        <h3 class="listtitle">Problem</h3>
+        <p class="titledescription">Suppose there is a button in
+          <Navbar /> Component which affects something in <strong>&ltHome/&gt</strong> Component. Problems:
+        </p>
+        <p class="titledescription">In this case, state can't be held in &ltNavbar/&gt or &ltHome/&gt it will be in
+          App.js</p>
+        <p class="titledescription">To access it, we have to pass it like a prop to the components, and if the component
+          is within 3-4 components, we have to pass it to everyone as shown in image below: </p>
+        <!-- img -->
+        <img src="../../assests/react-component-hierarchy.png" alt="context graph" width="300px">
+
+        <!-- Solution - Create Context -->
+        <h3 class="listtitle">Solution - Create Context</h3>
+        <p class="titledescription">
+          It's a hook so first we need to import it from react and initialize it! To do this, write
+        </p>
+        <li class="links">
+          <pre class="language-js"><code>
+import { createContext } from "react";
+
+const StateContext = createContext()
+</code></pre>
+        </li>
+        <!-- Runs on every render -->
+        <h3 class="listtitle">Context Provider</h3>
+        <p class="titledescription">Now we need to wrap the component tree that need the state Context in a Provider.
+          It's like the Provider will provide the state to every component in that tree which is wrapped in Provider</p>
+        <li class="links">
+          <pre class="language-js"><code>
+function App() {
+  const [state, setState] = useState('true');
+  return (
+    &ltStateContext.Provider value={state}&gt
+      &lth1&gt{`Hi! My state is ${state}!`}&lt/h1&gt
+      &ltHome state={state} /&gt
+    &lt/StateContext.Provider&gt
+  );
+}
+</code></pre>
+        </li>
+        <!-- Runs when data changes -->
+        <h3 class="listtitle">useContext hook</h3>
+        <p class="titledescription">To access <span>useContext</span> you can do something like this:</p>
+        <li class="links">
+          <pre class="language-js"><code>
+
+function Home() {
+  const state = useContext(StateContext);
+
+  return (
+    &lt&gt
+      &lth2&gt{`Hii! My state is ${state}! `}&lt/h2&gt
+    &lt/&gt
+  );
+}            
+</code></pre>
+        </li>
+      </ol>
+    </div>
+  </div>
+  <!-- footer -->
+  <footer class="footercontainer">
+    <div class="footer">
+      <!-- logo  -->
+      <div class="footerlogo">
+        <img src="../../assests/logo_png.png" alt="" class="footerimg" />
+      </div>
+      <!-- about company -->
+      <div class="content">
+        <ul class="footermenu">
+          <li class="footermenulink"><a href="../../index.html" class="listlinks">Home</a></li>
+          <li class="footermenulink">About</li>
+          <li class="footermenulink">Portfolio</li>
+          <li class="footermenulink">Contact</li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright">
+      All Right Reserved &copy; By
+      <span class="copyrightspan"> Vishal singh</span>
+    </p>
+  </footer>
+</body>
+<!-- prism.js -->
+<script src="../../prismScript/prism.js"></script>
+
+</html>
