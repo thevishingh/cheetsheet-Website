@@ -21,16 +21,29 @@
 
 <body>
   <!-- Navigation section -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">
-        <img src="./assests/logo_png.png" alt="" class="image" />
+    <div class="navbar">
+      <img src="./assests/logo_png.png" alt="logo" />
+      <div class="menu-right">
+        <span id="toggle"><i class="fa-solid fa-bars"></i></span>
+        <ul id="menu">
+          <li><a href="./pages/html.html" class="navbarlinks" target="_blank">Html</a></li>
+          <li><a href="./pages/css.html" class="navbarlinks" target="_blank">Css</a></li>
+          <li><a href="./pages/javascript.html" class="navbarlinks" target="_blank">Javascript</a>
+          </li>
+          <li><a href="./pages/react.html" class="navbarlinks" target="_blank">React</a></li>
+          <li><a href="./pages/github.html" class="navbarlinks" target="_blank">Github</a></li>
+          <li><a href="./pages/node.html" class="navbarlinks" target="_blank">Node</a></li>
+          <li><a href="./pages/express.html" class="navbarlinks" target="_blank">Express</a></li>
+        </ul>
       </div>
+    </div>
+
+  <!-- <header>
+    <nav class="navbar">
+        <img src="./assests/logo_png.png" alt="" class="logo" />
+    
       <div class="navlinks">
         <ul class="menu">
-          <!-- <li class="menulinks">
-              <a href="./" class="navbarlinks">Home</a>
-            </li> -->
           <li class="menulinks"><a href="./pages/html.html" class="navbarlinks" target="_blank">Html</a></li>
           <li class="menulinks"><a href="./pages/css.html" class="navbarlinks" target="_blank">Css</a></li>
           <li class="menulinks"><a href="./pages/javascript.html" class="navbarlinks" target="_blank">Javascript</a>
@@ -39,14 +52,17 @@
           <li class="menulinks"><a href="./pages/github.html" class="navbarlinks" target="_blank">Github</a></li>
           <li class="menulinks"><a href="./pages/node.html" class="navbarlinks" target="_blank">Node</a></li>
           <li class="menulinks"><a href="./pages/express.html" class="navbarlinks" target="_blank">Express</a></li>
+          <span class="hamburger"><i class="fa-solid fa-bars"></i></span>
         </ul>
       </div>
     </nav>
-  </header>
+  </header> -->
   <!-- middle section About languages and cheetsheet-->
   <div class="container">
     <div class="titlesection">
-      <h1 class="title">Welcome To Code With Vish</h1>
+      <h1 class="title">
+        <marquee behavior="scroll" loop="infinite" direction="right">Welcome To Code With Vish</marquee>
+      </h1>
     </div>
     <!-- about Conatiner -->
     <div class="about">
@@ -57,6 +73,9 @@
             <li class="descriptionlistlink">CSS</li>
             <li class="descriptionlistlink">JAVASCRIPT</li>
             <li class="descriptionlistlink">REACT</li>
+            <li class="descriptionlistlink">NODE.JS</li>
+            <li class="descriptionlistlink">EXPRESS.JS</li>
+            <li class="descriptionlistlink">MONGODB</li>
           </ol>
         </div>
         <div class="description">
@@ -125,5 +144,7 @@
 </body>
 <!-- prism javascript -->
 <script src="./prismScript/prism.js"></script>
+<!-- custome js -->
+<script src="./navbar.js"></script>
 
 </html>

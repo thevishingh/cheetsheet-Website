@@ -15,50 +15,47 @@ body {
 }
 
 .navbar {
-    width: 100vw;
+   padding: 10px;
     background-color: rgb(0, 0, 0);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: #ffffff;
 }
 
-.logo {
-    padding: 0.2rem;
+.navbar img{
+   height: 45px; 
+   float: left;
+   margin-right: 20px;
 }
 
-.image {
-    width: 185px;
+.menu-right {
+    text-align: right;
 }
 
-.menu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-}
-
-.menulinks {
+ul li {
+    display: inline-block;
+    margin: 0.2rem;
     list-style: none;
-    padding: 0.5rem;
-    margin: 0.5rem;
-    cursor: pointer;
-    font-weight: 400;
 }
 
 .navbarlinks {
+    text-decoration: none;
     color: #fff;
     font-family: 'Urbanist', sans-serif;
-    text-decoration: none;
+    cursor: pointer;
 }
 
 .navbarlinks:hover {
-    color: rgb(224, 7, 7);
+    color: rgb(243, 3, 3);
 }
+
 
 /* hambergur */
 
-
+span {
+   margin: 0 20px;
+    font-size: 25px;
+    color: rgb(251, 255, 0);
+    cursor: pointer;
+    display: none;
+}
 
 
 
@@ -76,6 +73,7 @@ body {
 }
 
 .title {
+    margin-top: 1rem;
     text-align: center;
     font-size: 2rem;
     letter-spacing: .1rem;
@@ -106,7 +104,7 @@ body {
     text-align: left;
     font-family: 'Roboto', sans-serif;
     color: rgb(0, 0, 0);
-    background-color: #E9E8E8;
+    background-color: #b1acac;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
@@ -123,19 +121,6 @@ body {
     font-weight: 500;
 }
 
-span {
-    color: red;
-    font-size: 2rem;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-.brtag {
-    font-size: 1rem;
-    color: blueviolet;
-    font-family: 'Urbanist', sans-serif;
-    font-weight: 600;
-}
-
 .language {
     width: 50%;
     display: flex;
@@ -145,30 +130,8 @@ span {
 
 }
 
-.box {
-    width: 120px;
-    height: 120px;
-    background-color: #ffffff;
-    border: 1px solid #000;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: .8rem;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 19px 38px, rgba(0, 0, 0, 0.12) 0px 15px 12px;
-}
-
-.boximg {
-    width: 80px;
-    cursor: pointer;
-}
-
-.box:hover {
-    background-color: #DAF5FF;
-    transition: all 1s ease-in-out;
-}
-
 /* footer */
+
 .footercontainer {
     background-color: #000000;
     margin: auto;
@@ -282,18 +245,11 @@ span {
 /* media queary */
 
 @media only screen and (max-width: 320px) {
+
     .navbar {
         width: 100%;
-        background-color: rgb(0, 0, 0);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        color: #ffffff;
-        flex-direction: column;
-    }
-
-    .logo {
-        display: none;
+        margin: 0;
+        padding: 0;
     }
 
     /* About container */
@@ -301,7 +257,6 @@ span {
     .container {
         background-color: #EEEEEE;
         width: 80%;
-        /* height: 80vh; */
     }
 
     .titlesection {
@@ -357,7 +312,6 @@ span {
     .footercontainer {
         background-color: #000000;
         width: 100%;
-        /* height: 60vh; */
         margin: auto;
         color: #fff;
     }
@@ -419,6 +373,7 @@ span {
     }
 
     /* Hover Effect */
+
     .instagram:hover {
         font-size: 1rem;
         color: rgb(209, 43, 106);
@@ -467,18 +422,22 @@ span {
 }
 
 @media only screen and (max-width: 650px) {
-    .navbar {
-        width: 100%;
-        background-color: rgb(0, 0, 0);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        color: #ffffff;
-        flex-direction: column;
+
+    /* hamburger */
+    span {
+        margin: 0;
+        display: block;
     }
-    .logo {
+
+    ul {
         display: none;
     }
+
+    ul li {
+        font-size: 10px;
+        display: block;
+    }
+
     /* About container */
 
     .container {
@@ -691,15 +650,6 @@ span {
 }
 
 @media only screen and (max-width: 950px) {
-    .navbar {
-        width: 100%;
-        background-color: rgb(0, 0, 0);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        color: #ffffff;
-        flex-direction: column;
-    }
 
     /* About container */
 
@@ -912,15 +862,7 @@ span {
 }
 
 @media only screen and (max-width: 1450px) {
-    .navbar {
-        width: 100%;
-        background-color: rgb(0, 0, 0);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        color: #ffffff;
-        flex-direction: column;
-    }
+
 
     /* About container */
 
