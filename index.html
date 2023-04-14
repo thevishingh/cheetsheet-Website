@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="./prismScript/prism.css" />
   <!-- custome css -->
   <link rel="stylesheet" href="./index.css" />
+  <!-- navbar css -->
+  <link rel="stylesheet" href="./navbar.css">
   <!-- fonawesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
@@ -21,42 +23,69 @@
 
 <body>
   <!-- Navigation section -->
-    <div class="navbar">
-      <img src="./assests/logo_png.png" alt="logo" />
-      <div class="menu-right">
-        <span id="toggle">&#9776;</span>
-        <ul id="menu">
-          <li><a href="./pages/html.html" class="navbarlinks" target="_blank">Html</a></li>
-          <li><a href="./pages/css.html" class="navbarlinks" target="_blank">Css</a></li>
-          <li><a href="./pages/javascript.html" class="navbarlinks" target="_blank">Javascript</a>
-          </li>
-          <li><a href="./pages/react.html" class="navbarlinks" target="_blank">React</a></li>
-          <li><a href="./pages/github.html" class="navbarlinks" target="_blank">Github</a></li>
-          <li><a href="./pages/node.html" class="navbarlinks" target="_blank">Node</a></li>
-          <li><a href="./pages/express.html" class="navbarlinks" target="_blank">Express</a></li>
-        </ul>
-      </div>
-    </div>
 
-  <!-- <header>
-    <nav class="navbar">
-        <img src="./assests/logo_png.png" alt="" class="logo" />
-    
-      <div class="navlinks">
-        <ul class="menu">
-          <li class="menulinks"><a href="./pages/html.html" class="navbarlinks" target="_blank">Html</a></li>
-          <li class="menulinks"><a href="./pages/css.html" class="navbarlinks" target="_blank">Css</a></li>
-          <li class="menulinks"><a href="./pages/javascript.html" class="navbarlinks" target="_blank">Javascript</a>
-          </li>
-          <li class="menulinks"><a href="./pages/react.html" class="navbarlinks" target="_blank">React</a></li>
-          <li class="menulinks"><a href="./pages/github.html" class="navbarlinks" target="_blank">Github</a></li>
-          <li class="menulinks"><a href="./pages/node.html" class="navbarlinks" target="_blank">Node</a></li>
-          <li class="menulinks"><a href="./pages/express.html" class="navbarlinks" target="_blank">Express</a></li>
-          <span class="hamburger"><i class="fa-solid fa-bars"></i></span>
-        </ul>
+
+  <section class="navigation">
+    <div class="nav-container">
+      <div class="brand">
+        <a href="#!"> <img src="./assests/logo_png.png" alt="logo" width="150px"> </a>
       </div>
-    </nav>
-  </header> -->
+      <nav>
+        <div class="nav-mobile">
+          <a id="nav-ham" href="#!"><span id="ss"></span></a>        
+        </div>
+        <ul>
+          <li>
+            <a href="./pages/html.html">Html</a>
+          </li>
+          <li>
+            <a href="./pages/css.html">Css</a>
+          </li>
+          <li>
+            <a href="./pages/javascript.html">Javascript</a>
+            <!-- <ul>
+              <li>
+                <a href="./pages/javascript.html">Javascript</a>
+              </li>
+              <li>
+                <a href="#!">web design</a>
+              </li>
+              <li>
+                <a href="#!">Graphic Design</a>
+              </li>
+            </ul> -->
+          </li>
+          <li>
+            <a href="./pages/react.html">React</a>
+          </li>
+          <li>
+            <a href="./pages/node.html">Node-js</a>
+            <!-- <ul>
+              <li>
+                <a href="#!">Web Design</a>
+              </li>
+              <li>
+                <a href="#!">Web Development</a>
+              </li>
+              <li>
+                <a href="#!">Graphic Design</a>
+              </li>
+              <li>
+                <a href="#!">References</a>
+              </li>
+            </ul> -->
+          </li>
+          <li>
+            <a href="./pages/express.html">Express-js</a>
+          </li>
+          <li>
+            <a href="./pages/mangodb.html">MongoDb-js</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+
   <!-- middle section About languages and cheetsheet-->
   <div class="container">
     <div class="titlesection">

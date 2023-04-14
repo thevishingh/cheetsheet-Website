@@ -14,51 +14,6 @@ body {
     flex-direction: column;
 }
 
-.navbar {
-    padding: 10px;
-    background-color: rgb(0, 0, 0);
-}
-
-.navbar img {
-    height: 45px;
-    float: left;
-    margin-right: 20px;
-}
-
-.menu-right {
-    text-align: right;
-}
-
-ul li {
-    display: inline-block;
-    margin: 0.2rem;
-    list-style: none;
-    font-weight: 400;
-}
-
-.navbarlinks {
-    text-decoration: none;
-    color: #fff;
-    font-family: 'Urbanist', sans-serif;
-    cursor: pointer;
-}
-
-.navbarlinks:hover {
-    color: rgb(243, 3, 3);
-}
-
-
-/* hambergur */
-
-span {
-    margin: 0 20px;
-    font-size: 2rem;
-    color: rgb(162, 0, 255);
-    cursor: pointer;
-    display: none;
-}
-
-
 
 /* About container */
 
@@ -401,22 +356,7 @@ span {
 
 @media only screen and (max-width:650px) {
 
-    /* hamburger */
-    span {
-        margin: 0;
-        display: block;
-    }
-
-    ul {
-        display: none;
-    }
-
-    ul li {
-        margin: 0;
-        font-size: 14px;
-        display: block;
-    }
-
+   
     /* About container */
 
     .container {

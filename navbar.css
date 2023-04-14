@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+
+:root {
+  --nav-content-width: 1000px;
+  --nav-height: 65px;
+  --nav-link-height: 16px;
+  --nav-background: rgb(0, 0, 0);
+  --nav-font-color: #fff;
+  --link-hover-color: #28d;
+}
+
+/* Logo + navigation bar, full width */
+.navigation {
+  height: var(--nav-height);
+  background: var(--nav-background);
+}
+
+/* Logo + navigation bar, restricted width */
+.nav-container {
+  max-width: var(--nav-content-width);
+  margin: 0 auto;
+}
+
+/* Logo */
+.brand {
+  position: absolute;
+  /* padding-left: 20px; */
+  float: left;
+  line-height: var(--nav-height);
+  font-size: 1.4em;
+  width: 200px;
+}
+.brand:hover {
+  background: var(--link-hover-color);
+  color: var(--nav-font-color);
+}
+.brand a,
+.brand a:visited {
+  color: var(--nav-font-color);
+  text-decoration: none;
+}
+
+/* Navigation bar */
+nav {
+  width: 100%;
+  padding: var(--nav-height) 0 15px;
+}
+nav .active {
+  display: block;
+}
+/* 1st level */
+nav > ul {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav > ul > li {
+  float: none;
+  position: relative;
+  font-family: 'Urbanist', sans-serif;    font-family: 'Urbanist', sans-serif;
+}
+nav > ul > li a,
+nav > ul > li a:visited {
+  display: block;
+  padding: 15px;
+  line-height: var(--nav-link-height);
+  background: var(--nav-background);
+  color: var(--nav-font-color);
+  text-decoration: none;
+}
+nav > ul > li a:hover,
+nav > ul > li a:visited:hover {
+  background: var(--link-hover-color);
+  color: var(--nav-font-color);
+}
+nav > ul > li a:not(:only-child):after,
+nav > ul > li a:visited:not(:only-child):after {
+  padding-left: 4px;
+  content: "\25BC";
+}
+/* 2nd level */
+nav > ul > li > ul {
+  position: static;
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+nav > ul > li > ul > li {
+  min-width: 190px;
+}
+nav > ul > li > ul > li a {
+  padding: 15px 15px 15px 30px;
+  line-height: var(--nav-link-height);
+}
+
+/* Mobile navigation */
+.nav-mobile {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--nav-background);
+  height: var(--nav-height);
+  width: var(--nav-height);
+}
+#nav-ham {
+  position: absolute;
+  left: 8px;
+  top: 14px;
+  cursor: pointer;
+  padding: 10px 35px 10px 0px;
+}
+#nav-ham span,
+#nav-ham span:before,
+#nav-ham span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: var(--nav-font-color);
+  position: absolute;
+  display: block;
+  content: "";
+  transition: all 300ms ease-in-out;
+}
+#nav-ham span:before {
+  top: -10px;
+}
+#nav-ham span:after {
+  bottom: -10px;
+}
+#nav-ham.active span {
+  background-color: transparent;
+}
+#nav-ham.active span:before,
+#nav-ham.active span:after {
+  top: 0;
+}
+#nav-ham.active span:before {
+  transform: rotate(45deg);
+}
+#nav-ham.active span:after {
+  transform: rotate(-45deg);
+}
+
+@media screen and (min-width: 799px) {
+  nav {
+    float: right;
+    width: auto;
+    padding: 0;
+  }
+  /* 1st level */
+  nav > ul {
+    display: block !important;
+  }
+  nav > ul > li {
+    float: left;
+  }
+  nav > ul > li a,
+  nav > ul > li a:visited {
+    padding: 0 20px;
+    line-height: var(--nav-height);
+  }
+  /* 2nd level */
+  nav > ul > li > ul {
+    position: absolute;
+    display: none;
+  }
+  nav > ul > li > ul > li a {
+    padding: 15px;
+  }
+  .nav-mobile {
+    display: none;
+  }
+}
+
+/* Some text */
+article {
+  max-width: var(--nav-content-width);
+  margin: 0 auto;
+  padding: 10px;
+}
