@@ -56,45 +56,175 @@
 
 <body>
     <!-- title -->
-    <h1 class="title"><span class="spantitle"> MongoDb </span> Code Snippits</h1>
+    <h1 class="title">
+        <span class="spantitle"> MongoDb </span> Code Snippits
+    </h1>
     <!-- container -->
     <div class="main-container">
         <div class="container">
             <ol class="list">
                 <h3 class="listtitle">What is MongoDb</h3>
                 <p class="titledescription">
-                    Node.js is a cross-platform, open-source server environment that can
-                    run on Windows, Linux, Unix, macOS, and more. Node.js is a back-end
-                    JavaScript runtime environment, runs on the V8 JavaScript Engine,
-                    and executes JavaScript code outside a web browser.
+                    MongoDB is built on a scale-out architecture that has become popular
+                    with developers of all kinds for developing scalable applications
+                    with evolving data schemas. As a document database, MongoDB makes it
+                    easy for developers to store structured or unstructured data. It
+                    uses a JSON-like format to store documents.
                 </p>
                 <!-- Quick start -->
-                <h3 class="listtitle">Node Set-up</h3>
-                <p class="titledescription"></p>
-                <h3 class="listtitle">Download Node From Here..!!</h3>
+                <h3 class="listtitle">MongoDB Community Server Download</h3>
+                <p class="titledescription">
+                    The Community version of our distributed database offers a flexible
+                    document data model along with support for ad-hoc queries, secondary
+                    indexing, and real-time aggregations to provide powerful ways to
+                    access and analyze your data
+                </p>
+                <h3 class="listtitle">Download From Here..!!</h3>
                 <!-- Down link -->
                 <li class="rar">
                     &rarr;
-                    <a href="https://nodejs.org/en" class="linkslist" target="_blank">Click Here To Download</a>
+                    <a href="https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-6.0.5-signed.msi"
+                        class="linkslist" target="_blank">Click Here To Download</a>
                 </li>
                 <p class="titledescription">
-                    Check the installation of node and npm using the following commands
+                    Set the bin Path As Enviormental Variables
                 </p>
+                <p class="titledescription">program file &darr;</p>
+                <p class="titledescription">mongoDb &darr;</p>
+                <p class="titledescription">server &darr;</p>
+                <p class="titledescription">bin &darr;</p>
+                <p class="titledescription">copy the Path &darr;</p>
+                <p class="titledescription">set to the Enviormental Variables</p>
+                <!-- Bson -->
+                <h3 class="listtitle">What is BSON</h3>
+                <p class="titledescription">
+                    BSON stands for Binary Javascript Object Notation. It is a
+                    binary-encoded serialization of JSON documents. BSON has been
+                    extended to add some optional non-JSON-native data types, like dates
+                    and binary data. BSON can be compared to other binary formats, like
+                    Protocol Buffers
+                </p>
+                <h3 class="listtitle">Show DataBase</h3>
+                <li class="links">
+                    <pre class="language-js"><code>show dbs</code></pre>
+                </li>
+                <p class="titledescription">This Will Show Existing Database</p>
+                <h3 class="listtitle">show collection</h3>
+                <li class="links">
+                    <pre class="language-js"><code>show collection</code></pre>
+                </li>
+                <p class="titledescription">
+                    Collection of Documents is Known as Collection
+                </p>
+                <p class="titledescription">This Will Show Existing Collection</p>
+                <h3 class="listtitle">use [ " Database name " ]</h3>
+                <li class="links">
+                    <pre class="language-js"><code>use ["Database name you want"]
+//create new Data base</code></pre>
+                </li>
+                <p class="titledescription">
+                    This Will Create a new database with the given name
+                </p>
+                <h3 class="listtitle">creating collection and adding data</h3>
                 <li class="links">
                     <pre class="language-js"><code>
-node --version && npm --version
-</code></pre>
+db.'database-name'.insertOne({name:"visha", faccolor:"black"})  
+// db.students.insertOne({name:"vishal", favcolor:"black"});
+// Add this in Database And return
+//"acknowledged" : true,
+//"insertedId" : ObjectId("643aca247f897188fa88104a")
+              </code></pre>
                 </li>
+                <h3 class="listtitle">Find data From the Database</h3>
+                <li class="links">
+                    <pre class="language-js"><code>
+db.'collection name'.find()
+// db.students.find()
+//this will show saved Data 
+//from the Database
+              </code></pre>
+                </li>
+                <h3 class="listtitle">Insert Many Data in Database</h3>
+                <li class="links">
+                    <pre class="language-js"><code>
+db.'database-name'.insertMany([{name:"visha", faccolor:"black"},{name:"akash", faccolor:"red"}])  
+// db.students.insertOne({name:"vishal", favcolor:"black"},{name:"visha", faccolor:"black"});
+// Add this in Database And return
+//"acknowledged" : true,
+//"insertedId" : ObjectId("643aca247f897188fa88104a")
+              </code></pre>
+                </li>
+                <p class="titledescription">
+                    This Will Add many data as much asa we want to add
+                </p>
+                <h3 class="listtitle">Find Specfic Data Fron the Data base</h3>
+                <li class="links">
+                    <pre class="language-js"><code>
+db.'database-name'.find({name:"akash"})  
+// db.students.insertOne({name:"vishal"});
+// This Will return data with the name of vishal
+              </code></pre>
+                </li>
+                <h3 class="listtitle">Find Specfic Data but with limitation</h3>
+                <li class="links">
+                    <pre class="language-js"><code>
+db.'database-name'.find({name:"akash"}).limit(1) ;
+// db.students.insertOne({name:"vishal"}).limit(1);
+ </code></pre>
+                </li>
+                <p class="titledescription">
+                    This Will return data with the name of vishal but only one vishal
+                    this will not give all data which having same name cause it having
+                    linmitations
+                </p>
+                <h3 class="listtitle">Update Data</h3>
+                <li class="links">
+                    <pre class="language-js"><code>
+db.'database-name'.update({name:"akash"}, {name:"akash yadav"});
+//db.students.insertOne({name:"akash"},{name:"akash yadav"} );
+ </code></pre>
+                </li>
+                <p class="titledescription">
+                    This Will update name with updated name value and saved in the data base
+                </p>
                 <!--  Creating a sample nodejs file -->
-                <h3 class="listtitle">Initilize NPM in Any Project Type</h3>
+                <h3 class="listtitle">update One</h3>
                 <li class="links">
                     <pre class="language-js"><code>
-npm init
-//Type in project terminal
-//This will create a package.json
-//file Where all your dependencies will add
+
+db.personal.updateOne({name:"ankit"}, {$set:{name:"vishal singh"}})
 </code></pre>
                 </li>
+                <p class="titledescription">
+                    Here <span>$ </span> is use Before mongodb Operator eg: <strong>$set :</strong>
+                    <br>
+                    same way if you want to update All then you could use
+                    <span>updateMany({})</span>
+                </p>
+                <h3 class="listtitle">update Many</h3>
+                <li class="links">
+                    <pre class="language-js"><code>
+
+db.personal.updateMany({name:"Akash singh"},{ $set: {name:"sonali akash singh"}})
+</code></pre>
+                </li>
+                <p class="titledescription">
+                    This will update all data which having name <span>Akash singh</span>
+                </p>
+                <h3 class="listtitle">Delete One</h3>
+                <li class="links">
+                    <pre class="language-js"><code>
+
+db.personal.deleteOne({name:"Akash yadav"})
+</code></pre>
+                </li>
+                <p class="titledescription">
+                    This will delete <span>Akash yadav</span>
+                    <br>
+                    <br>
+                    note &rarr; if we just write <span>delete()</span> or <span>deleteOne()</span> and did not give value it will delete automatically first data from the collection same if we give 
+                    <span>deleteMany()</span> this will delete All data from the database so always give parameter what you want to delete
+                </p>
             </ol>
         </div>
     </div>

@@ -18,7 +18,7 @@ body {
 /* About container */
 
 .container {
-    background-color: #EEEEEE;
+    background-color: rgba(81, 0, 128, 0.205);
     width: 100vw;
     height: 100vh;
 }
@@ -52,15 +52,14 @@ body {
 
 .description {
     width: 30vw;
-    padding: 1.2rem;
-    margin: 1rem;
+    padding: 1rem;
     outline: none;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 400;
     text-align: left;
     font-family: 'Roboto', sans-serif;
     color: rgb(0, 0, 0);
-    background-color: #C9EEFF;
+    background-color: #ffffff;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
@@ -228,7 +227,7 @@ body {
     .description {
         width: 80%;
         height: 80%;
-        padding: 0.3rem;
+        /* padding: 0.3rem; */
         border-radius: 0;
         outline: none;
         font-size: 0.4rem;
@@ -236,7 +235,6 @@ body {
         text-align: left;
         font-family: 'Roboto', sans-serif;
         color: rgb(0, 0, 0);
-        background-color: #E9E8E8;
         box-shadow: none;
     }
 
@@ -566,7 +564,6 @@ body {
         text-align: left;
         font-family: 'Roboto', sans-serif;
         color: rgb(0, 0, 0);
-        background-color: #E9E8E8;
         box-shadow: none;
     }
 
@@ -733,7 +730,6 @@ body {
         text-align: left;
         font-family: 'Roboto', sans-serif;
         color: rgb(0, 0, 0);
-        background-color: #E9E8E8;
         box-shadow: none;
     }
 
