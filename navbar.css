@@ -32,7 +32,7 @@
   font-size: 1.4em;
   width: 200px;
 }
-.brand:hover {
+/* .brand:hover {
   background: var(--link-hover-color);
   color: var(--nav-font-color);
 }
@@ -40,7 +40,7 @@
 .brand a:visited {
   color: var(--nav-font-color);
   text-decoration: none;
-}
+} */
 
 /* Navigation bar */
 nav {

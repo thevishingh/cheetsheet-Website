@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="../assests/mongoicon.ico"
+      type="image/x-icon"
+    />
+    <!-- prism.css -->
+    <link rel="stylesheet" href="../prismScript/prism.css" />
+    <!-- custome css -->
+    <link rel="stylesheet" href="../style/html.css" />
+    <!-- button css -->
+    <link rel="stylesheet" href="../button.css" />
+    <title>Mongoose-CheetSheet</title>
+  </head>
+
+  <body>
+    <!-- title -->
+    <h1 class="title">
+      <span class="spantitle"> Mongoose </span> Code Snippits
+    </h1>
+    <!-- container -->
+    <div class="main-container">
+      <div class="container">
+        <ol class="list">
+          <h3 class="listtitle">What is Mongoose</h3>
+          <p class="titledescription">
+            Mongoose is an Object Data Modeling (ODM) library for MongoDB and
+            Node.js. It manages relationships between data, provides schema
+            validation, and is used to translate between objects in code and the
+            representation of those objects in MongoDB.
+          </p>
+          <!-- Quick start -->
+          <!-- <h3 class="listtitle">MongoDB Community Server Download</h3> -->
+          <p class="titledescription">
+            MongoDB is a schema-less NoSQL document database. It means you can
+            store JSON documents in it, and the structure of these documents can
+            vary as it is not enforced like SQL databases. This is one of the
+            advantages of using NoSQL as it speeds up application development
+            and reduces the complexity of deployments
+          </p>
+          <h3 class="listtitle">Learn More</h3>
+          <!-- Down link -->
+          <li class="rarr">
+            &rarr;
+            <a
+              href="https://www.freecodecamp.org/news/introduction-to-mongoose-for-mongodb-d2a7aa593c57/"
+              class="linkslist"
+              target="_blank"
+              >Click Here To Learn</a
+            >
+          </li>
+
+          <h3 class="listtitle">Terminologies</h3>
+          <li class="rarr">&rarr; Collections</li>
+          <p class="titledescription">
+            <a
+              href="https://mongoosejs.com/docs/guide.html#collection"
+              target="_blank"
+              >Collections</a
+            >
+            in Mongo are equivalent to tables in relational databases. They can
+            hold multiple JSON documents.
+          </p>
+          <li class="rarr">&rarr; Documents</li>
+          <p class="titledescription">
+            <a href="https://mongoosejs.com/docs/documents.html" target="_blank"
+              >Documents</a
+            >
+            are equivalent to records or rows of data in SQL. While a SQL row
+            can reference data in other tables, Mongo documents usually combine
+            that in a document.
+          </p>
+          <li class="rarr">&rarr; Fields</li>
+          <p class="titledescription">
+            Fields, also known as properties or attributes, are similar to
+            columns in a SQL table. In the image above, FirstName, LastName,
+            Email, and Phone are all fields.
+          </p>
+          <li class="rarr">&rarr; Schema</li>
+          <p class="titledescription">
+            While Mongo is schema-less, SQL defines a
+            <a
+              href="https://mongoosejs.com/docs/guide.html#schemas"
+              target="_blank"
+              >schema</a
+            >
+            via the table definition. A Mongoose schema is a document data
+            structure (or shape of the document) that is enforced via the
+            application layer
+          </p>
+          <li class="rarr">&rarr; SchemaTypes</li>
+          <p class="titledescription">
+            While Mongoose schemas define the overall structure or shape of a
+            document,
+            <a
+              href="https://mongoosejs.com/docs/schematypes.html"
+              target="_blank"
+              >SchemaTypes</a
+            >
+            define the expected data type for individual fields (String, Number,
+            Boolean, and so on). You can also pass in useful options like
+            required to make a field non-optional, default to set a default
+            value for the field, and many more.
+          </p>
+          <li class="rarr">&rarr; Models</li>
+          <p class="titledescription">
+            <a href="https://mongoosejs.com/docs/models.html" target="_blank"
+              >Models</a
+            >
+            are higher-order constructors that take a schema and create an
+            instance of a document equivalent to records in a relational
+            database.
+          </p>
+
+          <!-- Getting Started -->
+          <h3 class="listtitle">Getting Started</h3>
+          <p class="titledescription">
+            Mongo Installation <a href="../pages/mangodb.html">Follow This</a>
+          </p>
+          <h3 class="listtitle">NPM Install</h3>
+          <p class="titledescription">
+            Let’s go to the project folder and initialize our project
+          </p>
+          <li class="links">
+            <pre class="language-js"><code>npm init</code></pre>
+          </li>
+          <p class="titledescription">
+            Let’s install Mongoose and a validation library with the following
+            command:
+          </p>
+          <li class="links">
+            <pre
+              class="language-js"
+            ><code>npm install mongoose validator</code></pre>
+          </li>
+          <p class="titledescription">
+            The above install command will install the latest version of the
+            libraries. The Mongoose syntax in this article is specific to
+            Mongoose v5 and beyond.
+          </p>
+          <!-- <p class="titledescription">This Will Show Existing Collection</p> -->
+          <h3 class="listtitle">Database Connection</h3>
+          <li class="links">
+            <pre class="language-js"><code>
+let mongoose = require('mongoose');
+const server = '127.0.0.1:27017'; // REPLACE WITH YOUR DB SERVER
+const database = 'fcc-Mail'; // REPLACE WITH YOUR DB NAME
+class Database {
+  constructor() {
+    this._connect();
+  }
+  _connect() {
+    mongoose
+      .connect(`mongodb://${server}/${database}`)
+      .then(() => {
+        console.log('Database connection successful');
+      })
+      .catch((err) => {
+        console.error('Database connection error');
+      });
+  }
+}
+module.exports = new Database();
+                    </code></pre>
+          </li>
+          <p class="titledescription">
+            This Will Create a new database with the given name
+          </p>
+          <h3 class="listtitle">creating collection and adding data</h3>
+          <li class="links">
+            <pre class="language-js"><code>
+db.'database-name'.insertOne({name:"visha", faccolor:"black"})  
+// db.students.insertOne({name:"vishal", favcolor:"black"});
+// Add this in Database And return
+//"acknowledged" : true,
+//"insertedId" : ObjectId("643aca247f897188fa88104a")
+              </code></pre>
+          </li>
+          <h3 class="listtitle">Find data From the Database</h3>
+          <li class="links">
+            <pre class="language-js"><code>
+db.'collection name'.find()
+// db.students.find()
+//this will show saved Data 
+//from the Database
+              </code></pre>
+          </li>
+          <h3 class="listtitle">Insert Many Data in Database</h3>
+          <li class="links">
+            <pre class="language-js"><code>
+db.'database-name'.insertMany([{name:"visha", faccolor:"black"},{name:"akash", faccolor:"red"}])  
+// db.students.insertOne({name:"vishal", favcolor:"black"},{name:"visha", faccolor:"black"});
+// Add this in Database And return
+//"acknowledged" : true,
+//"insertedId" : ObjectId("643aca247f897188fa88104a")
+              </code></pre>
+          </li>
+          <p class="titledescription">
+            This Will Add many data as much asa we want to add
+          </p>
+          <h3 class="listtitle">Find Specfic Data Fron the Data base</h3>
+          <li class="links">
+            <pre class="language-js"><code>
+db.'database-name'.find({name:"akash"})  
+// db.students.insertOne({name:"vishal"});
+// This Will return data with the name of vishal
+              </code></pre>
+          </li>
+          <h3 class="listtitle">Find Specfic Data but with limitation</h3>
+          <li class="links">
+            <pre class="language-js"><code>
+db.'database-name'.find({name:"akash"}).limit(1) ;
+// db.students.insertOne({name:"vishal"}).limit(1);
+ </code></pre>
+          </li>
+          <p class="titledescription">
+            This Will return data with the name of vishal but only one vishal
+            this will not give all data which having same name cause it having
+            linmitations
+          </p>
+          <h3 class="listtitle">Update Data</h3>
+          <li class="links">
+            <pre class="language-js"><code>
+db.'database-name'.update({name:"akash"}, {name:"akash yadav"});
+//db.students.insertOne({name:"akash"},{name:"akash yadav"} );
+ </code></pre>
+          </li>
+          <p class="titledescription">
+            This Will update name with updated name value and saved in the data
+            base
+          </p>
+          <!--  Creating a sample nodejs file -->
+          <h3 class="listtitle">update One</h3>
+          <li class="links">
+            <pre class="language-js"><code>
+
+db.personal.updateOne({name:"ankit"}, {$set:{name:"vishal singh"}})
+</code></pre>
+          </li>
+          <p class="titledescription">
+            Here <span>$ </span> is use Before mongodb Operator eg:
+            <strong>$set :</strong>
+            <br />
+            same way if you want to update All then you could use
+            <span>updateMany({})</span>
+          </p>
+          <h3 class="listtitle">update Many</h3>
+          <li class="links">
+            <pre class="language-js"><code>
+
+db.personal.updateMany({name:"Akash singh"},{ $set: {name:"sonali akash singh"}})
+</code></pre>
+          </li>
+          <p class="titledescription">
+            This will update all data which having name <span>Akash singh</span>
+          </p>
+          <h3 class="listtitle">Delete One</h3>
+          <li class="links">
+            <pre class="language-js"><code>
+
+db.personal.deleteOne({name:"Akash yadav"})
+</code></pre>
+          </li>
+          <p class="titledescription">
+            This will delete <span>Akash yadav</span>
+            <br />
+            <br />
+            note &rarr; if we just write <span>delete()</span> or
+            <span>deleteOne()</span> and did not give value it will delete
+            automatically first data from the collection same if we give
+            <span>deleteMany()</span> this will delete All data from the
+            database so always give parameter what you want to delete
+          </p>
+          <h3 class="listtitle">CRUD Operations</h3>
+          <li class="links">
+            <pre class="language-js"><code>
+import mongoose from "mongoose";
+
+// creating a server
+const server = "sample";
+
+// you will get this from mongoose compass 
+const port = "mongodb://127.0.0.1:27017";
+
+mongoose.connect(`${port}/${server}`).then(() => {
+    console.log("connenct to mongoDb Successfully");
+}).catch((error) => {
+    console.log(error);
+});
+
+
+// mongoose Schema
+const students = mongoose.Schema({
+    name: String,
+    workout: Boolean,
+    height: Number
+});
+
+
+// mongoose models
+const schoolStudents = new mongoose.model("students", students);
+
+
+// creating Dtaa there's Two method
+
+// First method
+const adder = async () => {
+    const ss = new schoolStudents({
+        name: "Akash singh",
+        workout: true,
+        height: 5
+    }); 
+    await ss.save();
+};
+adder(); 
+
+// second method
+const createData = async ()=>{
+    const insertData = await schoolStudents.create({
+        name:"chandu",
+        height:5,
+        workout:true
+    })
+    console.log(insertData);
+}
+createData();
+
+//reading
+const readData = async ()=>{
+    const rr = await schoolStudents.find();
+    console.log(rr);
+}
+readData();
+
+// // updating
+const updateData = async ()=>{
+    const uu = await schoolStudents.updateOne({
+        $set:{
+            name:"Akash singhla",
+            workout:false,
+            height:4
+        }
+    });
+    console.log(uu);
+}
+updateData();
+
+// detelet 
+const deleteData = async()=>{
+    const dd = await schoolStudents.deleteOne();
+    console.log(dd);
+}
+deleteData();
+</code></pre>
+          </li>
+          <p class="titledescription">
+            This is A whole concept of A <span>CRUD</span> operation with the
+            help of Mongoose like &rarr; creating server, creating schemas,
+            creating models, and performing CRUD operations
+          </p>
+          <h3 class="listtitle">Query and Projection Operators</h3>
+          <p class="titledescription">
+            <button class="glow-on-hover" type="button">
+              <a
+                href="https://www.mongodb.com/docs/manual/reference/operator/query/"
+                style="color:#fff; text-decoration: none;" target="_blank" >Click Here to Learn</a
+              >
+            </button>
+          </p>
+        </ol>
+      </div>
+    </div>
+    <!-- footer -->
+    <footer class="footercontainer">
+      <div class="footer">
+        <!-- logo  -->
+        <div class="footerlogo">
+          <img src="../../assests/logo_png.png" alt="" class="footerimg" />
+        </div>
+        <!-- about company -->
+        <div class="content">
+          <ul class="footermenu">
+            <li class="footermenulink">
+              <a href="../../index.html" class="listlinks">Home</a>
+            </li>
+            <li class="footermenulink">About</li>
+            <li class="footermenulink">Portfolio</li>
+            <li class="footermenulink">Contact</li>
+          </ul>
+        </div>
+      </div>
+      <p class="copyright">
+        All Right Reserved &copy; By
+        <span class="copyrightspan"> Vishal singh</span>
+      </p>
+    </footer>
+  </body>
+  <!-- prism.js -->
+  <script src="../prismScript/prism.js"></script>
+</html>
