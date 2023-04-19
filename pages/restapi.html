@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../assests/nodicon.ico" type="image/x-icon" />
+    <!-- prism.css -->
+    <link rel="stylesheet" href="../prismScript/prism.css" />
+    <!-- custome css -->
+    <link rel="stylesheet" href="../style/html.css" />
+    <!-- butto css  -->
+    <link rel="stylesheet" href="../button.css" />
+    <title>Node-CheetSheet</title>
+</head>
+
+<body oncontextmenu="return false">
+    <!-- title -->
+    <h1 class="title"><span class="spantitle">REST </span> Api</h1>
+    <!-- container -->
+    <div class="main-container">
+        <div class="container">
+            <ol class="list">
+                <h3 class="listtitle">What is a API</h3>
+                <p class="titledescription">
+                    What are APIs? Application Programming Interfaces (APIs) are
+                    constructs made available in programming languages to allow
+                    developers to create complex functionality more easily. They
+                    abstract more complex code away from you, providing some easier
+                    syntax to use in its place
+                </p>
+                <h3 class="listtitle">What is REST Api</h3>
+                <p class="titledescription">REST APIs are used to access and manipulate data using a common set of
+                    stateless operations. These operations are integral to the HTTP protocol and represent essential
+                    create, read, update, and delete (CRUD) functionality, although not in a clean one-to-one manner:
+                    POST <br> (create a resource or generally provide data)</p>
+                <h3 class="listtitle">HTTP methods</h3>
+                <p class="titledescription">
+                    Node.js has a built-in module called HTTP, which allows Node.js to transfer data over the Hyper Text
+                    Transfer Protocol (HTTP)
+                    To include the HTTP module, use the require() method:
+                </p>
+                <p class="titledescription">
+                    Following four HTTP methods are commonly used in REST based
+                    architecture <br><br> GET − This is used to provide a read only access to a
+                    resource <br> PUT − This is used to create a new resource <br> DELETE − This
+                    is used to remove a resource <br> POST − This is used to update a
+                    existing resource or create a new resource.
+                </p>
+                <h3 class="listtitle">Http Status codes</h3>
+                <p class="titledescription">
+                    An HTTP status code is a server response to a browser's request. When you visit a website, your
+                    browser sends a request to the site's server, and the server then responds to the browser's request
+                    with a three-digit code: the HTTP status code.
+                    <br>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">Click Here to know About Http
+                        Codes
+                        Status</a>
+                </p>
+                <!-- example -->
+                <h3 class="listtitle">Example of An Rest Api Creation</h3>
+                <li class="links">
+                    <pre class="language-js"><code>
+import express from "express";
+import mongoose from "mongoose";
+
+import path from "path";
+import { fileURLToPath } from "url";
+
+import bodyParser from "body-parser";
+
+const app = express();
+
+// connecting to mongoDb
+//,{useNewUrlParser:true, useUnifiedToplogy:true} -> optional
+mongoose
+    .connect("mongodb://localhost:27017/EcoomerceProduct")
+    .then(() => {
+        console.log("Server is connected");
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+
+// Define file and path directory name
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// define {body-parser} middlware
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.json());
+
+// making schemas
+const productSchemas = mongoose.Schema({
+    name: String,
+    description: String,
+    catgories: String,
+    price: Number,
+});
+
+// making collection
+const productCollection = new mongoose.model("product", productSchemas);
+
+// creating product Api
+app.post("/api/v1/product/new", async (req, res) => {
+    const product = await productCollection.create(req.body);
+
+    // sending response
+    res.status(200).json({
+        success: true,
+        product,
+    });
+});
+
+// read product;
+app.get("/api/v1/product", async (req, res) => {
+    const product = await productCollection.find();
+    // sending response
+    res.status(200).json({
+        success: true,
+        product,
+    });
+});
+
+// update product
+app.put("/api/v1/product/:id", async (req, res) => {
+    let product = await productCollection.findById(req.params.id);
+
+    if (!product) {
+        return res.status(500).json({
+            success: false,
+            message: "there is no such product"
+        });
+    }
+
+    // {new:true, useFindAndModify:true, runValidator:true}
+    product = await productCollection.findByIdAndUpdate(req.params.id, req.body);
+
+    // sending res
+    res.status(200).json({
+        success: true,
+        product
+    });
+});
+
+// delete product
+app.delete("/api/v1/product/:id", async (req, res) => {
+    let product = await productCollection.findById(req.params.id);
+
+    if (!product) {
+        return res.status(500).json({
+            success: false,
+            message: "there is no such product"
+        });
+    }
+
+    // {new:true, useFindAndModify:true, runValidator:true}
+    product = await productCollection.findByIdAndDelete(req.params.id, req.body);
+
+    // This is also a way to delete product ->
+    // await product.remove(); 
+
+    // sending response
+    res.status(200).json({
+        success: true, 
+        message: "Product is deleted",
+        product
+    });
+});
+
+// creating server
+const PORT = 8000;
+const server = "localhost";
+
+app.listen(PORT, server, () => {
+    console.log(`server is runnig on http://${server}:${PORT}`);
+}); 
+</code></pre>
+                </li>
+                <a href="/resApi.zip" download="codes download"> <button class="glow-on-hover" type="button">Download
+                        codes</button> </a>
+            </ol>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer class="footercontainer">
+        <div class="footer">
+            <!-- logo  -->
+            <div class="footerlogo">
+                <img src="../../assests/logo_png.png" alt="" class="footerimg" />
+            </div>
+            <!-- about company -->
+            <div class="content">
+                <ul class="footermenu">
+                    <li class="footermenulink">
+                        <a href="../../index.html" class="listlinks">Home</a>
+                    </li>
+                    <li class="footermenulink">About</li>
+                    <li class="footermenulink">Portfolio</li>
+                    <li class="footermenulink">Contact</li>
+                </ul>
+            </div>
+        </div>
+        <p class="copyright">
+            All Right Reserved &copy; By
+            <span class="copyrightspan"> Vishal singh</span>
+        </p>
+    </footer>
+</body>
+<!-- prism.js -->
+<script src="../prismScript/prism.js"></script>
+
+</html>
