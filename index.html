@@ -1,180 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="./assests/favicon.ico"
+      type="image/x-icon"
+    />
+    <!-- custome css -->
+    <link rel="stylesheet" href="./index.css" />
+    <!-- navbar css -->
+    <link rel="stylesheet" href="./navbar/navbar.css" />
+    <!-- button css -->
+    <link rel="stylesheet" href="./button.css" />
+    <!-- fonawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- responsive css codes -->
+    <link rel="stylesheet" href="./responsive.css">
+    <!-- title -->
+    <title>Cheet-sheet</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- favicon -->
-  <link rel="shortcut icon" href="./assests/favicon.ico" type="image/x-icon">
-  <!-- Prism css -->
-  <link rel="stylesheet" href="./prismScript/prism.css" />
-  <!-- custome css -->
-  <link rel="stylesheet" href="./index.css" />
-  <!-- navbar css -->
-  <link rel="stylesheet" href="./navbar.css">
-  <!-- button css -->
-  <link rel="stylesheet" href="./button.css">
-  <!-- fonawesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- title -->
-  <title>Cheet-sheet</title>
-</head>
+  <!-- <body oncontextmenu="return false"> -->
 
-<!-- <body oncontextmenu="return false"> -->
+  <body>
+    <!-- Navigation section -->
 
-<body>
-  <!-- Navigation section -->
-
-
-  <section class="navigation">
-    <div class="nav-container">
-      <div class="brand">
-        <a href="#!"> <img src="./assests/logo_png.png" alt="logo" width="150px"> </a>
-      </div>
-      <nav>
-        <div class="nav-mobile">
-          <a id="nav-ham" href="#!"><span id="ss"></span></a>
+    <section class="navigation">
+      <div class="nav-container">
+        <div class="brand">
+          <a href="#!"> <img src="./assests/logo_png.png" alt="logo" width="150px" /> </a>
         </div>
-        <ul>
-          <!-- <li>
+        <nav>
+          <div class="nav-mobile">
+            <a id="nav-ham" href="#!"><span id="ss"></span></a>
+          </div>
+          <ul>
+            <!-- <li>
             <a href="./pages/html.html">Html</a>
           </li>
           <li>
             <a href="./pages/css.html">Css</a>
           </li> -->
-          <li>
-            <!-- <a href="./pages/javascript.html">Javascript</a> -->
-            <a href="#!">Frontend</a>
-            <ul>
-              <li>
-                <a href="./pages/html.html">Html</a>
-              </li>
-              <li>
-                <a href="./pages//css.html">Css</a>
-              </li>
-              <li>
-                <a href="./pages//javascript.html">Javascript</a>
-              </li>
-              <li>
-                <a href="./pages/react.html">React</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#!">Backend</a>
-            <ul>
-              <li>
-                <a href="./pages/node.html">Node</a>
-              </li>
-              <li>
-                <a href="./pages/express.html">Express</a>
-              </li>
-              <li>
-                <a href="./pages/mangodb.html">MongoDb</a>
-              </li>
-              <li>
-                <a href="./pages/mongoose.html">Mongoose</a>
-              </li>
-              <li>
-                <a href="./pages/restapi.html">Rest Api</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="./pages/github.html">Git</a>
-          </li>
-          <li>
-            <a href="./pages/paper.html">Paper</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </section>
+            <li>
+              <!-- <a href="./pages/javascript.html">Javascript</a> -->
+              <a href="#!">Frontend</a>
+              <ul>
+                <li>
+                  <a href="./pages/html.html">Html</a>
+                </li>
+                <li>
+                  <a href="./pages/css.html">Css</a>
+                </li>
+                <li>
+                  <a href="./pages/javascript.html">Javascript</a>
+                </li>
+                <li>
+                  <a href="./pages/react.html">React</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#!">Backend</a>
+              <ul>
+                <li>
+                  <a href="./pages/node.html">Node</a>
+                </li>
+                <li>
+                  <a href="./pages/express.html">Express</a>
+                </li>
+                <li>
+                  <a href="./pages/mangodb.html">MongoDb</a>
+                </li>
+                <li>
+                  <a href="./pages/mongoose.html">Mongoose</a>
+                </li>
+                <li>
+                  <a href="./pages/restapi.html">Rest Api</a>
+                </li>
+                <li>
+                  <a href="./pages/tools.html">Tools</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="./pages/github.html">Git</a>
+            </li>
+            <li>
+              <a href="./pages/paper.html">Paper</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
 
-  <!-- middle section About languages and cheetsheet-->
-  <div class="container">
-    <div class="titlesection">
-      <h1 class="title">
-        <!-- <marquee behavior="scroll" loop="infinite" direction="right">Welcome To Code With Vish</marquee> -->
-        Welcome To Code With Vish
-      </h1>
-    </div>
-    <!-- about Conatiner -->
-    <div class="about">
-      <div class="descrisection">
-        <div class="description">
-          <ol class="descriptionlist">
-            <li class="descriptionlistlink">Html</li>
-            <li class="descriptionlistlink">Css</li>
-            <li class="descriptionlistlink">Javascript</li>
-            <li class="descriptionlistlink">React</li>
-            <li class="descriptionlistlink">Node</li>
-            <li class="descriptionlistlink">Express</li>
-            <li class="descriptionlistlink">MongoDb</li>
-            <li class="descriptionlistlink">Mongoose</li>
-          </ol>
-        </div>
-        <div class="description">
-          <p>Here You Will Get All Mern Stack Languages Basics Cheetsheet Which helps you to Start your Web-Developer
-            Journey , MERN stands for MongoDB, Express, React, Node, after the four key technologies that make up the
-            stack. MongoDB document database. Express(.js) Node.js web framework.</p>
+    <!-- middle section About languages and cheetsheet-->
+    <div class="container">
+      <!-- title -->
+      <h1 class="title">Welcome To Code With Vish</h1>
+
+      <!-- about Conatiner -->
+      <div class="about">
+        <h1 class="listtitle">Language We Provide</h1>
+        <div class="descriptionlan">
+          <ul class="descriptionlist">
+            <li>Html</li>
+            <li>Css</li>
+            <li>Javascript</li>
+            <li>React</li>
+            <li>Node</li>
+            <li>Express</li>
+            <li>MongoDb</li>
+            <li>Mongoose</li>
+          </ul>
         </div>
       </div>
+      <div class="languagebox">
+        <!-- description -->
+        <div class="description">
+          <h1 class="destitle">
+            Html <i class="fa-brands fa-html5 fa-beat"></i>
+          </h1>
+          <hr>
+          <p class="ptitle">
+            HTML stands for HyperText Markup Language. It is a standard markup
+            language for web page creation. It allows the creation and structure
+            of sections, paragraphs, and links using HTML elements (the building
+            blocks of a web page) such as tags and attributes.
+          </p>
+        </div>
+        <!-- description -->
+        <div class="description">
+          <h1 class="destitle">
+            Css <i class="fa-brands fa-css3-alt fa-beat"></i>
+          </h1>
+          <hr>
+          <p class="ptitle">
+            CSS stands for Cascading Style Sheets. It is a style sheet language
+            which is used to describe the look and formatting of a document
+            written in markup language. It provides an additional feature to
+            HTML. It is generally used with HTML to change the style of web
+            pages and user interfaces.
+          </p>
+        </div>
+        <!-- description -->
+        <div class="description">
+          <h1 class="destitle">
+            Javascript <i class="fa-brands fa-square-js fa-beat"></i>
+          </h1>
+          <hr>
+          <p class="ptitle">
+            JavaScript is a dynamic programming language that's used for web
+            development, in web applications, for game development, and lots
+            more. It allows you to implement dynamic features on web pages that
+            cannot be done with only HTML and CS
+          </p>
+        </div>
+        <!-- description -->
+        <div class="description">
+          <h1 class="destitle">
+            React <i class="fa-brands fa-react fa-beat"></i>
+          </h1>
+          <hr>
+          <p class="ptitle">
+            The React.js framework is an open-source JavaScript framework and
+            library developed by Facebook. It’s used for building interactive
+            user interfaces and web applications quickly and efficiently with
+            significantly less code than you would with vanilla JavaScript
+          </p>
+        </div>
+        <!-- description -->
+        <div class="description">
+          <h1 class="destitle">
+            Node <i class="fa-brands fa-node fa-beat"></i>
+          </h1>
+          <hr>
+          <p class="ptitle">
+            Node.js is a single-threaded, open-source, cross-platform runtime
+            environment for building fast and scalable server-side and
+            networking applications. It runs on the V8 JavaScript runtime
+            engine, and it uses event-driven, non-blocking I/O architecture,
+            which makes it efficient and suitable for real-time applications.
+          </p>
+        </div>
+        <div class="description">
+          <h1 class="destitle">
+            Express <i class="fa-brands fa-node-js fa-beat"></i>
+          </h1>
+          <hr>
+          <p class="ptitle">
+            Express.js is a small framework that works on top of Node.js web
+            server functionality to simplify its APIs and add helpful new
+            features. It makes it easier to organize your application’s
+            functionality with middleware and routing. It adds helpful utilities
+            to Node.js HTTP objects and facilitates the rendering of dynamic
+            HTTP objects.
+          </p>
+        </div>
+        <div class="description">
+          <h1 class="destitle">
+            MongoDb <i class="fa-sharp fa-solid fa-database fa-beat"></i>
+          </h1>
+          <hr>
+          <p class="ptitle">
+            MongoDB is an open-source document-oriented database that is
+            designed to store a large scale of data and also allows you to work
+            with that data very efficiently. It is categorized under the NoSQL
+            (Not only SQL) database because the storage and retrieval of data in
+            the MongoDB are not in the form of tables
+          </p>
+        </div>
+        <div class="description">
+          <h1 class="destitle">
+            Mongoose <i class="fa-solid fa-database fa-beat"></i>
+          </h1>
+          <hr>
+          <p class="ptitle">
+            Mongoose is an Object Data Modeling (ODM) library for MongoDB and
+            Node.js. It manages relationships between data, provides schema
+            validation, and is used to translate between objects in code and the
+            representation of those objects in MongoDB
+          </p>
+        </div>
+      </div>
     </div>
-  </div>
-  <!-- footer -->
-  <footer class="footercontainer">
-    <div class="footer">
-      <!-- logo  -->
-      <div class="footerlogo">
-        <img src="./assests/logo_png.png" alt="" class="footerimg" />
+    <!-- footer -->
+    <footer>
+      <div class="footer">
+        <!-- logo  -->
+        <div class="footerlogo">
+          <img src="./assests/logo_png.png" alt="logo" />
+        </div>
+        <!-- about company -->
+        <div class="content">
+          <ul class="footermenu">
+            <li title="Home">Home</li>
+            <li title="About">About</li>
+            <li title="Contact">Contact</li>
+            <li title="Services">Services</li>
+          </ul>
+          <!-- <ul class="footermenu">
+            <li title="Home"><i class="fa-solid fa-house"></i></li>
+            <li title="About"><i class="fa-regular fa-user"></i></li>
+            <li title="Contact"><i class="fa-solid fa-address-card"></i></li>
+            <li title="Services"><i class="fa-solid fa-taxi"></i></li>
+          </ul> -->
+        </div>
+        <!-- social media -->
+        <div class="social">
+          <ul class="socialmedia">
+            <!-- <h1 class="socialtitle">Follow On &rarr;</h1> -->
+            <li>
+              <a
+                href="https://www.instagram.com/__webinsect__/"
+                target="_blank"
+                class="sociallinks instagram"
+                ><i class="fa-brands fa-square-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/thevishingh03/"
+                target="_blank"
+                class="sociallinks facebook"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://twitter.com/thevishingh"
+                target="_blank"
+                class="sociallinks twitter"
+                ><i class="fa-brands fa-square-twitter"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/thevishingh/"
+                target="_blank"
+                class="sociallinks linkedin"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/thevishingh"
+                target="_blank"
+                class="sociallinks gitub"
+                ><i class="fa-brands fa-github fa-sm"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <!-- about company -->
-      <div class="content">
-        <ul class="footermenu">
-          <li class="footermenulink">Home</li>
-          <li class="footermenulink">About</li>
-          <li class="footermenulink">Contact</li>
-          <li class="footermenulink">Portfolio</li>
-        </ul>
+      <div class="copyrightsection">
+        <p class="copyright">
+          ALL Right Reserved &copy; By <span>Vishal singh</span>
+        </p>
       </div>
-      <!-- social media -->
-      <div class="social">
-        <ul class="socialmedia">
-          <li class="socialmedialinks">
-            <a href="https://www.instagram.com/__webinsect__/" target="_blank" class="sociallinks instagram"><i
-                class="fa-brands fa-square-instagram"></i></a>
-          </li>
-          <li class="socialmedialinks">
-            <a href="https://www.facebook.com/thevishingh03/" target="_blank" class="sociallinks facebook"><i
-                class="fa-brands fa-facebook"></i></a>
-          </li>
-          <li class="socialmedialinks">
-            <a href="https://twitter.com/thevishingh" target="_blank" class="sociallinks twitter"><i
-                class="fa-brands fa-square-twitter"></i></a>
-          </li>
-          <li class="socialmedialinks">
-            <a href="https://www.linkedin.com/in/thevishingh/" target="_blank" class="sociallinks linkedin"><i
-                class="fa-brands fa-linkedin-in"></i></a>
-          </li>
-          <li class="socialmedialinks">
-            <a href="https://github.com/thevishingh" target="_blank" class="sociallinks gitub"><i
-                class="fa-brands fa-github fa-sm"></i></a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <p class="copyright">
-      All Right Reserved &copy; By <span>Vishal singh</span>
-    </p>
-  </footer>
-</body>
-<!-- prism javascript -->
-<script src="./prismScript/prism.js"></script>
-<!-- custome js -->
-<script src="./navbar.js"></script>
-
+    </footer>
+  </body>
+  <!-- custome js -->
+  <script src="./navbar/navbar.js"></script>
 </html>

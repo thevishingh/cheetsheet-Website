@@ -2,41 +2,47 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- favicon -->
-    <link rel="shortcut icon" href="../assests/reactfavicon.ico" type="image/x-icon" />
-    <!-- prism.css -->
-    <link rel="stylesheet" href="../prismScript/prism.css" />
-    <!-- custome css -->
-    <link rel="stylesheet" href="../style/html.css" />
-    <title>React Css</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../assests/reactfavicon.ico" type="image/x-icon" />
+  <!-- prism.css -->
+  <link rel="stylesheet" href="../prismScript/prism.css" />
+  <!-- custome css -->
+  <link rel="stylesheet" href="../style/style.css" />
+  <!-- responsive css -->
+  <link rel="stylesheet" href="../style/responstyle.css">
+  <!-- button css -->
+  <link rel="stylesheet" href="../button.css">
+  <title>React Css</title>
 </head>
 
-<body oncontextmenu="return false">
-    <!-- title -->
-    <h1 class="title">
-        <span class="spantitle">React Css </span> Code Snippits
-    </h1>
-    <!-- container -->
-    <div class="main-container">
-        <div class="container">
-            <ol class="list">
-                <h3 class="listtitle"><span>React CSS Styling</span></h3>
-                <p class="titledescription">There are three ways to style in React</p>
-                <li class="rarr">&rarr; Inline Css</li>
-                <li class="rarr">&rarr; Css Stylesheet</li>
-                <li class="rarr">&rarr; Css Modules</li>
+<!-- oncontextmenu="return false" -->
 
-                <!-- inline Css -->
-                <h3 class="listtitle">Inline Styling</h3>
-                <p class="titledescription">
-                    To inline style an element, we can make a Javascript Object, like
-                    this
-                </p>
-                <li class="links">
-                    <pre class="language-js"><code>
+<body>
+  <!-- title -->
+  <h1 class="title">
+    <span class="spantitle">React Css </span> Code Snippits
+  </h1>
+  <!-- container -->
+  <div class="main-container">
+    <div class="container">
+      <ol class="list">
+        <h3 class="listtitle"><span>React CSS Styling</span></h3>
+        <p class="titledescription">There are three ways to style in React</p>
+        <li class="rarr">&rarr; Inline Css</li>
+        <li class="rarr">&rarr; Css Stylesheet</li>
+        <li class="rarr">&rarr; Css Modules</li>
+
+        <!-- inline Css -->
+        <h3 class="listtitle">Inline Styling</h3>
+        <p class="titledescription">
+          To inline style an element, we can make a Javascript Object, like
+          this
+        </p>
+        <li class="links">
+          <pre class="language-js"><code>
 const App = () =&gt {
   return (
     &lt&gt
@@ -45,13 +51,13 @@ const App = () =&gt {
   );
 }
 </code></pre>
-                </li>
-                <p class="titledescription">
-                    In this first curly brace is to write javascript and second is to
-                    make a javascript object. We can also write it like
-                </p>
-                <li class="links">
-                    <pre class="language-js"><code>
+        </li>
+        <p class="titledescription">
+          In this first curly brace is to write javascript and second is to
+          make a javascript object. We can also write it like
+        </p>
+        <li class="links">
+          <pre class="language-js"><code>
 const App = () =&gt {
 const h1Style = {
  backgroundColor: 'purple',
@@ -64,92 +70,72 @@ return (
 );
 }
 </code></pre>
-                </li>
-                <p class="titledescription">
-                    Note: CSS property name must be camelCase.
-                    <strong>background-color</strong> would be
-                    <strong>backgroundColor</strong>
-                </p>
-                <!--  CSS Stylesheets-->
-                <h3 class="listtitle">CSS Stylesheets</h3>
-                <p class="titledescription">
-                    You can save the whole CSS in a separate file with file extension
-                    .css and import it in your application <strong>App.css</strong>
-                </p>
-                <li class="links">
-                    <pre class="language-js"><code>
+        </li>
+        <p class="titledescription">
+          Note: CSS property name must be camelCase.
+          <strong>background-color</strong> would be
+          <strong>backgroundColor</strong>
+        </p>
+        <!--  CSS Stylesheets-->
+        <h3 class="listtitle">CSS Stylesheets</h3>
+        <p class="titledescription">
+          You can save the whole CSS in a separate file with file extension
+          .css and import it in your application <strong>App.css</strong>
+        </p>
+        <li class="links">
+          <pre class="language-js"><code>
 body {
   background-color: 'purple';
   color: 'white';
 }
 </code></pre>
-                </li>
-                <p class="titledescription">
-                    Here we are writing CSS, so we don't need to make JS Object or do it
-                    in <span>camelCase</span> <br />
-                    Just import it like this &rarr; <strong>Index.js</strong>
-                </p>
+        </li>
+        <p class="titledescription">
+          Here we are writing CSS, so we don't need to make JS Object or do it
+          in <span>camelCase</span> <br />
+          Just import it like this &rarr; <strong>Index.js</strong>
+        </p>
 
-                <li class="links">
-                    <pre class="language-js"><code>
+        <li class="links">
+          <pre class="language-js"><code>
 import './App.css'
 </code></pre>
-                </li>
-                <!-- Css module -->
-                <h3 class="listtitle">CSS Modules</h3>
-                <p class="titledescription">
-                    In this you don't have to worry about name conflicts as it is component specific. The CSS is
-                    available only for the file in which it is imported
-                </p>
-                <li class="rarr">&rarr; Make a file with extension .module.css, example: index.module.css</li>
-                <li class="rarr">&rarr; Make a new file index.module.css and insert some CSS into it, like this:</li>
+        </li>
+        <!-- Css module -->
+        <h3 class="listtitle">CSS Modules</h3>
+        <p class="titledescription">
+          In this you don't have to worry about name conflicts as it is component specific. The CSS is
+          available only for the file in which it is imported
+        </p>
+        <li class="rarr">&rarr; Make a file with extension .module.css, example: index.module.css</li>
+        <li class="rarr">&rarr; Make a new file index.module.css and insert some CSS into it, like this:</li>
 
-                <li class="links">
-                    <pre class="language-js"><code>
+        <li class="links">
+          <pre class="language-js"><code>
 .button {
 background-color: 'purple';
 color: 'white';
 }</code></pre>
-                </li>
-                <!-- comment -->
+        </li>
+        <!-- comment -->
 
-                <p class="titledescription">
-                    Import it in component like this
-                </p>
-                <li class="links">
-                    <pre class="language-js"><code>
+        <p class="titledescription">
+          Import it in component like this
+        </p>
+        <li class="links">
+          <pre class="language-js"><code>
 const Home = () =&gt {
    return (
      &ltbutton className={styles.button}&gtClick me!&lt/button&gt
      )
  };
 export default Home;</code> </pre>
-                </li>
-            </ol>
-        </div>
+        </li>
+        <button class="glow-on-hover" type="button"><a href="../pages/react.html">React Home Page</a></button>
+      </ol>
     </div>
-    <!-- footer -->
-<footer class="footercontainer">
-    <div class="footer">
-      <!-- logo  -->
-      <div class="footerlogo">
-        <img src="../../assests/logo_png.png" alt="" class="footerimg" />
-      </div>
-      <!-- about company -->
-      <div class="content">
-        <ul class="footermenu">
-          <li class="footermenulink"><a href="../../index.html" class="listlinks">Home</a></li>
-          <li class="footermenulink">About</li>
-          <li class="footermenulink">Portfolio</li>
-          <li class="footermenulink">Contact</li>
-        </ul>
-      </div>
-    </div>
-    <p class="copyright">
-      All Right Reserved &copy; By
-      <span class="copyrightspan"> Vishal singh</span>
-    </p>
-  </footer>
+  </div>
+
 </body>
 <!-- prism.js -->
 <script src="../prismScript/prism.js"></script>

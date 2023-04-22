@@ -1,0 +1,366 @@
+/* 6 */
+@media screen and (max-width: 1024px) {
+    .descriptionlist {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: masonry;
+      gap: 1rem;
+    }
+  
+    .description {
+      padding: 2rem;
+      margin: 1rem;
+      width: 450px;
+      height: 250px;
+      border-radius:20px;
+    }
+  
+    .ptitle {
+      font-size: 18px;
+      font-family: "Urbanist", sans-serif;
+      font-weight: 400;
+  }
+  }
+  
+  /* 5 */
+  @media screen and (max-width: 900px) {
+    .listtitle {
+      font-size: 2rem;
+      word-spacing: 2px;
+      font-weight: 400;
+    }
+  
+    .descriptionlist {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: masonry;
+      gap: 1rem;
+    }
+  
+    .description {
+      padding: 2rem;
+      margin: 1rem;
+      width: 520px;
+      height: 250px;
+      border-radius:20px;
+    }
+  
+    .ptitle {
+      font-size: 18px;
+      font-family: "Urbanist", sans-serif;
+      font-weight: 400;
+  }
+  
+    .footer {
+      padding-top: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-direction: column;
+    }
+  
+    .footerlogo > img {
+      width: 200px;
+    }
+  
+    .footermenu {
+      margin: 0rem;
+    }
+  
+    .footermenu > li {
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+  
+    .social {
+      display: none;
+    }
+  
+    .copyrightsection {
+      margin-top: 1rem;
+    }
+  
+    .copyright {
+      margin-top: 0;
+    }
+  }
+  
+  /* 4 */
+  @media screen and (max-width: 675px) {
+    .listtitle {
+      font-size: 2rem;
+      word-spacing: 2px;
+      font-weight: 400;
+    }
+  
+    .descriptionlist {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: masonry;
+      gap: 1rem;
+    }
+  
+    .description {
+      padding: 1rem;
+      margin: 1rem;
+      width: 380px;
+      height: 250px;
+      border-radius: 13px;
+    }
+  
+    .footer {
+      padding-top: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-direction: column;
+    }
+  
+    .footerlogo > img {
+      width: 200px;
+    }
+  
+    .footermenu {
+      margin: 0rem;
+    }
+  
+    .footermenu > li {
+      font-size: 1.3rem;
+      font-weight: 400;
+    }
+  
+    .social {
+      display: none;
+    }
+  
+    .copyrightsection {
+      margin-top: 0;
+    }
+  
+    .copyright {
+      margin-top: 0;
+      padding: 1rem;
+    }
+  }
+  
+  /* tablet 3 */
+  @media screen and (max-width: 550px) {
+    .listtitle {
+      font-size: 1.8rem;
+      word-spacing: 2px;
+      font-weight: 600;
+    }
+  
+    .descriptionlist {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: masonry;
+      gap: 1rem;
+    }
+  
+    .description {
+      padding: 1rem;
+      margin: 1rem;
+      width: 380px;
+      height: 280px;
+      border-radius: 13px;
+    }
+  
+    .ptitle {
+      text-align: left;
+      font-size: 1.1rem;
+    }
+  
+    .footer {
+      padding-top: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-direction: column;
+    }
+  
+    .footerlogo > img {
+      width: 180px;
+    }
+  
+    .footermenu {
+      margin: 0rem;
+    }
+  
+    .footermenu > li {
+      font-size: 1rem;
+      font-weight: 400;
+    }
+  
+    .social {
+      display: none;
+    }
+  
+    .copyrightsection {
+      margin-top: 0;
+    }
+  
+    .copyright {
+      margin-top: 1rem;
+    }
+  }
+  
+  /* mideum size cellphones 2 */
+  @media screen and (max-width: 450px) {
+
+    .title {
+        padding: 0.8rem;
+        font-size: 1.2rem;
+        word-spacing: 1px;
+        font-weight: 600;
+      }
+
+    .listtitle {
+        font-size: 1.5rem;
+        word-spacing: 2px;
+        font-weight: 400;
+      }
+
+    .descriptionlist {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+  
+    .description {
+      padding: 1rem;
+      margin: 1rem;
+      width: 350px;
+      height: 280px;
+      border-radius: 13px;
+    }
+  
+    .footer {
+      padding-top: 0;
+    }
+  
+    .footerlogo > img {
+      width: 150px;
+    }
+  
+    .footermenu > li {
+      margin: 1rem 0 0 0;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+  
+    .social {
+      display: none;
+    }
+  
+    .copyrightsection {
+      margin-top: 0;
+    }
+  
+    .copyright {
+      text-align: center;
+      font-size: 1rem;
+      font-family: "Urbanist";
+      color: #fff;
+    }
+  
+    .copyright > span {
+      font-size: 1.3rem;
+      font-weight: 400;
+    }
+  }
+  
+  /* for mobile 1 */
+  @media only screen and (max-width: 350px) {
+    .titlesection {
+      padding: 0;
+      margin-top: 0rem;
+    }
+  
+    .title {
+      padding: 0.8rem;
+      font-size: 1.2rem;
+      word-spacing: 1px;
+      font-weight: 800;
+    }
+  
+    .listtitle {
+      font-size: 1.2rem;
+      word-spacing: 2px;
+      font-weight: 600;
+    }
+  
+    .descriptionlist {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+  
+    .descriptionlist > li {
+      margin-left: 10px;
+      font-family: "Urbanist", sans-serif;
+      font-size: 1rem;
+      letter-spacing: 2px;
+      font-weight: 600;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+  
+    .ptitle {
+      font-size: 1rem;
+      font-family: "Urbanist", sans-serif;
+      font-weight: 600;
+    }
+  
+    footer {
+      height: 20vh;
+    }
+  
+    .footer {
+      padding-top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-direction: column;
+    }
+  
+    .footerlogo > img {
+      width: 140px;
+    }
+  
+    .footermenu {
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .footermenu > li {
+      font-size: 1rem;
+      font-weight: 400;
+    }
+  
+    .social {
+      display: none;
+    }
+  
+    .copyrightsection {
+      margin-top: 0;
+    }
+  
+    .copyright {
+      margin-top: 1rem;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .copyright > span {
+      margin-left: 5px;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+  }
+  

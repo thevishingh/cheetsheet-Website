@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../assests/favicon.ico" type="image/x-icon" />
+    <!-- prism.css -->
+    <link rel="stylesheet" href="../prismScript/prism.css" />
+    <!-- custome css -->
+    <link rel="stylesheet" href="../style/style.css" />
+    <!-- custome css -->
+    <link rel="stylesheet" href="../style/responstyle.css" />
+    <!-- butto css  -->
+    <link rel="stylesheet" href="../button.css" />
+    <title>Node-CheetSheet</title>
+</head>
+
+<body oncontextmenu="return false">
+    <!-- title -->
+    <h1 class="title"><span class="spantitle">Useful </span> Codes Snippits</h1>
+    <!-- container -->
+    <div class="main-container">
+        <div class="container">
+            <ol class="list">
+                <h3 class="listtitle">What is a Quaries in mongoDb</h3>
+                <p class="titledescription">
+                    MongoDB Query is a way to get the data from the MongoDB database.
+                    MongoDB queries provide the simplicity in process of fetching data
+                    from the database, it’s similar to SQL queries in SQL Database
+                    language. While performing a query operation, one can also use
+                    criteria or conditions which can be used to retrieve specific data
+                    from the database.
+                </p>
+                <!-- eg -->
+                <h3 class="listtitle">Creating quaries</h3>
+                <li class="links">
+                    <pre class="language-js"><code>
+// creating quaries 
+
+const name = req.query.user;
+const cat = req.query.cat;
+
+// use -> {servername}/api/posts?user=Akassingh
+</code></pre>
+                </li>
+                <!-- password hassing -->
+                <h3 class="listtitle">What is a password hasssing</h3>
+                <p class="titledescription">
+                    When building applications with Node.js, MongoDB, and Mongoose,
+                    there will be times where you'll need to handle user passwords.
+                    <br />
+                    <br />
+                    Since it's a big no-no to store passwords as plain-text in your
+                    database, how are you supposed to handle and store them?
+                    <br />
+                    <br />
+                    The answer is to create what's called a hash of the password. This
+                    is a long, complex, and unique string that is created using the
+                    plain-text version of the user's password. Instead of storing the
+                    user's plain-text password in the database, you'll store the hash
+                    version instead.
+                </p>
+                <!-- eg -->
+                <h3 class="listtitle">Creating password hasing</h3>
+                <p class="titledescription">Install "bcrypt" from Npm</p>
+                <li class="links">
+                    <pre class="language-js"><code>
+npm i bcrypt
+</code></pre>
+                </li>
+                <li class="links">
+                    <pre class="language-js"><code>
+const bcrypt = require("bcrypt");
+
+// password hasssing
+const salt = await bcrypt.genSalt(10);
+const hassedPass = await bcrypt.hash(req.body.password, salt);
+
+// Here -> [hassedPass] is our newpassword
+</code></pre>
+                </li>
+                <!-- Cors problem -->
+                <h3 class="listtitle">CORS problem</h3>
+                <p class="titledescription">
+                    if you are building your rest api in nodejs. And facing CORS problem on the client server side then Follow the folowing simple steps
+Stop the Node.js server and install 
+                   </p>
+                <li class="links">
+                    <pre class="language-js"><code>
+npm install cors --save
+</code></pre>
+                </li>
+                <li class="links">
+                    <pre class="language-js"><code>
+//Add following lines to your server.js or index.js
+const cors = require('cors')
+
+// Use this after the variable declaration
+//Now try to make your api call on the client side and it should work
+
+app.use(cors())
+</code></pre>
+                </li>
+                <br />
+                <button class="glow-on-hover" type="button">
+                    <a href="../index.html">Home Page</a>
+                </button>
+            </ol>
+        </div>
+    </div>
+</body>
+<!-- prism.js -->
+<script src="../prismScript/prism.js"></script>
+
+</html>

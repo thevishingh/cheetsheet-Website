@@ -5,16 +5,16 @@
 :root {
   --nav-content-width: 1000px;
   --nav-height: 65px;
-  --nav-link-height: 16px;
+  --nav-link-height: 20px;
   --nav-background: rgb(0, 0, 0);
   --nav-font-color: #fff;
-  --link-hover-color: #28d;
+  --link-hover-color: goldenrod;
 }
 
 /* Logo + navigation bar, full width */
 .navigation {
   height: var(--nav-height);
-  background: var(--nav-background);
+  background-image: linear-gradient(to right top, #39414c, #2b3f46, #233c3b, #24382d, #2c321f);
 }
 
 /* Logo + navigation bar, restricted width */
@@ -26,21 +26,12 @@
 /* Logo */
 .brand {
   position: absolute;
-  /* padding-left: 20px; */
+  padding-left: 20px;
   float: left;
   line-height: var(--nav-height);
   font-size: 1.4em;
   width: 200px;
 }
-/* .brand:hover {
-  background: var(--link-hover-color);
-  color: var(--nav-font-color);
-}
-.brand a,
-.brand a:visited {
-  color: var(--nav-font-color);
-  text-decoration: none;
-} */
 
 /* Navigation bar */
 nav {
@@ -67,7 +58,7 @@ nav > ul > li a:visited {
   display: block;
   padding: 15px;
   line-height: var(--nav-link-height);
-  background: var(--nav-background);
+  background-image: linear-gradient(to right top, #39414c, #2b3f46, #233c3b, #24382d, #2c321f);
   color: var(--nav-font-color);
   text-decoration: none;
 }
@@ -105,7 +96,7 @@ nav > ul > li > ul > li a {
   position: absolute;
   top: 0;
   right: 0;
-  background: var(--nav-background);
+  background-image: linear-gradient(to right top, #39414c, #2b3f46, #233c3b, #24382d, #2c321f);
   height: var(--nav-height);
   width: var(--nav-height);
 }

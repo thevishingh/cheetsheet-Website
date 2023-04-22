@@ -1,0 +1,188 @@
+/* google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lora:ital,wght@1,400;1,500;1,600&family=Nunito:wght@200;300;400;500&family=Urbanist:wght@100;200;300;400;500;600;700;800;900&family=Varela&family=Varela+Round&display=swap");
+/* 
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Lora', serif;
+font-family: 'Nunito', sans-serif;
+font-family: 'Urbanist', sans-serif;
+font-family: 'Varela', sans-serif;
+font-family: 'Varela Round', sans-serif;
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #C7DAEB;
+}
+
+.linkslist{
+    color: #000;
+}
+
+.linkslist:hover{
+    color: red;
+}
+
+strong {
+    color: rgb(255, 8, 103);
+    text-decoration: underline;
+}
+
+.rarr {
+    color: #000;
+    font-size: 1rem;
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+}
+
+.links {
+    margin-bottom: 10px;
+}
+
+a{
+    color: red;
+    text-decoration: underline;
+    font-family: "varela", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.git {
+    font-size: 14px;
+    font-family: "varela", sans-serif;
+}
+
+.spantitle {
+    color: #ff00009d;
+    font-size: 2rem;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 600;
+}
+
+.title {
+    color: #000000;
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-family: "Urbanist", sans-serif;
+}
+
+.main-container {
+   margin: 1rem;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.list {
+    list-style: none;
+    width: 60vw;
+}
+
+.listtitle {
+    text-align: left;
+    margin: 1rem;
+    color: blueviolet;
+    font-size: 1.2rem;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 600;
+}
+
+.titledescription {
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-family: "Nunito", sans-serif;
+    font-weight: 500;
+}
+
+.copy-to-clipboard-button {
+    margin: 5px 5px 0 0 !important;
+    padding: 5px 10px !important;
+    cursor: pointer !important;
+    color: red !important;
+    font-weight: 500 !important;
+    font-family: "Urbanist", sans-serif !important;
+}
+
+.copy-to-clipboard-button:hover {
+    color: #fff !important;
+}
+
+/* footer */
+.footercontainer {
+    margin: auto;
+    background-color: #363636c0;
+    height: 20vh;
+    color: #fff;
+}
+
+.footer {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footerimg {
+    width: 150px;
+}
+
+.footermenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footermenulink {
+    list-style: none;
+    padding: 0.3rem;
+    font-size: 1rem;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    color: #fff;
+}
+
+.listlinks {
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.listlinks:hover {
+    color: red;
+}
+
+.footermenulink:hover {
+    color: red;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 1rem;
+    font-family: "Varela Round", sans-serif;
+    padding: 1rem;
+}
+
+.copyrightspan {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: goldenrod;
+    font-family: "Urbanist", sans-serif;
+}

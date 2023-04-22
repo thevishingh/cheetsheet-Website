@@ -1,6 +1,6 @@
 /* google fonts */
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
 
 * {
     padding: 0;
@@ -8,126 +8,216 @@
     box-sizing: border-box;
 }
 
-body {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    background-color: rgba(81, 0, 128, 0.205);
+hr{
+    border: 1px solid #e4e4e4;
 }
 
-
-/* About container */
-
-.container {
-    width: 100vw;
-    height: 100vh;
+html,
+body {
+    height: 100%;
+    /* display: flex;
+    flex-direction: column;
+    margin: auto;
+    font-family: 'Poppins', sans-serif;
+    */
 }
 
 .titlesection {
-    padding: 1rem;
-    margin: 1rem;
+    padding: 0;
+    margin-top: 0.5rem;
 }
 
 .title {
-    margin-top: 1rem;
-    text-align: center;
-    font-size: 2.2rem;
-    word-spacing: 0.2rem;
-    font-weight: 800;
-    font-family: 'Urbanist', sans-serif;
-    color: #000;
-}
-
-
-.descrisection {
-   display: flex;
-   align-items: center;
-   justify-content: space-around;
-}
-
-.description {
-    width: 30vw;
-    height: 300px;
+    color: #000000;
     padding: 1rem;
-    outline: none;
-    border-radius: 13px;
-    font-size: 1rem;
+    text-align: center;
+    font-size: 2rem;
+    word-spacing: 2px;
     font-weight: 600;
-    text-align: left;
-    font-family: 'Urbanist', sans-serif;
-    color: rgb(0, 0, 0);
-    background-color: #ffffff;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    font-family: "Urbanist", sans-serif;
+}
+
+.container {
+    min-height: 100%;
+    background-image: linear-gradient(to right top,
+            #a2b1c7,
+            #98bbc9,
+            #99c3c1,
+            #a9c9b5,
+            #c2cbac);
+}
+
+.about {
+    margin: 1rem;
+}
+
+.listtitle {
+    color: #000000;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: "Urbanist";
+    word-spacing: 3px;
+    font-weight: 400;
+}
+
+.descriptionlan {
+    margin: 1rem;
 }
 
 .descriptionlist {
-    padding: 1rem;
     margin: 1rem;
-    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
-.descriptionlistlink {
-    font-family: 'Urbanist', sans-serif;
-    padding: 0.3em;
+.descriptionlist>li {
+    padding: 1.5rem;
+    margin-left: 10px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 12px;
+    cursor: pointer;
+    list-style: none;
+    padding: 0.6rem;
+    font-family: "Urbanist", sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    font-weight: 400;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.descriptionlist>li:hover {
+    background-color: goldenrod;
+    color: #ffffff;
+}
+
+/* languagebox */
+.languagebox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.description {
+    padding: 1rem;
+    margin: 1rem;
+    width: 300px;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 13px;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.description:hover {
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+.destitle {
+    color: red;
+    font-size: 1.5rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+}
+
+.destitle:hover {
     color: blueviolet;
+}
+
+.ptitle {
+    font-size: 15px;
+    font-family: "Urbanist", sans-serif;
     font-weight: 600;
 }
 
-/* footer */
+p::first-letter {
+    color: red;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
 
-.footercontainer {
-    background-color: #000000;
-    margin: auto;
-    width: 100%;
-    height: 30vh;
-    color: #fff;
+/* footer */
+footer {
+    background-image: linear-gradient(to right top,
+            #39414c,
+            #2b3f46,
+            #233c3b,
+            #24382d,
+            #2c321f);
+    height: 25vh;
 }
 
 .footer {
-    padding: 1rem;
+    margin-left: 1rem;
+    padding: 0;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-.footerimg {
-    width: 150px;
+.footerlogo>img {
+    width: 180px;
+}
+
+.content {
+    display: flex;
 }
 
 .footermenu {
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 20px;
 }
 
-.footermenulink {
+.footermenu>li {
     list-style: none;
-    padding: 0.3rem;
-    font-size: 14px;
-    font-family: 'Urbanist', sans-serif;
-    letter-spacing: 1px;
+    font-size: 1.2rem;
+    font-family: "Urbanist";
+    color: #fff;
     cursor: pointer;
 }
 
-.footermenulink:hover {
-    color: red;
+.footermenu>li:hover {
+    color: blueviolet;
+}
+
+/* .social {
+    display: flex;
+} */
+
+.socialtitle {
+    color: #ffffff;
+    font-size: 1rem;
+    font-family: "Urbanist";
+    letter-spacing: 1px;
 }
 
 .socialmedia {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
+    gap: 20px;
 }
 
-.socialmedialinks {
+.socialmedia>li {
     list-style: none;
-    padding: 0.5rem;
-    margin: 0.5px;
+    font-size: 1.3rem;
 }
 
-.socialmedialinks:hover {
+.sociallinks {
+    color: #fff;
+    text-decoration: none;
+}
+
+.socialmedia>li:hover {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -137,708 +227,56 @@ body {
     background-color: #fff;
 }
 
-.sociallinks {
-    color: #fff;
-    text-decoration: none;
-}
-
 /* Hover Effect */
 .instagram:hover {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: rgb(209, 43, 106);
     transition: all 0.5s ease-in-out;
 }
 
 .facebook:hover {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: rgb(43, 101, 209);
     transition: all 0.5s ease-in-out;
 }
 
 .gitub:hover {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: rgb(17, 218, 44);
     transition: all 0.5s ease-in-out;
 }
 
 .twitter:hover {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: rgb(1, 129, 248);
     transition: all 0.5s ease-in-out;
 }
 
 .linkedin:hover {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: rgb(61, 25, 221);
     transition: all 0.5s ease-in-out;
 }
 
+.copyrightsection {
+    margin-top: 3rem;
+}
+
 .copyright {
-    font-size: 10px;
+    margin-top: 2rem;
     text-align: center;
-    font-family: 'Urbanist', sans-serif;
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
+    font-size: 1.2rem;
+    font-family: "Urbanist";
+    color: #fff;
 }
 
-.copyright > span {
+.copyright>span {
     color: blueviolet;
-    font-family: 'Urbanist', sans-serif;
-    font-size: 1rem;
-    font-weight:bolder;
 }
 
-
-/* media queary */
-
-@media only screen and (max-width: 320px) {
-    /* About container */
-
-    .container {
-        width: 80%;
-    }
-
-    .titlesection {
-        padding: 0;
-        margin-top: 0.5rem;
-    }
-
-    .title {
-        text-align: center;
-        font-size: 1rem;
-        word-spacing: .1rem;
-        font-weight: 400;
-        font-family: 'Urbanist', sans-serif;
-        color: rgb(0, 0, 0);
-    }
-
-    .about {
-        margin: 0;
-        padding: 0;
-    }
-
-    .descrisection {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .description {
-        width: 80%;
-        /* height: 80%; */
-        border-radius: 12px;
-        outline: none;
-        font-size: 0.4rem;
-        font-weight: 400;
-        text-align: left;
-        font-family: 'Urbanist', sans-serif;
-        color: #000;
-    }
-
-    /* footer */
-
-    .footercontainer {
-        background-color: #000000;
-        width: 100%;
-        margin: auto;
-        color: #fff;
-    }
-
-    .footer {
-        padding: 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        flex-direction: column;
-    }
-
-    .footerimg {
-        width: 80px;
-    }
-
-    .footermenu {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .footermenulink {
-        list-style: none;
-        padding: 0.3rem;
-        font-size: 14px;
-        font-family: 'Urbanist', sans-serif;
-        letter-spacing: 1px;
-        cursor: pointer;
-    }
-
-    .footermenulink:hover {
-        color: red;
-    }
-
-    .socialmedia {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-    }
-
-    .socialmedialinks {
-        list-style: none;
-        padding: 0.5rem;
-        margin: 0.5px;
-    }
-
-    .socialmedialinks:hover {
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        background-color: #fff;
-    }
-
-    .sociallinks {
-        color: #fff;
-        text-decoration: none;
-    }
-
-    /* Hover Effect */
-
-    .instagram:hover {
-        font-size: 1rem;
-        color: rgb(209, 43, 106);
-        transition: all 0.5s ease-in-out;
-    }
-
-    .facebook:hover {
-        font-size: 1rem;
-        color: rgb(43, 101, 209);
-        transition: all 0.5s ease-in-out;
-    }
-
-    .gitub:hover {
-        font-size: 1rem;
-        color: rgb(17, 218, 44);
-        transition: all 0.5s ease-in-out;
-    }
-
-    .twitter:hover {
-        font-size: 1rem;
-        color: rgb(1, 129, 248);
-        transition: all 0.5s ease-in-out;
-    }
-
-    .linkedin:hover {
-        font-size: 1rem;
-        color: rgb(61, 25, 221);
-        transition: all 0.5s ease-in-out;
-    }
-
-    .copyright {
-        margin-top: 1rem;
-        font-size: 10px;
-        text-align: center;
-        font-family: 'Urbanist', sans-serif;
-        position: fixed;
-        right: 10px;
-        bottom: 10px;
-    }
-
-    .copyrightspan {
-        color: blueviolet;
-        font-family: 'Urbanist', sans-serif;
-        font-size: 0.8rem
-    }
+.copyright>span:hover {
+    color: red;
+    cursor: pointer;
+    text-decoration: underline;
 }
 
-@media only screen and (max-width:650px) {
-
-   
-    /* About container */
-
-    .container {
-        width: 100vw;
-        height: 100vh;
-    }
-
-    .titlesection {
-        padding: 0;
-        margin-top: 0.5rem;
-    }
-
-    .title {
-        text-align: center;
-        font-size: 1rem;
-        letter-spacing: .1rem;
-        font-weight: 400;
-        font-family: 'Urbanist', sans-serif;
-        color: #000;
-    }
-
-    .about {
-        margin: 0.5rem;
-        padding: 0.5rem;
-    }
-
-
-    .descrisection {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        flex-direction: column;
-    }
-
-    .description {
-        width: 100%;
-        height: 100%;
-        margin: 1rem;
-        padding: 1rem;
-        border-radius: 12px;
-        font-size: 1rem;
-        font-weight: 400;
-        text-align: left;
-        font-family: 'Roboto', sans-serif;
-    }
-
-    /* footer */
-
-    .footercontainer {
-        background-color: #000000;
-        width: 100%;
-        height: 60vh;
-        margin: auto;
-        color: #fff;
-    }
-
-    .footer {
-        padding: 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        flex-direction: column;
-    }
-
-    .footerimg {
-        width: 150px;
-    }
-
-    .footermenu {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .footermenulink {
-        list-style: none;
-        padding: 0.3rem;
-        font-size: 14px;
-        font-family: 'Urbanist', sans-serif;
-        letter-spacing: 1px;
-        cursor: pointer;
-    }
-
-    .footermenulink:hover {
-        color: red;
-    }
-
-    .socialmedia {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-    }
-
-    .socialmedialinks {
-        list-style: none;
-        padding: 0.5rem;
-        margin: 0.5px;
-    }
-
-    .socialmedialinks:hover {
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        background-color: #fff;
-    }
-
-    .sociallinks {
-        color: #fff;
-        text-decoration: none;
-    }
-
-    /* Hover Effect */
-    .instagram:hover {
-        font-size: 1rem;
-        color: rgb(209, 43, 106);
-        transition: all 0.5s ease-in-out;
-    }
-
-    .facebook:hover {
-        font-size: 1rem;
-        color: rgb(43, 101, 209);
-        transition: all 0.5s ease-in-out;
-    }
-
-    .gitub:hover {
-        font-size: 1rem;
-        color: rgb(17, 218, 44);
-        transition: all 0.5s ease-in-out;
-    }
-
-    .twitter:hover {
-        font-size: 1rem;
-        color: rgb(1, 129, 248);
-        transition: all 0.5s ease-in-out;
-    }
-
-    .linkedin:hover {
-        font-size: 1rem;
-        color: rgb(61, 25, 221);
-        transition: all 0.5s ease-in-out;
-    }
-
-    .copyright {
-        margin-top: 1rem;
-        font-size: 10px;
-        text-align: center;
-        font-family: 'Urbanist', sans-serif;
-        position: fixed;
-        right: 10px;
-        bottom: 10px;
-    }
-
-    .copyrightspan {
-        color: blueviolet;
-        font-family: 'Urbanist', sans-serif;
-        font-size: 0.8rem
-    }
-}
-
-@media only screen and (max-width: 950px) {
-
-    /* About container */
-
-    .container {
-        width: 100vw;
-        height: 80vh;
-    }
-
-    .titlesection {
-        padding: 0;
-        margin-top: 0.5rem;
-    }
-
-    .title {
-        text-align: center;
-        font-size: 1rem;
-        letter-spacing: .1rem;
-        font-weight: 400;
-        font-family: 'Urbanist', sans-serif;
-        color: #000;
-    }
-
-    .about {
-        margin: 1rem;
-        padding: 0.5rem;
-    }
-
-
-    .descrisection {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        flex-direction: column;
-    }
-
-    .description {
-        width: 100%;
-        height: 100%;
-        padding: 1.2rem;
-        margin-top: 15px;
-        border-radius: 0;
-        outline: none;
-        font-size: 1rem;
-        font-weight: 600;
-        text-align: left;
-        font-family: 'Urbanist', sans-serif;
-        color: rgb(0, 0, 0);
-        box-shadow: none;
-    }
-
-    /* footer */
-
-    .footercontainer {
-        background-color: #000000;
-        width: 100%;
-        height: 60vh;
-        margin: auto;
-        color: #fff;
-    }
-
-    .footer {
-        padding: 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        flex-direction: column;
-    }
-
-    .footerimg {
-        width: 150px;
-    }
-
-    .footermenu {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .footermenulink {
-        list-style: none;
-        padding: 0.3rem;
-        font-size: 14px;
-        font-family: 'Urbanist', sans-serif;
-        letter-spacing: 1px;
-        cursor: pointer;
-    }
-
-    .footermenulink:hover {
-        color: red;
-    }
-
-    .socialmedia {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-    }
-
-    .socialmedialinks {
-        list-style: none;
-        padding: 0.5rem;
-        margin: 0.5px;
-    }
-
-    .socialmedialinks:hover {
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        background-color: #fff;
-    }
-
-    .sociallinks {
-        color: #fff;
-        text-decoration: none;
-    }
-
-    /* Hover Effect */
-    .instagram:hover {
-        font-size: 1rem;
-        color: rgb(209, 43, 106);
-        transition: all 0.5s ease-in-out;
-    }
-
-    .facebook:hover {
-        font-size: 1rem;
-        color: rgb(43, 101, 209);
-        transition: all 0.5s ease-in-out;
-    }
-
-    .gitub:hover {
-        font-size: 1rem;
-        color: rgb(17, 218, 44);
-        transition: all 0.5s ease-in-out;
-    }
-
-    .twitter:hover {
-        font-size: 1rem;
-        color: rgb(1, 129, 248);
-        transition: all 0.5s ease-in-out;
-    }
-
-    .linkedin:hover {
-        font-size: 1rem;
-        color: rgb(61, 25, 221);
-        transition: all 0.5s ease-in-out;
-    }
-
-    .copyright {
-        margin-top: 1rem;
-        font-size: 10px;
-        text-align: center;
-        font-family: 'Urbanist', sans-serif;
-        position: fixed;
-        right: 10px;
-        bottom: 10px;
-    }
-
-    .copyrightspan {
-        color: blueviolet;
-        font-family: 'Urbanist', sans-serif;
-        font-size: 0.8rem
-    }
-}
-
-@media only screen and (max-width: 1450px) {
-
-
-    /* About container */
-
-    .container {
-        width: 100vw;
-        height: 80vh;
-    }
-
-    .titlesection {
-        padding: 0;
-        margin-top: 0.5rem;
-    }
-
-    .title {
-        text-align: center;
-        font-size: 1rem;
-        letter-spacing: .1rem;
-        font-weight: 400;
-        font-family: 'Urbanist', sans-serif;
-        color: #0000;
-    }
-
-    .about {
-        margin: 0.5rem;
-        padding: 0.5rem;
-    }
-
-
-    .descrisection {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    .description {
-        width: 100%;
-        height: 100%;
-        padding: 1.2rem;
-        margin-top: 1.2rem;
-        border-radius: 12px;
-        outline: none;
-        font-size: 1rem;
-        font-weight: 400;
-        text-align: left;
-        font-family: 'Urbanist', sans-serif;
-        color: rgb(0, 0, 0);
-    }
-
-    /* footer */
-
-    .footercontainer {
-        background-color: #000000;
-        width: 100%;
-        height: 35vh;
-        margin: auto;
-        color: #fff;
-    }
-
-    .footer {
-        padding: 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        flex-direction: column;
-    }
-
-    .footerimg {
-        width: 150px;
-    }
-
-    .footermenu {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .footermenulink {
-        list-style: none;
-        padding: 0.3rem;
-        font-size: 14px;
-        font-family: 'Urbanist', sans-serif;
-        letter-spacing: 1px;
-        cursor: pointer;
-    }
-
-    .footermenulink:hover {
-        color: red;
-    }
-
-    .socialmedia {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-    }
-
-    .socialmedialinks {
-        list-style: none;
-        padding: 0.5rem;
-        margin: 0.5px;
-    }
-
-    .socialmedialinks:hover {
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        background-color: #fff;
-    }
-
-    .sociallinks {
-        color: #fff;
-        text-decoration: none;
-    }
-
-    /* Hover Effect */
-    .instagram:hover {
-        font-size: 1rem;
-        color: rgb(209, 43, 106);
-        transition: all 0.5s ease-in-out;
-    }
-
-    .facebook:hover {
-        font-size: 1rem;
-        color: rgb(43, 101, 209);
-        transition: all 0.5s ease-in-out;
-    }
-
-    .gitub:hover {
-        font-size: 1rem;
-        color: rgb(17, 218, 44);
-        transition: all 0.5s ease-in-out;
-    }
-
-    .twitter:hover {
-        font-size: 1rem;
-        color: rgb(1, 129, 248);
-        transition: all 0.5s ease-in-out;
-    }
-
-    .linkedin:hover {
-        font-size: 1rem;
-        color: rgb(61, 25, 221);
-        transition: all 0.5s ease-in-out;
-    }
-
-    .copyright {
-        margin-top: 1rem;
-        font-size: 10px;
-        text-align: center;
-        font-family: 'Urbanist', sans-serif;
-        position: fixed;
-        right: 10px;
-        bottom: 10px;
-    }
-
-    .copyrightspan {
-        color: blueviolet;
-        font-family: 'Urbanist', sans-serif;
-        font-size: 0.8rem
-    }
-}

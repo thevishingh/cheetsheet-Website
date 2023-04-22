@@ -1,0 +1,107 @@
+
+/* tablet */
+@media only screen and (max-width: 1444px) {
+
+    .spantitle {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    .title {
+        font-size: 1rem;
+    }
+
+    .container {
+        padding: 0;
+        margin: 0;
+    }
+
+    .list {
+        width: 100%;
+        height: 100%;
+    }
+
+    .listtitle {
+        margin-top: 10px;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    .titledescription {
+        margin: 10px 0 0 0;
+        padding: 10px;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    /* footer */
+
+    .footercontainer {
+        height: 15vh;
+        width: 100vw;
+    }
+
+    .footer {
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .footerimg {
+        display: none;
+    }
+
+    .copyright {
+        margin-top: 1rem;
+        padding: 0rem;
+        font-size: 10px;
+    }
+
+    .copyrightspan {
+        font-size: 1rem;
+        font-weight: 600;
+        color: goldenrod;
+        font-family: "Urbanist", sans-serif;
+    } 
+
+} 
+
+
+/* media quaries */
+@media only screen and (max-width: 350px) {
+
+    .spantitle {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    .title {
+        font-size: 1rem;
+    }
+
+    .container {
+        padding: 0;
+        margin: 0;
+    }
+
+    .list {
+        width: 100%;
+        height: 100%;
+    }
+
+    .listtitle {
+        margin-top: 10px;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    .titledescription {
+        margin: 10px 0 0 0;
+        padding: 10px;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+}
