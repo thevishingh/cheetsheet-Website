@@ -39,14 +39,12 @@ body {
 
 .container {
   min-height: 100%;
-  background-image: linear-gradient(
-    to right top,
-    #a2b1c7,
-    #98bbc9,
-    #99c3c1,
-    #a9c9b5,
-    #c2cbac
-  );
+  background-image: linear-gradient(to right top,
+      #a2b1c7,
+      #98bbc9,
+      #99c3c1,
+      #a9c9b5,
+      #c2cbac);
 }
 
 .about {
@@ -75,7 +73,7 @@ body {
   gap: 1rem;
 }
 
-.descriptionlist > li {
+.descriptionlist>li {
   padding: 1.5rem;
   margin-left: 10px;
   background-color: #ffffff;
@@ -88,21 +86,24 @@ body {
   font-size: 1.5rem;
   letter-spacing: 2px;
   font-weight: 400;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  text-align: center;
 }
 
-.descriptionlist > li:hover {
-  background-color: goldenrod;
-  color: #ffffff;
-}
-
-.descriptionlist > li > a {
+.descriptionlist>li>a {
   text-decoration: none;
   color: #000;
 }
 
-.descriptionlist > li > a:hover {
-  background-color: goldenrod;
+
+.descriptionlist>li:hover {
+  background-color: #85d9a596;
+  color: #ffffff;
+  box-shadow: rgba(255, 166, 1, 0.438) 0px 5px 15px ;
+}
+
+
+.descriptionlist>li>a:hover {
+  background-color: #85d9a596;
   color: #ffffff;
 }
 
@@ -123,12 +124,12 @@ body {
   background-color: #fff;
   border-radius: 13px;
   outline: none;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .description:hover {
-  background-color: #000;
-  color: #fff;
+  background-color: #85d9a596;
+  color: #000000;
+  box-shadow: rgba(255, 166, 1, 0.438) 0px 5px 15px ;
   cursor: pointer;
 }
 
@@ -158,14 +159,12 @@ p::first-letter {
 
 /* footer */
 footer {
-  background-image: linear-gradient(
-    to right top,
-    #39414c,
-    #2b3f46,
-    #233c3b,
-    #24382d,
-    #2c321f
-  );
+  background-image: linear-gradient(to right top,
+      #39414c,
+      #2b3f46,
+      #233c3b,
+      #24382d,
+      #2c321f);
   height: 25vh;
 }
 
@@ -178,7 +177,7 @@ footer {
   flex-wrap: wrap;
 }
 
-.footerlogo > img {
+.footerlogo>img {
   width: 180px;
 }
 
@@ -192,7 +191,7 @@ footer {
   gap: 20px;
 }
 
-.footermenu > li {
+.footermenu>li {
   list-style: none;
   font-size: 1.2rem;
   font-family: "Urbanist";
@@ -200,7 +199,7 @@ footer {
   cursor: pointer;
 }
 
-.footermenu > li:hover {
+.footermenu>li:hover {
   color: blueviolet;
 }
 
@@ -221,7 +220,7 @@ footer {
   gap: 20px;
 }
 
-.socialmedia > li {
+.socialmedia>li {
   list-style: none;
   font-size: 1.3rem;
 }
@@ -231,7 +230,7 @@ footer {
   text-decoration: none;
 }
 
-.socialmedia > li:hover {
+.socialmedia>li:hover {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -284,11 +283,11 @@ footer {
   color: #fff;
 }
 
-.copyright > span {
+.copyright>span {
   color: blueviolet;
 }
 
-.copyright > span:hover {
+.copyright>span:hover {
   color: red;
   cursor: pointer;
   text-decoration: underline;
